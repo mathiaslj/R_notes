@@ -5,7 +5,7 @@ project:
 
 website:
   title: "posit::conf(2024)"
-  repo-url: https://github.com/mathiaslj/posit_conf_2024_notes
+  repo-url: https://github.com/mathiaslj/R_notes
   repo-actions: [source]
   back-to-top-navigation: true
   bread-crumbs: false
@@ -17,7 +17,7 @@ website:
       - sidebar:takeaways
     right: 
       - icon: github
-        href: https://github.com/mathiaslj/posit_conf_2024_notes
+        href: https://github.com/mathiaslj/R_notes
       
   sidebar: 
     - id: takeaways
