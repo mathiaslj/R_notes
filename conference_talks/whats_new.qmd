@@ -1,0 +1,46 @@
+---
+title: "What's new"
+---
+
+## AI tools
+
+-   See section [What's new - AI tools](tipsandtricks.qmd#sec:tipsandtricks-AI_tools) for notes on AI tools.
+    
+## Positron
+
+-   [Positron](https://github.com/posit-dev/positron) runs R as an extension, meaning that a crash in R does not result in a restart of the entire IDE (like in Rstudio), but rather that the console restarts
+-   Can debug C and C++ code
+-   Extensions readily available from [Open VSX](https://open-vsx.org/)
+    -   [Continue](https://github.com/continuedev/continue) for AI code assistant
+
+## Quarto {#sec:what_new-quarto}
+
+-   [typst](https://quarto.org/docs/output-formats/typst.html) for PDF creation with exact look of HTML
+    -   See brief intro to typst components in [these notes for talk *Report Design in R: Small Tweaks that Make a Big Difference*](other_talks/quarto_custom.qmd#sec:typst_components)
+    -   [Appsilon](https://www.appsilon.com/) used typst for automatic report generation in their TARS tool, which was talked about in the talk [*Shiny in Action: Transforming Film Production with TARS*](other_talks/end_to_end_ds.qmd#sec:TARS)
+-   [Quarto live](https://github.com/r-wasm/quarto-live) for interactive documents and code exercises to create educational content
+
+## Corporate specific
+
+### Databricks
+
+-   See notes for talk *Elevating Enterprise Data Through Open Source LLMs* at [AI chat-bot solution combining Databricks, Posit connect and Shiny conforming with legal and security requirements](other_talks/ai_not_generated.qmd#sec:databricks_ai_solution)
+-   See package [brickster](https://github.com/databrickslabs/brickster)
+
+### Posit Workbench and Cloud - Data access and user authentication
+
+-   Ability to sign into organisation's cloud data platform like [snowflake](https://www.snowflake.com/en/) or [databricks](https://www.databricks.com/) in Posit Workbench AND Posit Connect
+    -   Users no longer have to think about managing access tokens to pass them to connections when working in workbench
+    -   Authentication for data access in deployed Shiny apps in Posit Connect is automatic with a simple login to the cloud data platform
+    
+### Single node DuckDB
+
+Read notes on [Save costs without compromising on speed with single node(/machine) using DuckDB](keynotes/04duckdb.qmd#sec:save_single_node).
+
+### Pharma GxP packages
+
+The [R validation Hub](https://www.pharmar.org/) is putting a lot of work into [riskassessment](https://www.pharmar.org/posts/news/updates-aug-2024/) R package - give users interface through shiny app that automatically runs riskassessment on packages they want to add to the GxP list.
+
+### Quarto templates
+
+See notes from the talk [*Designing and Deploying Internal Quarto Templates*](other_talks/quarto_custom.qmd#sec:quarto_internal_templates)

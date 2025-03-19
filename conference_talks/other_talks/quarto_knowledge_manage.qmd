@@ -1,0 +1,31 @@
+---
+title: "Quarto for Knowledge Management"
+---
+
+Session called *Level Up Your Data Science Skills*, but I only watched the last talk labelled "Quarto for Knowledge Management".
+
+[Link to video](https://reg.conf.posit.co/flow/posit/positconf24/publiccatalog/page/publiccatalog/session/1712004520371001rrCt)
+
+### Session description
+
+*Have you ever considered using the power and flexibility of Quarto for note-taking and knowledge management? I did, and now I use Quarto websites to track my PhD progress, document insights from conferences, manage collaborative research projects, and more. Let me show you how easy it is to implement standard knowledge management system features, such as cross-referencing, search indexing, and custom navigation. But what if you want more advanced features like glossaries, document listings and summaries of datasets? Well, with some creative use of Quarto's many features and extensions, almost anything is possible. Whether you're new to Quarto or a seasoned expert, consider adding Quarto to your note-taking toolkit.*
+
+### Session notes
+
+See Cynthia's [Quarto wiki template](https://github.com/cynthiahqy/quarto-wiki-template) to create a Quarto website to host research notes, articles, glossaries, etc.
+
+See Cynthia's [repo for her personal website](https://github.com/cynthiahqy/digital-garden)
+
+**Essence of talk:** Have all notes from research gathered in one place, so everything is searchable and reusable.
+
+-   Use [Quarto listings](https://quarto.org/docs/websites/website-listings.html) to create overviews of fx. definitions of terms withing different research fields
+-   Tip: Can ctrl+V images in visual mode
+-   Use of javascript extensions [lightbox](https://quarto.org/docs/output-formats/html-lightbox-figures.html) (allows reader to click image to enlarge) and [masonry](https://github.com/mcanouil/quarto-masonry) (grid layout library for customisation of image placements)
+-   [`format: manuscript`](https://quarto.org/docs/manuscripts/) for research notes
+    -   Similar to website but can be tied up to journal templates
+
+#### Separate repo with images
+
+Cynthia has a [separate repo with images](https://github.com/cynthiahqy/collection_crossmap-images) that are used across projects, so they are in a central location where they are easily found
+
+-   Readme is constructed to show all images and where they can be found
