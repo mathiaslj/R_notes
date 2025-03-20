@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Updates from Posit – posit::conf(2024)</title>
+<title>grid - Creating any graphical object (grob) – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-55df919acfdb25f89e1b2f971901409c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-3b319470b4edcef0648341312c309106.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,8 +77,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">posit::conf(2024)</span>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Various notes about R</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -87,77 +87,81 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../workshop.html"> 
-<span class="menu-text">Workshop</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-conference-talks" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Conference talks</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-wrangling" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data wrangling</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-conference-talks">    
-        <li class="dropdown-header">Keynotes</li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-wrangling">    
+        <li class="dropdown-header">Base R</li>
         <li>
-    <a class="dropdown-item" href="../../conference_talks/keynotes/01posit_update.html">
- <span class="dropdown-text">Updates from Posit</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/keynotes/02AI.html">
- <span class="dropdown-text">Practical Tips for using Generative AI in Data Science Workflows</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/keynotes/03data_science_journey.html">
- <span class="dropdown-text">A future of data science</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/keynotes/04duckdb.html">
- <span class="dropdown-text">Data Wrangling [for Python or R] Like a Boss With DuckDB</span></a>
+    <a class="dropdown-item" href="../data-wrangling/baser.html">
+ <span class="dropdown-text">Base R</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">Other talks</li>
+        <li class="dropdown-header">The tidyverse</li>
         <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/ai_not_generated.html">
- <span class="dropdown-text">This Session Was Not Generated By AI</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/end_to_end_ds.html">
- <span class="dropdown-text">End-To-End Data Science With Real-World Impact</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/introducing_positron.html">
- <span class="dropdown-text">Introducing Positron</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/quarto_automated.html">
- <span class="dropdown-text">Automated Reporting With Quarto: Beyond Copy And Paste</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/quarto_custom.html">
- <span class="dropdown-text">Pour Some Glitter On It: Custom Quarto Outputs</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/quarto_knowledge_manage.html">
- <span class="dropdown-text">Quarto for Knowledge Management</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/strenghtening_r_ecosystem.html">
- <span class="dropdown-text">Strengthening the R ecosystem</span></a>
+    <a class="dropdown-item" href="../data-wrangling/tidyverse.html">
+ <span class="dropdown-text">The <code>tidyverse</code></span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-takeaways" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Takeaways</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-plotting" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Plotting</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-takeaways">    
-        <li class="dropdown-header">Takeaways</li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-plotting">    
+        <li class="dropdown-header">grid - The building block of <code>ggplot2</code></li>
         <li>
-    <a class="dropdown-item" href="../../conference_talks/whats_new.html">
- <span class="dropdown-text">What’s new</span></a>
+    <a class="dropdown-item" href="../plotting/grid.html">
+ <span class="dropdown-text"><code>grid</code> - Creating any graphical object (grob)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../conference_talks/tipsandtricks.html">
- <span class="dropdown-text">Miscellaneous tips and tricks learnt from conference</span></a>
+    <a class="dropdown-item" href="../plotting/gggrid.html">
+ <span class="dropdown-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">ggplot2</li>
+        <li>
+    <a class="dropdown-item" href="../plotting/ggplot2.html">
+ <span class="dropdown-text"><code>ggplot2</code></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-package-development" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Package development</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-package-development">    
+        <li class="dropdown-header">Creating a package</li>
+        <li>
+    <a class="dropdown-item" href="../pkg-dev/get-started.html">
+ <span class="dropdown-text">Get started</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pkg-dev/gh-actions.html">
+ <span class="dropdown-text">GitHub actions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pkg-dev/cran.html">
+ <span class="dropdown-text">Submitting to CRAN</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-programming-in-r" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Programming in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-programming-in-r">    
+        <li class="dropdown-header">Functional programming</li>
+        <li>
+    <a class="dropdown-item" href="../prog/func_prog.html">
+ <span class="dropdown-text">Functional programming</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Object-oriented programming</li>
+        <li>
+    <a class="dropdown-item" href="../prog/obj_prog.html">
+ <span class="dropdown-text">Object-oriented programming</span></a>
   </li>  
     </ul>
   </li>
@@ -180,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Updates from Posit</h1>
+          <h1 class="quarto-secondary-nav-title"><code>grid</code> - Creating any graphical object (grob)</h1>
         </a>     
     </div>
   </nav>
@@ -194,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Keynotes</span></a>
+ <span class="menu-text">grid - The building block of <code>ggplot2</code></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -202,26 +206,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/keynotes/01posit_update.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Updates from Posit</span></a>
+  <a href="../plotting/grid.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><code>grid</code> - Creating any graphical object (grob)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/keynotes/02AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical Tips for using Generative AI in Data Science Workflows</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/keynotes/03data_science_journey.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A future of data science</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/keynotes/04duckdb.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Wrangling [for Python or R] Like a Boss With DuckDB</span></a>
+  <a href="../plotting/gggrid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
   </div>
 </li>
       </ul>
@@ -229,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Other talks</span></a>
+ <span class="menu-text">ggplot2</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -237,44 +229,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/ai_not_generated.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">This Session Was Not Generated By AI</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/end_to_end_ds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">End-To-End Data Science With Real-World Impact</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/introducing_positron.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introducing Positron</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/quarto_automated.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Automated Reporting With Quarto: Beyond Copy And Paste</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/quarto_custom.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pour Some Glitter On It: Custom Quarto Outputs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/quarto_knowledge_manage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quarto for Knowledge Management</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/strenghtening_r_ecosystem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Strengthening the R ecosystem</span></a>
+  <a href="../plotting/ggplot2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>ggplot2</code></span></a>
   </div>
 </li>
       </ul>
@@ -284,27 +240,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#session-description" id="toc-session-description" class="nav-link active" data-scroll-target="#session-description">Session description</a></li>
-  <li><a href="#session-notes" id="toc-session-notes" class="nav-link" data-scroll-target="#session-notes">Session notes</a>
-  <ul class="collapse">
-  <li><a href="#future-of-quarto" id="toc-future-of-quarto" class="nav-link" data-scroll-target="#future-of-quarto">Future of Quarto</a></li>
-  <li><a href="#webr-shinylive-and-quarto-live" id="toc-webr-shinylive-and-quarto-live" class="nav-link" data-scroll-target="#webr-shinylive-and-quarto-live">webR, shinylive and Quarto live</a></li>
-  <li><a href="#snowflake-and-databricks" id="toc-snowflake-and-databricks" class="nav-link" data-scroll-target="#snowflake-and-databricks">Snowflake and databricks</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/conference_talks/keynotes/01posit_update.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Updates from Posit</h1>
+<h1 class="title d-none d-lg-block"><code>grid</code> - Creating any graphical object (grob)</h1>
 </div>
 
 
@@ -321,83 +265,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="https://reg.conf.posit.co/flow/posit/positconf24/publiccatalog/page/publiccatalog/session/1712004520449001rbm2">Link to video</a></p>
-<p>Speakers:</p>
-<ul>
-<li>Hadley Wickham, Chief Scientist, Posit</li>
-<li>James Blair, Senior Product Manager, Posit</li>
-<li>Charlotte Wickham, Developer Educator, Posit</li>
-<li>George Stagg, Software Engineer, Posit</li>
-</ul>
-<section id="session-description" class="level2">
-<h2 class="anchored" data-anchor-id="session-description">Session description</h2>
-<p><em>Please join us for our first Posit keynote, where we’ll tell you about our mission, our products, and some of the exciting things we’ve been working on over the last year. Hadley Wickham, Chief Scientist, will talk briefly about Posit’s mission and products, before introducing the three speakers who will update you on some of the coolest projects we’ve worked on over the last year. James Blair, Senior Product Manager, will give you the latest on our partnerships with Databricks and Snowflake, and how we’re building seamless integrations that let you focus on data science instead of dealing with technical details. Charlotte Wickham, Developer Educator, will show you what’s new in Quarto, focusing on new ways to build beautiful PDFs with Typst. Finally, George Stagg, Senior Software Engineer, will tell you about the latest innovations in teaching using webR, a tool that lets you compile your R code into standalone HTML files.</em></p>
-</section>
-<section id="session-notes" class="level2">
-<h2 class="anchored" data-anchor-id="session-notes">Session notes</h2>
-<section id="future-of-quarto" class="level3">
-<h3 class="anchored" data-anchor-id="future-of-quarto">Future of Quarto</h3>
-<ul>
-<li>Lots new features for <a href="https://quarto.org/docs/dashboards/">quarto dashboards</a></li>
-<li><a href="https://quarto.org/docs/output-formats/typst.html">typst</a> for PDF creation rather than LaTeX
-<ul>
-<li>typst ensures transformation of CSS behind HTML to typst properties than ensures HTML and PDF look exactly similar</li>
-</ul></li>
-</ul>
-</section>
-<section id="webr-shinylive-and-quarto-live" class="level3">
-<h3 class="anchored" data-anchor-id="webr-shinylive-and-quarto-live">webR, shinylive and Quarto live</h3>
-<ul>
-<li><a href="https://webr.r-wasm.org/latest/">webR</a> is a javascript app that allows running of R code directly in browser.</li>
-<li><a href="https://posit-dev.github.io/r-shinylive/">shinylive</a> is an R package that enables way of running Shiny entirely in a browser using webR.
-<ul>
-<li>Embed shinylive in quarto using <a href="https://quarto-ext.github.io/shinylive/">quarto extension</a></li>
-</ul></li>
-<li><a href="https://github.com/r-wasm/quarto-live">Quarto live</a> quarto extension which enables interactive documents and code exercises in quarto documents
-<ul>
-<li>Options of setup blocks, targeted feedback and much more available</li>
-<li>Great way to create educational material</li>
-</ul></li>
-</ul>
-</section>
-<section id="snowflake-and-databricks" class="level3">
-<h3 class="anchored" data-anchor-id="snowflake-and-databricks">Snowflake and databricks</h3>
-<section id="infrastructure-management" class="level4">
-<h4 class="anchored" data-anchor-id="infrastructure-management">Infrastructure management</h4>
-<ul>
-<li><a href="https://posit.co/products/enterprise/workbench/">Posit workbench</a> available in <a href="https://www.snowflake.com/en/">Snowflake</a> marketplace
-<ul>
-<li>Give users access to workbench directly through existing Snowflake infrastructure</li>
-<li>Version of workbench automatically update when new there is new release</li>
-<li>Low maintenance, hands-off approach to give users what they need</li>
-</ul></li>
-</ul>
-<p>Posit will work with other cloud data platforms to provide similar experience in other environments</p>
-</section>
-<section id="data-access" class="level4">
-<h4 class="anchored" data-anchor-id="data-access">Data access</h4>
-<ul>
-<li>New <a href="https://odbc.r-dbi.org/reference/databricks.html"><code>databricks</code></a> and <a href="https://odbc.r-dbi.org/reference/snowflake.html"><code>snowflake</code></a> functions in <code>odbc</code> package for easier connections.</li>
-<li>Users can sign in to databricks or snowflake on Posit workbench, and then workbench will manage credentials on the users behalf.
-<ul>
-<li>No longer have to think about access tokens, passwords - how to manage those, pass them into the connection, etc.</li>
-<li>Works with <code>odbc</code> but also <code>sparklyr</code> and interaction with <code>spark</code> in databricks</li>
-</ul></li>
-</ul>
-</section>
-<section id="authentication-in-apps" class="level4">
-<h4 class="anchored" data-anchor-id="authentication-in-apps">Authentication in apps</h4>
-<p>One solution is to create service account with an access token that runs the app. However, two limitations:</p>
-<ul>
-<li>Users will see data based on permission set of service account.</li>
-<li>With number of apps growing, so is number of service account with tokens that need managing</li>
-</ul>
-<p>New solution: Integrated authetication as described above but in Posit Connect - As a viewer, you log in to fx. databricks, and you will then only be able to see data that you are authorised to see through you permissions on your databricks account.</p>
+<p>Testing testing</p>
 
 
-</section>
-</section>
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -822,4 +692,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/conference_talks/keynotes/01posit_update.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/grid.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

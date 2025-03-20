@@ -1,63 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/workshop.html</loc>
-    <lastmod>2025-03-19T23:47:07.048Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/pkg-dev/cran.html</loc>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/keynotes/03data_science_journey.html</loc>
-    <lastmod>2025-03-19T23:47:07.045Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/pkg-dev/get-started.html</loc>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/keynotes/04duckdb.html</loc>
-    <lastmod>2025-03-19T23:47:07.045Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/prog/obj_prog.html</loc>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/other_talks/quarto_custom.html</loc>
-    <lastmod>2025-03-19T23:47:07.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/other_talks/strenghtening_r_ecosystem.html</loc>
-    <lastmod>2025-03-19T23:47:07.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/other_talks/ai_not_generated.html</loc>
-    <lastmod>2025-03-19T23:47:07.045Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/other_talks/quarto_knowledge_manage.html</loc>
-    <lastmod>2025-03-19T23:47:07.046Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/gggrid.html</loc>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
   <url>
     <loc>https://mathiaslj.github.io/R_notes/index.html</loc>
-    <lastmod>2025-03-19T23:47:07.048Z</lastmod>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/tipsandtricks.html</loc>
-    <lastmod>2025-03-19T23:47:07.046Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/data-wrangling/tidyverse.html</loc>
+    <lastmod>2025-03-20T00:48:11.809Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/other_talks/end_to_end_ds.html</loc>
-    <lastmod>2025-03-19T23:47:07.045Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/data-wrangling/baser.html</loc>
+    <lastmod>2025-03-20T00:48:11.809Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/other_talks/introducing_positron.html</loc>
-    <lastmod>2025-03-19T23:47:07.045Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/grid.html</loc>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/other_talks/quarto_automated.html</loc>
-    <lastmod>2025-03-19T23:47:07.045Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/ggplot2.html</loc>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/keynotes/01posit_update.html</loc>
-    <lastmod>2025-03-19T23:47:07.045Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/prog/func_prog.html</loc>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/keynotes/02AI.html</loc>
-    <lastmod>2025-03-19T23:47:07.045Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/conference_talks/whats_new.html</loc>
-    <lastmod>2025-03-19T23:47:07.046Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/pkg-dev/gh-actions.html</loc>
+    <lastmod>2025-03-20T00:48:11.812Z</lastmod>
   </url>
 </urlset>

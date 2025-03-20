@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>End-To-End Data Science With Real-World Impact – posit::conf(2024)</title>
+<title>Get started – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-55df919acfdb25f89e1b2f971901409c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-3b319470b4edcef0648341312c309106.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,8 +77,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">posit::conf(2024)</span>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Various notes about R</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -87,77 +87,81 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../workshop.html"> 
-<span class="menu-text">Workshop</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-conference-talks" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Conference talks</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-wrangling" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Data wrangling</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-conference-talks">    
-        <li class="dropdown-header">Keynotes</li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-wrangling">    
+        <li class="dropdown-header">Base R</li>
         <li>
-    <a class="dropdown-item" href="../../conference_talks/keynotes/01posit_update.html">
- <span class="dropdown-text">Updates from Posit</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/keynotes/02AI.html">
- <span class="dropdown-text">Practical Tips for using Generative AI in Data Science Workflows</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/keynotes/03data_science_journey.html">
- <span class="dropdown-text">A future of data science</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/keynotes/04duckdb.html">
- <span class="dropdown-text">Data Wrangling [for Python or R] Like a Boss With DuckDB</span></a>
+    <a class="dropdown-item" href="../data-wrangling/baser.html">
+ <span class="dropdown-text">Base R</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">Other talks</li>
+        <li class="dropdown-header">The tidyverse</li>
         <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/ai_not_generated.html">
- <span class="dropdown-text">This Session Was Not Generated By AI</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/end_to_end_ds.html">
- <span class="dropdown-text">End-To-End Data Science With Real-World Impact</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/introducing_positron.html">
- <span class="dropdown-text">Introducing Positron</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/quarto_automated.html">
- <span class="dropdown-text">Automated Reporting With Quarto: Beyond Copy And Paste</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/quarto_custom.html">
- <span class="dropdown-text">Pour Some Glitter On It: Custom Quarto Outputs</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/quarto_knowledge_manage.html">
- <span class="dropdown-text">Quarto for Knowledge Management</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../conference_talks/other_talks/strenghtening_r_ecosystem.html">
- <span class="dropdown-text">Strengthening the R ecosystem</span></a>
+    <a class="dropdown-item" href="../data-wrangling/tidyverse.html">
+ <span class="dropdown-text">The <code>tidyverse</code></span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-takeaways" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Takeaways</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-plotting" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Plotting</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-takeaways">    
-        <li class="dropdown-header">Takeaways</li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-plotting">    
+        <li class="dropdown-header">grid - The building block of <code>ggplot2</code></li>
         <li>
-    <a class="dropdown-item" href="../../conference_talks/whats_new.html">
- <span class="dropdown-text">What’s new</span></a>
+    <a class="dropdown-item" href="../plotting/grid.html">
+ <span class="dropdown-text"><code>grid</code> - Creating any graphical object (grob)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../conference_talks/tipsandtricks.html">
- <span class="dropdown-text">Miscellaneous tips and tricks learnt from conference</span></a>
+    <a class="dropdown-item" href="../plotting/gggrid.html">
+ <span class="dropdown-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">ggplot2</li>
+        <li>
+    <a class="dropdown-item" href="../plotting/ggplot2.html">
+ <span class="dropdown-text"><code>ggplot2</code></span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-package-development" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Package development</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-package-development">    
+        <li class="dropdown-header">Creating a package</li>
+        <li>
+    <a class="dropdown-item" href="../pkg-dev/get-started.html">
+ <span class="dropdown-text">Get started</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pkg-dev/gh-actions.html">
+ <span class="dropdown-text">GitHub actions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../pkg-dev/cran.html">
+ <span class="dropdown-text">Submitting to CRAN</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-programming-in-r" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Programming in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-programming-in-r">    
+        <li class="dropdown-header">Functional programming</li>
+        <li>
+    <a class="dropdown-item" href="../prog/func_prog.html">
+ <span class="dropdown-text">Functional programming</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Object-oriented programming</li>
+        <li>
+    <a class="dropdown-item" href="../prog/obj_prog.html">
+ <span class="dropdown-text">Object-oriented programming</span></a>
   </li>  
     </ul>
   </li>
@@ -180,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">End-To-End Data Science With Real-World Impact</h1>
+          <h1 class="quarto-secondary-nav-title">Get started</h1>
         </a>     
     </div>
   </nav>
@@ -193,88 +197,29 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Keynotes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Creating a package</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/keynotes/01posit_update.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Updates from Posit</span></a>
+  <a href="../pkg-dev/get-started.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Get started</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/keynotes/02AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Practical Tips for using Generative AI in Data Science Workflows</span></a>
+  <a href="../pkg-dev/gh-actions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GitHub actions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/keynotes/03data_science_journey.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A future of data science</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/keynotes/04duckdb.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Wrangling [for Python or R] Like a Boss With DuckDB</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Other talks</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/ai_not_generated.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">This Session Was Not Generated By AI</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/end_to_end_ds.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">End-To-End Data Science With Real-World Impact</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/introducing_positron.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introducing Positron</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/quarto_automated.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Automated Reporting With Quarto: Beyond Copy And Paste</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/quarto_custom.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pour Some Glitter On It: Custom Quarto Outputs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/quarto_knowledge_manage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quarto for Knowledge Management</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../conference_talks/other_talks/strenghtening_r_ecosystem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Strengthening the R ecosystem</span></a>
+  <a href="../pkg-dev/cran.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Submitting to CRAN</span></a>
   </div>
 </li>
       </ul>
@@ -289,35 +234,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#modernizing-the-data-science-toolkit-of-a-40-year-old-market-research-company" id="toc-modernizing-the-data-science-toolkit-of-a-40-year-old-market-research-company" class="nav-link active" data-scroll-target="#modernizing-the-data-science-toolkit-of-a-40-year-old-market-research-company">Modernizing the Data Science Toolkit of a 40-year-old Market Research Company</a>
-  <ul class="collapse">
-  <li><a href="#session-description" id="toc-session-description" class="nav-link" data-scroll-target="#session-description">Session description</a></li>
-  <li><a href="#session-notes" id="toc-session-notes" class="nav-link" data-scroll-target="#session-notes">Session notes</a></li>
-  </ul></li>
-  <li><a href="#building-scalable-data-pipelines-through-r-and-global-health-information-systems-api" id="toc-building-scalable-data-pipelines-through-r-and-global-health-information-systems-api" class="nav-link" data-scroll-target="#building-scalable-data-pipelines-through-r-and-global-health-information-systems-api">Building Scalable Data Pipelines through R and Global Health Information Systems’ API</a>
-  <ul class="collapse">
-  <li><a href="#session-description-1" id="toc-session-description-1" class="nav-link" data-scroll-target="#session-description-1">Session description</a></li>
-  <li><a href="#session-notes-1" id="toc-session-notes-1" class="nav-link" data-scroll-target="#session-notes-1">Session notes</a></li>
-  </ul></li>
-  <li><a href="#sec:TARS" id="toc-sec:TARS" class="nav-link" data-scroll-target="#sec\:TARS">Shiny in Action: Transforming Film Production with TARS</a>
-  <ul class="collapse">
-  <li><a href="#session-description-2" id="toc-session-description-2" class="nav-link" data-scroll-target="#session-description-2">Session description</a></li>
-  <li><a href="#session-notes-2" id="toc-session-notes-2" class="nav-link" data-scroll-target="#session-notes-2">Session notes</a></li>
-  </ul></li>
-  <li><a href="#computing-and-recommending-company-wide-employee-training-pair-decisions-at-scale-via-an-ai-matching-and-administrative-workflow-platform" id="toc-computing-and-recommending-company-wide-employee-training-pair-decisions-at-scale-via-an-ai-matching-and-administrative-workflow-platform" class="nav-link" data-scroll-target="#computing-and-recommending-company-wide-employee-training-pair-decisions-at-scale-via-an-ai-matching-and-administrative-workflow-platform">Computing and Recommending Company-Wide Employee Training Pair Decisions at Scale via an AI Matching and Administrative Workflow Platform</a>
-  <ul class="collapse">
-  <li><a href="#session-description-3" id="toc-session-description-3" class="nav-link" data-scroll-target="#session-description-3">Session description</a></li>
-  <li><a href="#session-notes-3" id="toc-session-notes-3" class="nav-link" data-scroll-target="#session-notes-3">Session notes</a></li>
-  </ul></li>
+  <li><a href="#setting-up-a-repository-with-github-pages-using-usethis" id="toc-setting-up-a-repository-with-github-pages-using-usethis" class="nav-link active" data-scroll-target="#setting-up-a-repository-with-github-pages-using-usethis">Setting up a repository with GitHub pages using <code>usethis</code></a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/conference_talks/other_talks/end_to_end_ds.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/pkg-dev/get-started.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">End-To-End Data Science With Real-World Impact</h1>
+<h1 class="title d-none d-lg-block">Get started</h1>
 </div>
 
 
@@ -334,83 +260,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="https://reg.conf.posit.co/flow/posit/positconf24/publiccatalog/page/publiccatalog/session/1711986881929001eEbl">Link to video</a></p>
-<section id="modernizing-the-data-science-toolkit-of-a-40-year-old-market-research-company" class="level2">
-<h2 class="anchored" data-anchor-id="modernizing-the-data-science-toolkit-of-a-40-year-old-market-research-company">Modernizing the Data Science Toolkit of a 40-year-old Market Research Company</h2>
-<section id="session-description" class="level3">
-<h3 class="anchored" data-anchor-id="session-description">Session description</h3>
-<p><em>This presentation outlines the efforts undertaken by the Decision Sciences and Innovation (DSI; which focuses on statistical consulting and end-to-end quantitative analysis) team at KS&amp;R to modernize their data science toolkit over the past year. The main goals were to foster collaboration, improve our legacy codebase, and deliver high-quality data products. Key topics covered include teamwide adoption of version control and GitHub, building and deploying internal R packages, Quarto-based documentation, and strategies for gaining buy-in across teams and leadership. Attendees can expect practical insights and tools for instigating change in their own organizations.</em></p>
-</section>
-<section id="session-notes" class="level3">
-<h3 class="anchored" data-anchor-id="session-notes">Session notes</h3>
-<ul>
-<li>Implemented version control and GitHub across the team to improve collaboration and code management.</li>
-<li>Developed and deployed internal R packages for streamlined and standardized analysis processes.</li>
-<li>Transitioned to Quarto for comprehensive documentation, improving clarity and accessibility of information.</li>
-</ul>
-</section>
-</section>
-<section id="building-scalable-data-pipelines-through-r-and-global-health-information-systems-api" class="level2">
-<h2 class="anchored" data-anchor-id="building-scalable-data-pipelines-through-r-and-global-health-information-systems-api">Building Scalable Data Pipelines through R and Global Health Information Systems’ API</h2>
-<section id="session-description-1" class="level3">
-<h3 class="anchored" data-anchor-id="session-description-1">Session description</h3>
-<p><em>Efficient and scalable analytics workflows are critical for an adaptive and data-driven organization. How can we scale systems to support an office charged with implementing USAID’s $6 billion HIV/AIDS program? Our team leveraged R and global health APIs to build more efficient workflows through automation by developing custom R packages to access health program data. Our investment in creating an automated data infrastructure, with flexible, open-source tools like R, enabled us to build reproducible workflows for analysts in over 50 partner countries. We would like to share our experience in a federal agency integrating APIs with R to develop scalable data pipelines, as inspiration for organizations facing similar resource &amp; data challenges.</em></p>
-</section>
-<section id="session-notes-1" class="level3">
-<h3 class="anchored" data-anchor-id="session-notes-1">Session notes</h3>
-<p><strong>Essence of talk:</strong> Use APIs as much as possible - to get data (fx. from google forms into google sheets directly), create folders, etc.</p>
-<ul>
-<li>Use <a href="https://httr2.r-lib.org/">httr2</a> for HTTP requests</li>
-<li><a href="https://usaid-oha-si.r-universe.dev/packages">Internally used packages</a> that were developed in process of streamlining processes
-<ul>
-<li>Generic tools like <a href="https://usaid-oha-si.r-universe.dev/grabr">grabr</a> and <a href="https://usaid-oha-si.r-universe.dev/glamr">GLAMR</a></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="sec:TARS" class="level2">
-<h2 class="anchored" data-anchor-id="sec:TARS">Shiny in Action: Transforming Film Production with TARS</h2>
-<section id="session-description-2" class="level3">
-<h3 class="anchored" data-anchor-id="session-description-2">Session description</h3>
-<p><em>Behind every ‘Lights! Camera! Action!’ is a complex choreography of 20+ departments, complicated by the manual creation of 50+ weekly or monthly reports over each production’s 2-3 year span. Our R/Shiny app (“TARS”) streamlines communication and coordination of this process via data integrations, interactive UIs, customizable notifications and reports. This presentation will unpack the layers of our app’s functionality, spotlighting Shiny and R’s pivotal roles in modernizing the business of film production, data confidentiality, and inter-departmental synergy. Developers will learn about methodologies for enhancing data flow, security measures, and custom notifications, offering inspiration for navigating similar challenges.</em></p>
-</section>
-<section id="session-notes-2" class="level3">
-<h3 class="anchored" data-anchor-id="session-notes-2">Session notes</h3>
-<p><strong>Essence of talk:</strong> Shiny CAN deliver production tools on a large scale</p>
-<p><em>Case:</em> Major US film studio that manually creates large reports - wants to be able to easily create more specialised/targeted reports with a single pathway to update any film data and access reports to ensure a <em>single source of truth</em>.</p>
-<p>See demo of app at 54:12.</p>
-<section id="tars" class="level4">
-<h4 class="anchored" data-anchor-id="tars">TARS</h4>
-<ul>
-<li>Single source of all film data</li>
-<li>Automated (scheduled) report generator
-<ul>
-<li>Using typst</li>
-</ul></li>
-<li>Access rights controller
-<ul>
-<li>Only shows relevant data to user</li>
-</ul></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="computing-and-recommending-company-wide-employee-training-pair-decisions-at-scale-via-an-ai-matching-and-administrative-workflow-platform" class="level2">
-<h2 class="anchored" data-anchor-id="computing-and-recommending-company-wide-employee-training-pair-decisions-at-scale-via-an-ai-matching-and-administrative-workflow-platform">Computing and Recommending Company-Wide Employee Training Pair Decisions at Scale via an AI Matching and Administrative Workflow Platform</h2>
-<section id="session-description-3" class="level3">
-<h3 class="anchored" data-anchor-id="session-description-3">Session description</h3>
-<p><em>Regis A. James developed an innovative tool that automates at-scale generation of high-quality mentor/mentee matches at Regeneron. Built using R, Python, LLMs, shiny, MySQL, Neo4j, JavaScript, CSS, HTML, and bash, it transforms months of manual collaborative work into days. The reticulate, bs4dash, DT, plumber API, dbplyr, and neo4r packages were particularly helpful in enabling its full-stack data science. The patent-pending expert recommendation engine of the AI tool has been successfully used for training a 400-member data science community of practice, and also for larger career development mentoring cohorts for thousands of employees across the company, demonstrating its practical value and potential for wider application.</em></p>
-</section>
-<section id="session-notes-3" class="level3">
-<h3 class="anchored" data-anchor-id="session-notes-3">Session notes</h3>
-<p>All about data driven decision making - see this <a href="https://www.youtube.com/watch?v=-R3t00EGlkM">R in Pharma 2021 keynote by Regis</a></p>
-<section id="magnetron-mentoring-and-growing-next-generation-talent-at-regeneron-oline" class="level4">
-<h4 class="anchored" data-anchor-id="magnetron-mentoring-and-growing-next-generation-talent-at-regeneron-oline">MAGNETRON (Mentoring And Growing NExt-generation Talent at Regeneron OLine)</h4>
-<p>As mentioned in session description is AI tool used to match mentor/mentee pairs. See video for many details.</p>
+<p>A package should use git and be hosted on a remote repository. Below we describe how to use GitHub.</p>
+<section id="setting-up-a-repository-with-github-pages-using-usethis" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-a-repository-with-github-pages-using-usethis">Setting up a repository with GitHub pages using <code>usethis</code></h2>
+<ol type="1">
+<li><code>use_git()</code></li>
+<li><code>use_github()</code></li>
+<li><code>use_description()</code></li>
+<li><code>use_github_action(...)</code></li>
+<li><code>use_github_pages()</code></li>
+</ol>
+<p>See more in page about GH actions.</p>
 
 
-</section>
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -836,4 +698,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/conference_talks/other_talks/end_to_end_ds.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/pkg-dev/get-started.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
