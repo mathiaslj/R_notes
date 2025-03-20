@@ -1,0 +1,12 @@
+---
+title: "Combining `grid` and `ggplot2`"
+---
+
+See the overall summary with reference to code in specific questions in my [lab2 answer in STATS 787 at UoA](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary)
+
+# Reference
+
+- [The `grid` Graphics System](https://www.stat.auckland.ac.nz/~paul/stats787/2025/Topics/grid.html) by Paul Murrell for an overview and readings.
+- [Slides from lecture](https://www.stat.auckland.ac.nz/~paul/stats787/2025/Slides/grid-slides.html#/)
+  - Notice transparency look of picture on slide 22
+  - Use of `mask` in slides 24-25 and 26-27

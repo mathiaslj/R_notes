@@ -1,7 +1,0 @@
----
-title: "Combining `grid` and `ggplot2`"
----
-
-## "Manual" combination
-
-## `gggrid`

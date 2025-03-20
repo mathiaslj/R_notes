@@ -38,8 +38,7 @@ website:
       contents:
         - section: "grid - The building block of `ggplot2`"
           contents:
-            - plotting/grid.qmd
-            - plotting/gggrid.qmd
+            - plotting/grid-and-gggrid.qmd
         - section: "ggplot2"
           contents:
             - plotting/ggplot2.qmd
