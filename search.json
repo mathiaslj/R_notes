@@ -44,11 +44,11 @@
     ]
   },
   {
-    "objectID": "plotting/gggrid.html#gggrid",
-    "href": "plotting/gggrid.html#gggrid",
+    "objectID": "plotting/grid-and-gggrid.html",
+    "href": "plotting/grid-and-gggrid.html",
     "title": "Combining grid and ggplot2",
-    "section": "gggrid",
-    "text": "gggrid",
+    "section": "",
+    "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA\n\nReference\n\nThe grid Graphics System by Paul Murrell for an overview and readings.\nSlides from lecture\n\nNotice transparency look of picture on slide 22\nUse of mask in slides 24-25 and 26-27\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "grid - The building block of `ggplot2`",
       "Combining `grid` and `ggplot2`"
@@ -102,11 +102,7 @@
     "href": "plotting/grid.html",
     "title": "grid - Creating any graphical object (grob)",
     "section": "",
-    "text": "Testing testing\n\n\n\n Back to top",
-    "crumbs": [
-      "grid - The building block of `ggplot2`",
-      "`grid` - Creating any graphical object (grob)"
-    ]
+    "text": "The grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs).\n\nUsing viewports\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree).\nSee example of use of\n\n\n\n\n Back to top"
   },
   {
     "objectID": "plotting/ggplot2.html",
