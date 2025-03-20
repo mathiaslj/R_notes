@@ -1,0 +1,5 @@
+---
+title: "Object-oriented programming"
+---
+
+As intro, see [Object-oriented programming in Advanced R](https://adv-r.hadley.nz/oo.html).

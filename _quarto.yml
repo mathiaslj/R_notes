@@ -4,43 +4,66 @@ project:
   # post-render: "Rendering done!"
 
 website:
-  title: "posit::conf(2024)"
+  title: "Various notes about R"
   repo-url: https://github.com/mathiaslj/R_notes
   repo-actions: [source]
   back-to-top-navigation: true
   bread-crumbs: false
   navbar:
     left:
-      - href: workshop.qmd
-        text: Workshop
-      - sidebar:conference_talks
-      - sidebar:takeaways
+      - sidebar:data-wrangling
+      - sidebar:plotting
+      - sidebar:pkg-dev
+      - sidebar:prog
     right: 
       - icon: github
         href: https://github.com/mathiaslj/R_notes
       
   sidebar: 
-    - id: takeaways
-      title: Takeaways
+    - id: data-wrangling
+      title: Data wrangling
       style: "docked"
       collapse-level: 1
       contents:
-        - section: "Takeaways"
+        - section: "Base R"
           contents:
-            - conference_talks/whats_new.qmd
-            - conference_talks/tipsandtricks.qmd
-            
-    - id: conference_talks
-      title: Conference talks
+            - data-wrangling/baser.qmd
+        - section: "The tidyverse"
+          contents:
+            - data-wrangling/tidyverse.qmd
+    - id: plotting
+      title: Plotting
+      style: "docked"
+      collapse-level: 1
+      contents:
+        - section: "grid - The building block of `ggplot2`"
+          contents:
+            - plotting/grid.qmd
+            - plotting/gggrid.qmd
+        - section: "ggplot2"
+          contents:
+            - plotting/ggplot2.qmd
+    - id: pkg-dev
+      title: Package development
+      style: "docked"
+      collapse-level: 1
+      contents:
+        - section: "Creating a package"
+          contents:
+            - pkg-dev/get-started.qmd
+            - pkg-dev/gh-actions.qmd
+            - pkg-dev/cran.qmd
+    - id: prog
+      title: Programming in R
       style: "docked"
       collapse-level: 1
       contents: 
-        - section: "Keynotes"
+        - section: "Functional programming"
           contents:
-            - auto: "conference_talks/keynotes/*.qmd"
-        - section: "Other talks"
+            - prog/func_prog.qmd
+        - section: "Object-oriented programming"
           contents:
-            - auto: "conference_talks/other_talks/*.qmd"
+            - prog/obj_prog.qmd
         
 format:
   html:

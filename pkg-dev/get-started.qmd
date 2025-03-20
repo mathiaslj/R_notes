@@ -1,0 +1,15 @@
+---
+title: "Get started"
+---
+
+A package should use git and be hosted on a remote repository. Below we describe how to use GitHub.
+
+## Setting up a repository with GitHub pages using `usethis`
+
+1. `use_git()`
+1. `use_github()`
+1. `use_description()`
+1. `use_github_action(...)`
+1. `use_github_pages()`
+
+See more in page about GH actions.

@@ -1,0 +1,5 @@
+---
+title: "Functional programming"
+---
+
+As intro, see [Functional programming in Advanced R](https://adv-r.hadley.nz/fp.html).

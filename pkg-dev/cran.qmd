@@ -1,0 +1,5 @@
+---
+title: "Submitting to CRAN"
+---
+
+See nice guides in [Chapter 22 of r-pkgs book](https://r-pkgs.org/release.html) and [r consortiums CRAN submission cookbook](https://r-consortium.org/posts/user-friendly-technical-cookbook-style-cran-guide-for-new-r-programmers-ready/).

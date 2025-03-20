@@ -1,7 +1,26 @@
 ---
-title: "posit::conf(2024) conference notes"
+title: "Miscellaneous notes about R added as I stumble upon it"
 ---
 
-This Quarto website is home to private notes from workshop and attended conference talks. The [Takeaways](conference_talks/whats_new.qmd) tab tries to condense the most relevant information into points to more easily gain an overview of what I learnt from the entire conference experience.
+This Quarto website is home to private notes about everything R.
 
-[Link to conference portal](https://reg.conf.posit.co/flow/posit/positconf24/reg/login) with session information and videos (only accessible with a valid login)
+Misc links:
+
+## Learning R
+
+- [Learn the tidyverse](https://www.tidyverse.org/learn/)
+- [Statistical Inference via Data Science: A ModernDive into R and the Tidyverse](https://www.tidymodels.org/books/moderndive/)
+
+### Advanced
+
+- [Advanced R](https://adv-r.hadley.nz/)
+  - [Solutions](https://advanced-r-solutions.rbind.io/)
+- [The art of R programming](https://diytranscriptomics.com/Reading/files/The%20Art%20of%20R%20Programming.pdf)
+- [Rstudio education - expert pathway](https://education.rstudio.com/learn/expert/)
+
+## Organisations
+
+- [R consortium (working groups)](https://www.r-consortium.org/all-projects/isc-working-groups)
+- [ROpenSci](https://ropensci.org/)
+
+To be continued...
