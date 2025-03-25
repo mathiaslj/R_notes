@@ -36,11 +36,12 @@ website:
       style: "docked"
       collapse-level: 1
       contents:
-        - section: "grid - The building block of `ggplot2`"
+        - section: Principles of Effective Data Visualisation
+          contents:
+            - plotting/edv.qmd
+        - section: "Creating plots"
           contents:
             - plotting/grid-and-gggrid.qmd
-        - section: "ggplot2"
-          contents:
             - plotting/ggplot2.qmd
     - id: pkg-dev
       title: Package development

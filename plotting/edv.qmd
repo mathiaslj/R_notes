@@ -1,0 +1,95 @@
+---
+title: "Effective Data Visualisation"
+---
+
+# Concepts from [sections 1.1 and 1.2](https://socviz.co/lookatdata.html#why-look-at-data) of *“Data Visualization: A practical introduction”* by Kieran Healey.
+
+- **Aesthetic:** Ugly or inconsistent design choices
+- **Substantive:** It's not about making stuff look pretty but making sure to present data in the most informative way.
+  - In many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.
+- **Perceptual:** In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at. 
+  - Fx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.
+- **Data-to-ink ratio (concept by Tufte):** Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed
+  - Healey notes that *..., it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it*.
+
+# Concepts from [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) by Claus O. Wilke
+
+## [The principle of proportional ink](https://clauswilke.com/dataviz/proportional-ink.html)
+
+This concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West [2016](https://callingbullshit.org/tools/tools_proportional_ink.html)):
+
+> **The principle of proportional ink:** The sizes of shaded areas in a visualization need to be proportional to the data values they represent.
+
+- Most plots should always include 0 in the y-axis.
+  - Be careful with heights/widths of bars.
+- If values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.
+- On logarithmic axes, bars are a ratio. Make sure to represent correctly.
+  - Consider using points instead of bars.
+
+## Direct Area Visualisations
+
+> *"..., we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area."*
+
+## [Overplotting](https://clauswilke.com/dataviz/overlapping-points.html)
+
+**Issue:** points that overlap.
+
+**Possible fixes:**
+- Transparent points
+- Jitter
+- High density of points: *Use 2D histogram*
+- Contour lines
+
+## [Color pitfalls](https://clauswilke.com/dataviz/color-pitfalls.html)
+
+- Encoding too much or irrelevant information
+  - Too much:
+    - **Quote from reference in title:** *"As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle."*
+    - **Possible solutions**: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)
+  - **Irrelevant:** Do not color without a clear purpose that helps answer a question.
+
+**Tip:** To make sure your figures work for people with *cvd (color-vision-deficiency)*, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator.
+
+### It's not only about color
+
+> *"use color to enhance the visual appearance of the figure without relying entirely on color to convey key information."* [Redundant coding](https://clauswilke.com/dataviz/redundant-coding.html)
+
+- **Scatter plots:** Fx. change the shape of points instead of only color.
+- **Line plots:**
+  - Changing line type often **does not work very well**. 
+  - *"If there is a clear visual ordering in your data, make sure to match it in the legend."*.
+    - Most plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.
+    
+## [Designing figures without legends](https://clauswilke.com/dataviz/redundant-coding.html#designing-figures-without-legends)
+
+> *"Whenever possible, design your figures so they don’t need a legend."*
+
+## [Multi-panel figures](https://clauswilke.com/dataviz/multi-panel-figures.html)
+
+- **Small multiples:** *"Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization."*
+  - Be **very careful** with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.
+- **Coumpound figures:** *"Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets."*
+  - Unlike small multiples, where panels are labelled by variables, labels often need to **be added manually** to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.
+  
+## [Titles, captions and tables](https://clauswilke.com/dataviz/figure-titles-captions.html)
+
+- **Title:** *"Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure."*
+- **Axis and legend titles:**
+  - Axis and legend titles should be informative. 
+    - Display units in parentheses when possible.
+  - Legend label not needed when self explanatory. Fx. when values displayed are "female" and "male", so the variable is obviously sex/gender.
+- **Tables:**
+  - See the 6-item breakdown of table guidelines in [this section](https://clauswilke.com/dataviz/figure-titles-captions.html#tables) from the reference in the title of this section.
+  - Place captions on top (underneath for figures).
+
+# References
+
+## Lecture notes and slides from [STATS 787: Data Visualisation at UoA](https://courseoutline.auckland.ac.nz/dco/course/STATS/787/1213)
+
+- [Lecture 1 (Introduction to Data Visualisation)](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/intro.html)
+  - [Slides](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/intro-slides.html#/)
+- [Lecture 3 (Effective Data Visualisations)](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/effective.html)
+
+## References from inside lecture notes
+
+- **Top tier book!!** [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) by Claus O. Wilke
