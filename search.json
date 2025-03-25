@@ -50,8 +50,140 @@
     "section": "",
     "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA\n\nReference\n\nThe grid Graphics System by Paul Murrell for an overview and readings.\nSlides from lecture\n\nNotice transparency look of picture on slide 22\nUse of mask in slides 24-25 and 26-27\n\n\n\n\n\n\n Back to top",
     "crumbs": [
-      "grid - The building block of `ggplot2`",
+      "Creating plots",
       "Combining `grid` and `ggplot2`"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html",
+    "href": "plotting/edv.html",
+    "title": "Effective Data Visualisation",
+    "section": "",
+    "text": "Aesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#the-principle-of-proportional-ink",
+    "href": "plotting/edv.html#the-principle-of-proportional-ink",
+    "title": "Effective Data Visualisation",
+    "section": "The principle of proportional ink",
+    "text": "The principle of proportional ink\nThis concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#direct-area-visualisations",
+    "href": "plotting/edv.html#direct-area-visualisations",
+    "title": "Effective Data Visualisation",
+    "section": "Direct Area Visualisations",
+    "text": "Direct Area Visualisations\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#overplotting",
+    "href": "plotting/edv.html#overplotting",
+    "title": "Effective Data Visualisation",
+    "section": "Overplotting",
+    "text": "Overplotting\nIssue: points that overlap.\nPossible fixes: - Transparent points - Jitter - High density of points: Use 2D histogram - Contour lines",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#color-pitfalls",
+    "href": "plotting/edv.html#color-pitfalls",
+    "title": "Effective Data Visualisation",
+    "section": "Color pitfalls",
+    "text": "Color pitfalls\n\nEncoding too much or irrelevant information\n\nToo much:\n\nQuote from reference in title: “As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”\nPossible solutions: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)\n\nIrrelevant: Do not color without a clear purpose that helps answer a question.\n\n\nTip: To make sure your figures work for people with cvd (color-vision-deficiency), don’t just rely on specific color scales. Instead, test your figures in a cvd simulator.\n\nIt’s not only about color\n\n“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.” Redundant coding\n\n\nScatter plots: Fx. change the shape of points instead of only color.\nLine plots:\n\nChanging line type often does not work very well.\n“If there is a clear visual ordering in your data, make sure to match it in the legend.”.\n\nMost plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#designing-figures-without-legends",
+    "href": "plotting/edv.html#designing-figures-without-legends",
+    "title": "Effective Data Visualisation",
+    "section": "Designing figures without legends",
+    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#multi-panel-figures",
+    "href": "plotting/edv.html#multi-panel-figures",
+    "title": "Effective Data Visualisation",
+    "section": "Multi-panel figures",
+    "text": "Multi-panel figures\n\nSmall multiples: “Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization.”\n\nBe very careful with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.\n\nCoumpound figures: “Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets.”\n\nUnlike small multiples, where panels are labelled by variables, labels often need to be added manually to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#titles-captions-and-tables",
+    "href": "plotting/edv.html#titles-captions-and-tables",
+    "title": "Effective Data Visualisation",
+    "section": "Titles, captions and tables",
+    "text": "Titles, captions and tables\n\nTitle: “Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”\nAxis and legend titles:\n\nAxis and legend titles should be informative.\n\nDisplay units in parentheses when possible.\n\nLegend label not needed when self explanatory. Fx. when values displayed are “female” and “male”, so the variable is obviously sex/gender.\n\nTables:\n\nSee the 6-item breakdown of table guidelines in this section from the reference in the title of this section.\nPlace captions on top (underneath for figures).",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
+    "href": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
+    "title": "Effective Data Visualisation",
+    "section": "Lecture notes and slides from STATS 787: Data Visualisation at UoA",
+    "text": "Lecture notes and slides from STATS 787: Data Visualisation at UoA\n\nLecture 1 (Introduction to Data Visualisation)\n\nSlides\n\nLecture 3 (Effective Data Visualisations)",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#references-from-inside-lecture-notes",
+    "href": "plotting/edv.html#references-from-inside-lecture-notes",
+    "title": "Effective Data Visualisation",
+    "section": "References from inside lecture notes",
+    "text": "References from inside lecture notes\n\nTop tier book!! Fundamentals of Data Visualization by Claus O. Wilke",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "data-wrangling/baser.html",
+    "href": "data-wrangling/baser.html",
+    "title": "Base R",
+    "section": "",
+    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
+    "crumbs": [
+      "Base R",
+      "Base R"
+    ]
+  },
+  {
+    "objectID": "data-wrangling/tidyverse.html",
+    "href": "data-wrangling/tidyverse.html",
+    "title": "The tidyverse",
+    "section": "",
+    "text": "Test\n\n\n\n Back to top",
+    "crumbs": [
+      "The tidyverse",
+      "The `tidyverse`"
     ]
   },
   {
@@ -76,28 +208,6 @@
     "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
   },
   {
-    "objectID": "data-wrangling/tidyverse.html",
-    "href": "data-wrangling/tidyverse.html",
-    "title": "The tidyverse",
-    "section": "",
-    "text": "Test\n\n\n\n Back to top",
-    "crumbs": [
-      "The tidyverse",
-      "The `tidyverse`"
-    ]
-  },
-  {
-    "objectID": "data-wrangling/baser.html",
-    "href": "data-wrangling/baser.html",
-    "title": "Base R",
-    "section": "",
-    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
-    "crumbs": [
-      "Base R",
-      "Base R"
-    ]
-  },
-  {
     "objectID": "plotting/grid.html",
     "href": "plotting/grid.html",
     "title": "grid - Creating any graphical object (grob)",
@@ -111,7 +221,7 @@
     "section": "",
     "text": "Something something\n\n\n\n Back to top",
     "crumbs": [
-      "ggplot2",
+      "Creating plots",
       "`ggplot2`"
     ]
   },

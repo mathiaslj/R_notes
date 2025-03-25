@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>grid - Creating any graphical object (grob) – Various notes about R</title>
+<title>Effective Data Visualisation – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -178,26 +178,101 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Effective Data Visualisation</h1>
+        </a>     
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Principles of Effective Data Visualisation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/edv.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Effective Data Visualisation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Creating plots</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/ggplot2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>ggplot2</code></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#using-viewports" id="toc-using-viewports" class="nav-link active" data-scroll-target="#using-viewports">Using viewports</a></li>
+  <li><a href="#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." id="toc-concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." class="nav-link active" data-scroll-target="#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.">Concepts from sections 1.1 and 1.2 of <em>“Data Visualization: A practical introduction”</em> by Kieran Healey.</a></li>
+  <li><a href="#concepts-from-fundamentals-of-data-visualization-by-claus-o.-wilke" id="toc-concepts-from-fundamentals-of-data-visualization-by-claus-o.-wilke" class="nav-link" data-scroll-target="#concepts-from-fundamentals-of-data-visualization-by-claus-o.-wilke">Concepts from Fundamentals of Data Visualization by Claus O. Wilke</a>
+  <ul class="collapse">
+  <li><a href="#the-principle-of-proportional-ink" id="toc-the-principle-of-proportional-ink" class="nav-link" data-scroll-target="#the-principle-of-proportional-ink">The principle of proportional ink</a></li>
+  <li><a href="#direct-area-visualisations" id="toc-direct-area-visualisations" class="nav-link" data-scroll-target="#direct-area-visualisations">Direct Area Visualisations</a></li>
+  <li><a href="#overplotting" id="toc-overplotting" class="nav-link" data-scroll-target="#overplotting">Overplotting</a></li>
+  <li><a href="#color-pitfalls" id="toc-color-pitfalls" class="nav-link" data-scroll-target="#color-pitfalls">Color pitfalls</a>
+  <ul class="collapse">
+  <li><a href="#its-not-only-about-color" id="toc-its-not-only-about-color" class="nav-link" data-scroll-target="#its-not-only-about-color">It’s not only about color</a></li>
+  </ul></li>
+  <li><a href="#designing-figures-without-legends" id="toc-designing-figures-without-legends" class="nav-link" data-scroll-target="#designing-figures-without-legends">Designing figures without legends</a></li>
+  <li><a href="#multi-panel-figures" id="toc-multi-panel-figures" class="nav-link" data-scroll-target="#multi-panel-figures">Multi-panel figures</a></li>
+  <li><a href="#titles-captions-and-tables" id="toc-titles-captions-and-tables" class="nav-link" data-scroll-target="#titles-captions-and-tables">Titles, captions and tables</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa" id="toc-lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa" class="nav-link" data-scroll-target="#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa">Lecture notes and slides from STATS 787: Data Visualisation at UoA</a></li>
+  <li><a href="#references-from-inside-lecture-notes" id="toc-references-from-inside-lecture-notes" class="nav-link" data-scroll-target="#references-from-inside-lecture-notes">References from inside lecture notes</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/grid.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/edv.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><code>grid</code> - Creating any graphical object (grob)</h1>
+<h1 class="title d-none d-lg-block">Effective Data Visualisation</h1>
 </div>
 
 
@@ -214,13 +289,146 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The <code>grid</code> package allows total customisation in creating <em>grobs</em> (graphical objects). They can either be drawn directly using <code>grid::grid.xx</code> functions or created as grobs with <code>grid::xxGrob</code> functions to be drawn later (with <code>grid::grid.draw</code>). This enables us to gather different grobs in a <em>grob tree</em> with <code>grid::gTree</code> and specifying grobs with a <code>grid::gList</code> as the <code>children</code> argument (alternatively use <code>grid::grobTree</code> when all components are grobs).</p>
-<section id="using-viewports" class="level3">
-<h3 class="anchored" data-anchor-id="using-viewports">Using viewports</h3>
-<p>We can use <code>grid::viewport</code> with <code>grid::pushViewport</code> to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with <code>grid::upViewport</code> (<code>grid::popViewport</code> navigates to parent viewport AND deletes the current viewport from the viewport tree).</p>
-<p>See example of use of</p>
+<section id="concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." class="level1">
+<h1>Concepts from <a href="https://socviz.co/lookatdata.html#why-look-at-data">sections 1.1 and 1.2</a> of <em>“Data Visualization: A practical introduction”</em> by Kieran Healey.</h1>
+<ul>
+<li><strong>Aesthetic:</strong> Ugly or inconsistent design choices</li>
+<li><strong>Substantive:</strong> It’s not about making stuff look pretty but making sure to present data in the most informative way.
+<ul>
+<li>In many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.</li>
+</ul></li>
+<li><strong>Perceptual:</strong> In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.
+<ul>
+<li>Fx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.</li>
+</ul></li>
+<li><strong>Data-to-ink ratio (concept by Tufte):</strong> Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed
+<ul>
+<li>Healey notes that <em>…, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it</em>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="concepts-from-fundamentals-of-data-visualization-by-claus-o.-wilke" class="level1">
+<h1>Concepts from <a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a> by Claus O. Wilke</h1>
+<section id="the-principle-of-proportional-ink" class="level2">
+<h2 class="anchored" data-anchor-id="the-principle-of-proportional-ink"><a href="https://clauswilke.com/dataviz/proportional-ink.html">The principle of proportional ink</a></h2>
+<p>This concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West <a href="https://callingbullshit.org/tools/tools_proportional_ink.html">2016</a>):</p>
+<blockquote class="blockquote">
+<p><strong>The principle of proportional ink:</strong> The sizes of shaded areas in a visualization need to be proportional to the data values they represent.</p>
+</blockquote>
+<ul>
+<li>Most plots should always include 0 in the y-axis.
+<ul>
+<li>Be careful with heights/widths of bars.</li>
+</ul></li>
+<li>If values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.</li>
+<li>On logarithmic axes, bars are a ratio. Make sure to represent correctly.
+<ul>
+<li>Consider using points instead of bars.</li>
+</ul></li>
+</ul>
+</section>
+<section id="direct-area-visualisations" class="level2">
+<h2 class="anchored" data-anchor-id="direct-area-visualisations">Direct Area Visualisations</h2>
+<blockquote class="blockquote">
+<p><em>“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”</em></p>
+</blockquote>
+</section>
+<section id="overplotting" class="level2">
+<h2 class="anchored" data-anchor-id="overplotting"><a href="https://clauswilke.com/dataviz/overlapping-points.html">Overplotting</a></h2>
+<p><strong>Issue:</strong> points that overlap.</p>
+<p><strong>Possible fixes:</strong> - Transparent points - Jitter - High density of points: <em>Use 2D histogram</em> - Contour lines</p>
+</section>
+<section id="color-pitfalls" class="level2">
+<h2 class="anchored" data-anchor-id="color-pitfalls"><a href="https://clauswilke.com/dataviz/color-pitfalls.html">Color pitfalls</a></h2>
+<ul>
+<li>Encoding too much or irrelevant information
+<ul>
+<li>Too much:
+<ul>
+<li><strong>Quote from reference in title:</strong> <em>“As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”</em></li>
+<li><strong>Possible solutions</strong>: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)</li>
+</ul></li>
+<li><strong>Irrelevant:</strong> Do not color without a clear purpose that helps answer a question.</li>
+</ul></li>
+</ul>
+<p><strong>Tip:</strong> To make sure your figures work for people with <em>cvd (color-vision-deficiency)</em>, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator.</p>
+<section id="its-not-only-about-color" class="level3">
+<h3 class="anchored" data-anchor-id="its-not-only-about-color">It’s not only about color</h3>
+<blockquote class="blockquote">
+<p><em>“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”</em> <a href="https://clauswilke.com/dataviz/redundant-coding.html">Redundant coding</a></p>
+</blockquote>
+<ul>
+<li><strong>Scatter plots:</strong> Fx. change the shape of points instead of only color.</li>
+<li><strong>Line plots:</strong>
+<ul>
+<li>Changing line type often <strong>does not work very well</strong>.</li>
+<li><em>“If there is a clear visual ordering in your data, make sure to match it in the legend.”</em>.
+<ul>
+<li>Most plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="designing-figures-without-legends" class="level2">
+<h2 class="anchored" data-anchor-id="designing-figures-without-legends"><a href="https://clauswilke.com/dataviz/redundant-coding.html#designing-figures-without-legends">Designing figures without legends</a></h2>
+<blockquote class="blockquote">
+<p><em>“Whenever possible, design your figures so they don’t need a legend.”</em></p>
+</blockquote>
+</section>
+<section id="multi-panel-figures" class="level2">
+<h2 class="anchored" data-anchor-id="multi-panel-figures"><a href="https://clauswilke.com/dataviz/multi-panel-figures.html">Multi-panel figures</a></h2>
+<ul>
+<li><strong>Small multiples:</strong> <em>“Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization.”</em>
+<ul>
+<li>Be <strong>very careful</strong> with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.</li>
+</ul></li>
+<li><strong>Coumpound figures:</strong> <em>“Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets.”</em>
+<ul>
+<li>Unlike small multiples, where panels are labelled by variables, labels often need to <strong>be added manually</strong> to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.</li>
+</ul></li>
+</ul>
+</section>
+<section id="titles-captions-and-tables" class="level2">
+<h2 class="anchored" data-anchor-id="titles-captions-and-tables"><a href="https://clauswilke.com/dataviz/figure-titles-captions.html">Titles, captions and tables</a></h2>
+<ul>
+<li><strong>Title:</strong> <em>“Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”</em></li>
+<li><strong>Axis and legend titles:</strong>
+<ul>
+<li>Axis and legend titles should be informative.
+<ul>
+<li>Display units in parentheses when possible.</li>
+</ul></li>
+<li>Legend label not needed when self explanatory. Fx. when values displayed are “female” and “male”, so the variable is obviously sex/gender.</li>
+</ul></li>
+<li><strong>Tables:</strong>
+<ul>
+<li>See the 6-item breakdown of table guidelines in <a href="https://clauswilke.com/dataviz/figure-titles-captions.html#tables">this section</a> from the reference in the title of this section.</li>
+<li>Place captions on top (underneath for figures).</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<section id="lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa">Lecture notes and slides from <a href="https://courseoutline.auckland.ac.nz/dco/course/STATS/787/1213">STATS 787: Data Visualisation at UoA</a></h2>
+<ul>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/intro.html">Lecture 1 (Introduction to Data Visualisation)</a>
+<ul>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/intro-slides.html#/">Slides</a></li>
+</ul></li>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/effective.html">Lecture 3 (Effective Data Visualisations)</a></li>
+</ul>
+</section>
+<section id="references-from-inside-lecture-notes" class="level2">
+<h2 class="anchored" data-anchor-id="references-from-inside-lecture-notes">References from inside lecture notes</h2>
+<ul>
+<li><strong>Top tier book!!</strong> <a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a> by Claus O. Wilke</li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -646,4 +854,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/grid.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/edv.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
