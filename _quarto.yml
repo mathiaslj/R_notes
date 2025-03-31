@@ -36,11 +36,12 @@ website:
       style: "docked"
       collapse-level: 1
       contents:
-        - section: Principles of Effective Data Visualisation
+        - section: "Principles of Effective Data Visualisation"
           contents:
             - plotting/edv.qmd
         - section: "Creating plots"
           contents:
+            - plotting/colors-in-R.qmd
             - plotting/grid-and-gggrid.qmd
             - plotting/ggplot2.qmd
     - id: pkg-dev

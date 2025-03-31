@@ -1,0 +1,18 @@
+---
+title: "Colors in R"
+format: html
+---
+
+# References
+
+- ["Selecting colours in R"](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Colour/colour-notes.html)
+  - Various R functions to generate colors
+- The [Colorspace](https://colorspace.r-forge.r-project.org/index.html) R package
+  - "A Toolbox for Manipulating and Assessing Colors and Palettes"
+- [“Coloring in R’s Blind Spot”](https://arxiv.org/abs/2303.04918)  by Achim Zeileis and Paul Murrell
+  - A walkthrough of new R color and palette functions introduced with R version 4.0.0
+
+**Practical advice on how to use colors most "efficiently" in your plots**
+
+- Section [Color Pitfalls](edv.qmd#sec-colorpitfalls)
+- Chapters [4](https://clauswilke.com/dataviz/color-basics.html) and [19](https://clauswilke.com/dataviz/color-pitfalls.html) of “Fundamentals of Data Visualization” by Claus O. Wilke.
