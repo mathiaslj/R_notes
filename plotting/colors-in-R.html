@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Combining grid and ggplot2 – Various notes about R</title>
+<title>Colors in R – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -188,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Combining <code>grid</code> and <code>ggplot2</code></h1>
+          <h1 class="quarto-secondary-nav-title">Colors in R</h1>
         </a>     
     </div>
   </nav>
@@ -227,13 +227,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plotting/colors-in-R.html" class="sidebar-item-text sidebar-link">
+  <a href="../plotting/colors-in-R.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Colors in R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link active">
+  <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
   </div>
 </li>
@@ -255,16 +255,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link active" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/grid-and-gggrid.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/colors-in-R.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Combining <code>grid</code> and <code>ggplot2</code></h1>
+<h1 class="title d-none d-lg-block">Colors in R</h1>
 </div>
 
 
@@ -281,16 +281,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>See the overall summary with reference to code in specific questions in my <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary">lab2 answer in STATS 787 at UoA</a></p>
-<section id="reference" class="level1">
-<h1>Reference</h1>
+<section id="references" class="level1">
+<h1>References</h1>
 <ul>
-<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/2025/Topics/grid.html">The <code>grid</code> Graphics System</a> by Paul Murrell for an overview and readings.</li>
-<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/2025/Slides/grid-slides.html#/">Slides from lecture</a>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Colour/colour-notes.html">“Selecting colours in R”</a>
 <ul>
-<li>Notice transparency look of picture on slide 22</li>
-<li>Use of <code>mask</code> in slides 24-25 and 26-27</li>
+<li>Various R functions to generate colors</li>
 </ul></li>
+<li>The <a href="https://colorspace.r-forge.r-project.org/index.html">Colorspace</a> R package
+<ul>
+<li>“A Toolbox for Manipulating and Assessing Colors and Palettes”</li>
+</ul></li>
+<li><a href="https://arxiv.org/abs/2303.04918">“Coloring in R’s Blind Spot”</a> by Achim Zeileis and Paul Murrell
+<ul>
+<li>A walkthrough of new R color and palette functions introduced with R version 4.0.0</li>
+</ul></li>
+</ul>
+<p><strong>Practical advice on how to use colors most “efficiently” in your plots</strong></p>
+<ul>
+<li>Section <a href="../plotting/edv.html#sec-colorpitfalls">Color Pitfalls</a></li>
+<li>Chapters <a href="https://clauswilke.com/dataviz/color-basics.html">4</a> and <a href="https://clauswilke.com/dataviz/color-pitfalls.html">19</a> of “Fundamentals of Data Visualization” by Claus O. Wilke.</li>
 </ul>
 
 
@@ -719,4 +729,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/grid-and-gggrid.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/colors-in-R.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

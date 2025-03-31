@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -117,6 +151,10 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Creating plots</li>
+        <li>
+    <a class="dropdown-item" href="../plotting/colors-in-R.html">
+ <span class="dropdown-text">Colors in R</span></a>
+  </li>  
         <li>
     <a class="dropdown-item" href="../plotting/grid-and-gggrid.html">
  <span class="dropdown-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
@@ -223,6 +261,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../plotting/colors-in-R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Colors in R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
   </div>
@@ -251,13 +295,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-principle-of-proportional-ink" id="toc-the-principle-of-proportional-ink" class="nav-link" data-scroll-target="#the-principle-of-proportional-ink">The principle of proportional ink</a></li>
   <li><a href="#direct-area-visualisations" id="toc-direct-area-visualisations" class="nav-link" data-scroll-target="#direct-area-visualisations">Direct Area Visualisations</a></li>
   <li><a href="#overplotting" id="toc-overplotting" class="nav-link" data-scroll-target="#overplotting">Overplotting</a></li>
-  <li><a href="#color-pitfalls" id="toc-color-pitfalls" class="nav-link" data-scroll-target="#color-pitfalls">Color pitfalls</a>
+  <li><a href="#sec-colorpitfalls" id="toc-sec-colorpitfalls" class="nav-link" data-scroll-target="#sec-colorpitfalls">Color pitfalls</a>
   <ul class="collapse">
   <li><a href="#its-not-only-about-color" id="toc-its-not-only-about-color" class="nav-link" data-scroll-target="#its-not-only-about-color">It’s not only about color</a></li>
   </ul></li>
   <li><a href="#designing-figures-without-legends" id="toc-designing-figures-without-legends" class="nav-link" data-scroll-target="#designing-figures-without-legends">Designing figures without legends</a></li>
   <li><a href="#multi-panel-figures" id="toc-multi-panel-figures" class="nav-link" data-scroll-target="#multi-panel-figures">Multi-panel figures</a></li>
   <li><a href="#titles-captions-and-tables" id="toc-titles-captions-and-tables" class="nav-link" data-scroll-target="#titles-captions-and-tables">Titles, captions and tables</a></li>
+  <li><a href="#gestault-rules" id="toc-gestault-rules" class="nav-link" data-scroll-target="#gestault-rules">Gestault rules</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
   <ul class="collapse">
@@ -332,14 +377,16 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><em>“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”</em></p>
 </blockquote>
+<p>Functions to change the scale of point sizes (when using <code>aes(size = xx)</code> in a <code>geom_point</code> fx.): - <code>ggplot2::scale_radius</code> can be used to scale based on radius rather than area since. - <code>ggplot2::scale_size_area</code> can be used to make sure ratio of sizes is equal to ratio of data values.</p>
+<p><strong>Note!</strong> Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.</p>
 </section>
 <section id="overplotting" class="level2">
 <h2 class="anchored" data-anchor-id="overplotting"><a href="https://clauswilke.com/dataviz/overlapping-points.html">Overplotting</a></h2>
 <p><strong>Issue:</strong> points that overlap.</p>
-<p><strong>Possible fixes:</strong> - Transparent points - Jitter - High density of points: <em>Use 2D histogram</em> - Contour lines</p>
+<p><strong>Possible fixes:</strong> - Transparent points - Jitter - High density of points: <em>Use 2D histogram</em> - See <code>ggplot2::geom_bin2d</code> and <code>ggplot2::geom_hex</code> (hexagons are more “correct”) - See also <code>smoothScatter</code> in the base <code>graphics</code> package, whic makes a 2D kernel density estimate but also shows points “on the edge”. - Contour lines - See <code>ggplot2::geom_density2d</code> or <code>ggplot2::geom_density2d_filled</code> - Be wary of <code>ggplot2::geom_density2d</code> not showing the entire range of data</p>
 </section>
-<section id="color-pitfalls" class="level2">
-<h2 class="anchored" data-anchor-id="color-pitfalls"><a href="https://clauswilke.com/dataviz/color-pitfalls.html">Color pitfalls</a></h2>
+<section id="sec-colorpitfalls" class="level2">
+<h2 class="anchored" data-anchor-id="sec-colorpitfalls"><a href="https://clauswilke.com/dataviz/color-pitfalls.html">Color pitfalls</a></h2>
 <ul>
 <li>Encoding too much or irrelevant information
 <ul>
@@ -351,11 +398,12 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Irrelevant:</strong> Do not color without a clear purpose that helps answer a question.</li>
 </ul></li>
 </ul>
-<p><strong>Tip:</strong> To make sure your figures work for people with <em>cvd (color-vision-deficiency)</em>, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator.</p>
+<p><strong>Tip:</strong> To make sure your figures work for people with <em>cvd (color-vision-deficiency)</em>, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator - See <a href="https://colorspace.r-forge.r-project.org/reference/simulate_cvd.html"><code>colorspace::deutan</code></a></p>
 <section id="its-not-only-about-color" class="level3">
 <h3 class="anchored" data-anchor-id="its-not-only-about-color">It’s not only about color</h3>
+<p><a href="https://clauswilke.com/dataviz/redundant-coding.html">Redundant coding</a> in essence means we do more than one aesthetic mapping to a single variable. Wilke fx. recommends:</p>
 <blockquote class="blockquote">
-<p><em>“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”</em> <a href="https://clauswilke.com/dataviz/redundant-coding.html">Redundant coding</a></p>
+<p><em>“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”</em></p>
 </blockquote>
 <ul>
 <li><strong>Scatter plots:</strong> Fx. change the shape of points instead of only color.</li>
@@ -375,6 +423,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><em>“Whenever possible, design your figures so they don’t need a legend.”</em></p>
 </blockquote>
+<p>See packages: - <code>ggforce</code> which has <code>geom</code>s that take <code>label</code> as an aesthetic mapping - <code>directlabels</code></p>
 </section>
 <section id="multi-panel-figures" class="level2">
 <h2 class="anchored" data-anchor-id="multi-panel-figures"><a href="https://clauswilke.com/dataviz/multi-panel-figures.html">Multi-panel figures</a></h2>
@@ -392,7 +441,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="titles-captions-and-tables" class="level2">
 <h2 class="anchored" data-anchor-id="titles-captions-and-tables"><a href="https://clauswilke.com/dataviz/figure-titles-captions.html">Titles, captions and tables</a></h2>
 <ul>
-<li><strong>Title:</strong> <em>“Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”</em></li>
+<li><strong>Title:</strong> <em>“Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”</em>
+<ul>
+<li>Use <code>title</code>, <code>subtitle</code> and <code>caption</code> in <code>labs</code>.</li>
+</ul></li>
 <li><strong>Axis and legend titles:</strong>
 <ul>
 <li>Axis and legend titles should be informative.
@@ -407,6 +459,17 @@ ul.task-list li input[type="checkbox"] {
 <li>Place captions on top (underneath for figures).</li>
 </ul></li>
 </ul>
+<p><strong>Tip:</strong> Use <code>expression</code>s to make LaTeX rendered text. Fx. write</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Engine displacment ("</span>, <span class="st">"in"</span><span class="sc">^</span><span class="dv">3</span>, <span class="st">")"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>to render the exponent.</p>
+</section>
+<section id="gestault-rules" class="level2">
+<h2 class="anchored" data-anchor-id="gestault-rules"><a href="https://socviz.co/lookatdata.html#gestalt-rules">Gestault rules</a></h2>
+<blockquote class="blockquote">
+<p><em>“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“</em></p>
+</blockquote>
 </section>
 </section>
 <section id="references" class="level1">
@@ -418,7 +481,11 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/intro-slides.html#/">Slides</a></li>
 </ul></li>
-<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/effective.html">Lecture 3 (Effective Data Visualisations)</a></li>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/effective.html">Lecture 4 (Effective Data Visualisations)</a>
+<ul>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/effective-slides.html#/">Slides</a></li>
+</ul></li>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/perception.html">Lecture 5 (Visual Perception)</a></li>
 </ul>
 </section>
 <section id="references-from-inside-lecture-notes" class="level2">

@@ -44,14 +44,64 @@
     ]
   },
   {
-    "objectID": "plotting/grid-and-gggrid.html",
-    "href": "plotting/grid-and-gggrid.html",
-    "title": "Combining grid and ggplot2",
+    "objectID": "plotting/colors-in-R.html",
+    "href": "plotting/colors-in-R.html",
+    "title": "Colors in R",
     "section": "",
-    "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA\n\nReference\n\nThe grid Graphics System by Paul Murrell for an overview and readings.\nSlides from lecture\n\nNotice transparency look of picture on slide 22\nUse of mask in slides 24-25 and 26-27\n\n\n\n\n\n\n Back to top",
+    "text": "References\n\n“Selecting colours in R”\n\nVarious R functions to generate colors\n\nThe Colorspace R package\n\n“A Toolbox for Manipulating and Assessing Colors and Palettes”\n\n“Coloring in R’s Blind Spot” by Achim Zeileis and Paul Murrell\n\nA walkthrough of new R color and palette functions introduced with R version 4.0.0\n\n\nPractical advice on how to use colors most “efficiently” in your plots\n\nSection Color Pitfalls\nChapters 4 and 19 of “Fundamentals of Data Visualization” by Claus O. Wilke.\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Creating plots",
-      "Combining `grid` and `ggplot2`"
+      "Colors in R"
+    ]
+  },
+  {
+    "objectID": "plotting/grid.html",
+    "href": "plotting/grid.html",
+    "title": "grid - Creating any graphical object (grob)",
+    "section": "",
+    "text": "The grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs).\n\nUsing viewports\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree).\nSee example of use of\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "",
+    "text": "This Quarto website is home to private notes about everything R.\nMisc links:"
+  },
+  {
+    "objectID": "index.html#learning-r",
+    "href": "index.html#learning-r",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "Learning R",
+    "text": "Learning R\n\nLearn the tidyverse\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse\n\n\nAdvanced\n\nAdvanced R\n\nSolutions\n\nThe art of R programming\nRstudio education - expert pathway"
+  },
+  {
+    "objectID": "index.html#organisations",
+    "href": "index.html#organisations",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "Organisations",
+    "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
+  },
+  {
+    "objectID": "data-wrangling/tidyverse.html",
+    "href": "data-wrangling/tidyverse.html",
+    "title": "The tidyverse",
+    "section": "",
+    "text": "Test\n\n\n\n Back to top",
+    "crumbs": [
+      "The tidyverse",
+      "The `tidyverse`"
+    ]
+  },
+  {
+    "objectID": "data-wrangling/baser.html",
+    "href": "data-wrangling/baser.html",
+    "title": "Base R",
+    "section": "",
+    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
+    "crumbs": [
+      "Base R",
+      "Base R"
     ]
   },
   {
@@ -81,7 +131,7 @@
     "href": "plotting/edv.html#direct-area-visualisations",
     "title": "Effective Data Visualisation",
     "section": "Direct Area Visualisations",
-    "text": "Direct Area Visualisations\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”",
+    "text": "Direct Area Visualisations\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.): - ggplot2::scale_radius can be used to scale based on radius rather than area since. - ggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
@@ -92,18 +142,18 @@
     "href": "plotting/edv.html#overplotting",
     "title": "Effective Data Visualisation",
     "section": "Overplotting",
-    "text": "Overplotting\nIssue: points that overlap.\nPossible fixes: - Transparent points - Jitter - High density of points: Use 2D histogram - Contour lines",
+    "text": "Overplotting\nIssue: points that overlap.\nPossible fixes: - Transparent points - Jitter - High density of points: Use 2D histogram - See ggplot2::geom_bin2d and ggplot2::geom_hex (hexagons are more “correct”) - See also smoothScatter in the base graphics package, whic makes a 2D kernel density estimate but also shows points “on the edge”. - Contour lines - See ggplot2::geom_density2d or ggplot2::geom_density2d_filled - Be wary of ggplot2::geom_density2d not showing the entire range of data",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
     ]
   },
   {
-    "objectID": "plotting/edv.html#color-pitfalls",
-    "href": "plotting/edv.html#color-pitfalls",
+    "objectID": "plotting/edv.html#sec-colorpitfalls",
+    "href": "plotting/edv.html#sec-colorpitfalls",
     "title": "Effective Data Visualisation",
     "section": "Color pitfalls",
-    "text": "Color pitfalls\n\nEncoding too much or irrelevant information\n\nToo much:\n\nQuote from reference in title: “As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”\nPossible solutions: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)\n\nIrrelevant: Do not color without a clear purpose that helps answer a question.\n\n\nTip: To make sure your figures work for people with cvd (color-vision-deficiency), don’t just rely on specific color scales. Instead, test your figures in a cvd simulator.\n\nIt’s not only about color\n\n“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.” Redundant coding\n\n\nScatter plots: Fx. change the shape of points instead of only color.\nLine plots:\n\nChanging line type often does not work very well.\n“If there is a clear visual ordering in your data, make sure to match it in the legend.”.\n\nMost plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.",
+    "text": "Color pitfalls\n\nEncoding too much or irrelevant information\n\nToo much:\n\nQuote from reference in title: “As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”\nPossible solutions: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)\n\nIrrelevant: Do not color without a clear purpose that helps answer a question.\n\n\nTip: To make sure your figures work for people with cvd (color-vision-deficiency), don’t just rely on specific color scales. Instead, test your figures in a cvd simulator - See colorspace::deutan\n\nIt’s not only about color\nRedundant coding in essence means we do more than one aesthetic mapping to a single variable. Wilke fx. recommends:\n\n“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”\n\n\nScatter plots: Fx. change the shape of points instead of only color.\nLine plots:\n\nChanging line type often does not work very well.\n“If there is a clear visual ordering in your data, make sure to match it in the legend.”.\n\nMost plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
@@ -114,7 +164,7 @@
     "href": "plotting/edv.html#designing-figures-without-legends",
     "title": "Effective Data Visualisation",
     "section": "Designing figures without legends",
-    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”",
+    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”\n\nSee packages: - ggforce which has geoms that take label as an aesthetic mapping - directlabels",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
@@ -136,7 +186,18 @@
     "href": "plotting/edv.html#titles-captions-and-tables",
     "title": "Effective Data Visualisation",
     "section": "Titles, captions and tables",
-    "text": "Titles, captions and tables\n\nTitle: “Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”\nAxis and legend titles:\n\nAxis and legend titles should be informative.\n\nDisplay units in parentheses when possible.\n\nLegend label not needed when self explanatory. Fx. when values displayed are “female” and “male”, so the variable is obviously sex/gender.\n\nTables:\n\nSee the 6-item breakdown of table guidelines in this section from the reference in the title of this section.\nPlace captions on top (underneath for figures).",
+    "text": "Titles, captions and tables\n\nTitle: “Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”\n\nUse title, subtitle and caption in labs.\n\nAxis and legend titles:\n\nAxis and legend titles should be informative.\n\nDisplay units in parentheses when possible.\n\nLegend label not needed when self explanatory. Fx. when values displayed are “female” and “male”, so the variable is obviously sex/gender.\n\nTables:\n\nSee the 6-item breakdown of table guidelines in this section from the reference in the title of this section.\nPlace captions on top (underneath for figures).\n\n\nTip: Use expressions to make LaTeX rendered text. Fx. write\n\nlabs(x = expression(paste(\"Engine displacment (\", \"in\"^3, \")\")))\n\nto render the exponent.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#gestault-rules",
+    "href": "plotting/edv.html#gestault-rules",
+    "title": "Effective Data Visualisation",
+    "section": "Gestault rules",
+    "text": "Gestault rules\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
@@ -147,7 +208,7 @@
     "href": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
     "title": "Effective Data Visualisation",
     "section": "Lecture notes and slides from STATS 787: Data Visualisation at UoA",
-    "text": "Lecture notes and slides from STATS 787: Data Visualisation at UoA\n\nLecture 1 (Introduction to Data Visualisation)\n\nSlides\n\nLecture 3 (Effective Data Visualisations)",
+    "text": "Lecture notes and slides from STATS 787: Data Visualisation at UoA\n\nLecture 1 (Introduction to Data Visualisation)\n\nSlides\n\nLecture 4 (Effective Data Visualisations)\n\nSlides\n\nLecture 5 (Visual Perception)",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
@@ -165,54 +226,15 @@
     ]
   },
   {
-    "objectID": "data-wrangling/baser.html",
-    "href": "data-wrangling/baser.html",
-    "title": "Base R",
+    "objectID": "plotting/grid-and-gggrid.html",
+    "href": "plotting/grid-and-gggrid.html",
+    "title": "Combining grid and ggplot2",
     "section": "",
-    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
+    "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA\n\nReference\n\nThe grid Graphics System by Paul Murrell for an overview and readings.\nSlides from lecture\n\nNotice transparency look of picture on slide 22\nUse of mask in slides 24-25 and 26-27\n\n\n\n\n\n\n Back to top",
     "crumbs": [
-      "Base R",
-      "Base R"
+      "Creating plots",
+      "Combining `grid` and `ggplot2`"
     ]
-  },
-  {
-    "objectID": "data-wrangling/tidyverse.html",
-    "href": "data-wrangling/tidyverse.html",
-    "title": "The tidyverse",
-    "section": "",
-    "text": "Test\n\n\n\n Back to top",
-    "crumbs": [
-      "The tidyverse",
-      "The `tidyverse`"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "",
-    "text": "This Quarto website is home to private notes about everything R.\nMisc links:"
-  },
-  {
-    "objectID": "index.html#learning-r",
-    "href": "index.html#learning-r",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "Learning R",
-    "text": "Learning R\n\nLearn the tidyverse\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse\n\n\nAdvanced\n\nAdvanced R\n\nSolutions\n\nThe art of R programming\nRstudio education - expert pathway"
-  },
-  {
-    "objectID": "index.html#organisations",
-    "href": "index.html#organisations",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "Organisations",
-    "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
-  },
-  {
-    "objectID": "plotting/grid.html",
-    "href": "plotting/grid.html",
-    "title": "grid - Creating any graphical object (grob)",
-    "section": "",
-    "text": "The grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs).\n\nUsing viewports\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree).\nSee example of use of\n\n\n\n\n Back to top"
   },
   {
     "objectID": "plotting/ggplot2.html",
