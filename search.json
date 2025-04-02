@@ -107,144 +107,144 @@
   {
     "objectID": "plotting/edv.html",
     "href": "plotting/edv.html",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "",
     "text": "Aesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.",
     "href": "plotting/edv.html#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "",
     "text": "Aesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#the-principle-of-proportional-ink",
     "href": "plotting/edv.html#the-principle-of-proportional-ink",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "The principle of proportional ink",
     "text": "The principle of proportional ink\nThis concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#direct-area-visualisations",
     "href": "plotting/edv.html#direct-area-visualisations",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Direct Area Visualisations",
     "text": "Direct Area Visualisations\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.): - ggplot2::scale_radius can be used to scale based on radius rather than area since. - ggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#overplotting",
     "href": "plotting/edv.html#overplotting",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Overplotting",
     "text": "Overplotting\nIssue: points that overlap.\nPossible fixes: - Transparent points - Jitter - High density of points: Use 2D histogram - See ggplot2::geom_bin2d and ggplot2::geom_hex (hexagons are more “correct”) - See also smoothScatter in the base graphics package, whic makes a 2D kernel density estimate but also shows points “on the edge”. - Contour lines - See ggplot2::geom_density2d or ggplot2::geom_density2d_filled - Be wary of ggplot2::geom_density2d not showing the entire range of data",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#sec-colorpitfalls",
     "href": "plotting/edv.html#sec-colorpitfalls",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Color pitfalls",
     "text": "Color pitfalls\n\nEncoding too much or irrelevant information\n\nToo much:\n\nQuote from reference in title: “As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”\nPossible solutions: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)\n\nIrrelevant: Do not color without a clear purpose that helps answer a question.\n\n\n\nColor vision deficiency\nTip: To make sure your figures work for people with cvd (color-vision-deficiency), don’t just rely on specific color scales. Instead, test your figures in a cvd simulator - See colorspace::deutan\n\n\nColor contrasts\nWe judge color relative to other colors, so colors might appear darker or lighter than they are depending on surrounding colors. See fx. section 1.3.1 from Kieran Healy.\n\n\nColor “scales”\nSee slide 11.\nWorks for categorical variables:\n\nhue: Different colors\n\nWorks for numerical variables:\n\nMake sure to keep hue constant while changing these.\n\n\nchroma: How “saturated” the color is. White, grey, black have no chroma.\nluminance: Darkness/brightness of color. On scale we go from white to black.\n\n\n\nIt’s not only about color\nRedundant coding in essence means we do more than one aesthetic mapping to a single variable. Wilke fx. recommends:\n\n“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”\n\n\nScatter plots: Fx. change the shape of points instead of only color.\nLine plots:\n\nChanging line type often does not work very well.\n“If there is a clear visual ordering in your data, make sure to match it in the legend.”.\n\nMost plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#designing-figures-without-legends",
     "href": "plotting/edv.html#designing-figures-without-legends",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Designing figures without legends",
     "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”\n\nSee packages: - ggforce which has geoms that take label as an aesthetic mapping - directlabels",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#multi-panel-figures",
     "href": "plotting/edv.html#multi-panel-figures",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Multi-panel figures",
     "text": "Multi-panel figures\n\nSmall multiples: “Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization.”\n\nBe very careful with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.\n\nCoumpound figures: “Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets.”\n\nUnlike small multiples, where panels are labelled by variables, labels often need to be added manually to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#titles-captions-and-tables",
     "href": "plotting/edv.html#titles-captions-and-tables",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Titles, captions and tables",
     "text": "Titles, captions and tables\n\nTitle: “Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”\n\nUse title, subtitle and caption in labs.\n\nAxis and legend titles:\n\nAxis and legend titles should be informative.\n\nDisplay units in parentheses when possible.\n\nLegend label not needed when self explanatory. Fx. when values displayed are “female” and “male”, so the variable is obviously sex/gender.\n\nTables:\n\nSee the 6-item breakdown of table guidelines in this section from the reference in the title of this section.\nPlace captions on top (underneath for figures).\n\n\nTip: Use expressions to make LaTeX rendered text. Fx. write\n\nlabs(x = expression(paste(\"Engine displacment (\", \"in\"^3, \")\")))\n\nto render the exponent.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#gestault-rules",
     "href": "plotting/edv.html#gestault-rules",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Gestault rules",
     "text": "Gestault rules\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#channels",
     "href": "plotting/edv.html#channels",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Channels",
     "text": "Channels\nChannels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference.\nOrder of “best” channels, where “best” means that randomly asked people can best decode the value of data from a visualisation.\n\nPosition\nLength\nAngle\nArea\nColor\nShape\nTexture (fx. hashing areas)\n\nUsually just a worse choice than color",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
     "href": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "Lecture notes and slides from STATS 787: Data Visualisation at UoA",
     "text": "Lecture notes and slides from STATS 787: Data Visualisation at UoA\n\nLecture 1 (Introduction to Data Visualisation)\n\nSlides\n\nLecture 4 (Effective Data Visualisations)\n\nSlides\n\nLecture 5 (Visual Perception)\n\nSlides",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
     "objectID": "plotting/edv.html#references-from-inside-lecture-notes",
     "href": "plotting/edv.html#references-from-inside-lecture-notes",
-    "title": "Effective Data Visualisation",
+    "title": "Effective Data Visualisation and Visual Perception",
     "section": "References from inside lecture notes",
-    "text": "References from inside lecture notes\n\nTop tier book!! Fundamentals of Data Visualization by Claus O. Wilke",
+    "text": "References from inside lecture notes\n\nTop tier book!! “Fundamentals of Data Visualization” by Claus O. Wilke\n“Data Visualization: A practical introduction” by Kieran Healey.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation"
+      "Effective Data Visualisation and Visual Perception"
     ]
   },
   {

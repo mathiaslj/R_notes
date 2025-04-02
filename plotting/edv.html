@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Effective Data Visualisation – Various notes about R</title>
+<title>Effective Data Visualisation and Visual Perception – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="dropdown-header">Principles of Effective Data Visualisation</li>
         <li>
     <a class="dropdown-item" href="../plotting/edv.html">
- <span class="dropdown-text">Effective Data Visualisation</span></a>
+ <span class="dropdown-text">Effective Data Visualisation and Visual Perception</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Creating plots</li>
@@ -222,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Effective Data Visualisation</h1>
+          <h1 class="quarto-secondary-nav-title">Effective Data Visualisation and Visual Perception</h1>
         </a>     
     </div>
   </nav>
@@ -245,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../plotting/edv.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Effective Data Visualisation</span></a>
+ <span class="menu-text">Effective Data Visualisation and Visual Perception</span></a>
   </div>
 </li>
       </ul>
@@ -290,8 +290,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." id="toc-concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." class="nav-link active" data-scroll-target="#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.">Concepts from sections 1.1 and 1.2 of <em>“Data Visualization: A practical introduction”</em> by Kieran Healey.</a></li>
-  <li><a href="#concepts-from-fundamentals-of-data-visualization-by-claus-o.-wilke" id="toc-concepts-from-fundamentals-of-data-visualization-by-claus-o.-wilke" class="nav-link" data-scroll-target="#concepts-from-fundamentals-of-data-visualization-by-claus-o.-wilke">Concepts from <em>“Fundamentals of Data Visualization”</em> by Claus O. Wilke</a>
-  <ul class="collapse">
   <li><a href="#the-principle-of-proportional-ink" id="toc-the-principle-of-proportional-ink" class="nav-link" data-scroll-target="#the-principle-of-proportional-ink">The principle of proportional ink</a></li>
   <li><a href="#direct-area-visualisations" id="toc-direct-area-visualisations" class="nav-link" data-scroll-target="#direct-area-visualisations">Direct Area Visualisations</a></li>
   <li><a href="#overplotting" id="toc-overplotting" class="nav-link" data-scroll-target="#overplotting">Overplotting</a></li>
@@ -307,7 +305,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#titles-captions-and-tables" id="toc-titles-captions-and-tables" class="nav-link" data-scroll-target="#titles-captions-and-tables">Titles, captions and tables</a></li>
   <li><a href="#gestault-rules" id="toc-gestault-rules" class="nav-link" data-scroll-target="#gestault-rules">Gestault rules</a></li>
   <li><a href="#channels" id="toc-channels" class="nav-link" data-scroll-target="#channels">Channels</a></li>
-  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
   <ul class="collapse">
   <li><a href="#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa" id="toc-lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa" class="nav-link" data-scroll-target="#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa">Lecture notes and slides from STATS 787: Data Visualisation at UoA</a></li>
@@ -321,7 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Effective Data Visualisation</h1>
+<h1 class="title d-none d-lg-block">Effective Data Visualisation and Visual Perception</h1>
 </div>
 
 
@@ -356,8 +353,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="concepts-from-fundamentals-of-data-visualization-by-claus-o.-wilke" class="level1">
-<h1>Concepts from <em>“<a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a>”</em> by Claus O. Wilke</h1>
 <section id="the-principle-of-proportional-ink" class="level2">
 <h2 class="anchored" data-anchor-id="the-principle-of-proportional-ink"><a href="https://clauswilke.com/dataviz/proportional-ink.html">The principle of proportional ink</a></h2>
 <p>This concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West <a href="https://callingbullshit.org/tools/tools_proportional_ink.html">2016</a>):</p>
@@ -377,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="direct-area-visualisations" class="level2">
-<h2 class="anchored" data-anchor-id="direct-area-visualisations">Direct Area Visualisations</h2>
+<h2 class="anchored" data-anchor-id="direct-area-visualisations"><a href="https://clauswilke.com/dataviz/proportional-ink.html#direct-area-visualizations">Direct Area Visualisations</a></h2>
 <blockquote class="blockquote">
 <p><em>“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”</em></p>
 </blockquote>
@@ -516,7 +511,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-</section>
 <section id="references" class="level1">
 <h1>References</h1>
 <section id="lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa" class="level2">
@@ -539,7 +533,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="references-from-inside-lecture-notes" class="level2">
 <h2 class="anchored" data-anchor-id="references-from-inside-lecture-notes">References from inside lecture notes</h2>
 <ul>
-<li><strong>Top tier book!!</strong> <a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a> by Claus O. Wilke</li>
+<li><strong>Top tier book!!</strong> <em>“<a href="https://clauswilke.com/dataviz/">Fundamentals of Data Visualization</a>”</em> by Claus O. Wilke</li>
+<li><em>“<a href="https://socviz.co/lookatdata.html#why-look-at-data">Data Visualization: A practical introduction</a>”</em> by Kieran Healey.</li>
 </ul>
 
 
