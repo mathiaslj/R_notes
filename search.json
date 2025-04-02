@@ -116,6 +116,17 @@
     ]
   },
   {
+    "objectID": "plotting/edv.html#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.",
+    "href": "plotting/edv.html#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.",
+    "title": "Effective Data Visualisation",
+    "section": "",
+    "text": "Aesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
     "objectID": "plotting/edv.html#the-principle-of-proportional-ink",
     "href": "plotting/edv.html#the-principle-of-proportional-ink",
     "title": "Effective Data Visualisation",
