@@ -1,5 +1,5 @@
 ---
-title: "Effective Data Visualisation"
+title: "Effective Data Visualisation and Visual Perception"
 ---
 
 ## Concepts from [sections 1.1 and 1.2](https://socviz.co/lookatdata.html#why-look-at-data) of *“Data Visualization: A practical introduction”* by Kieran Healey.
@@ -11,8 +11,6 @@ title: "Effective Data Visualisation"
   - Fx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.
 - **Data-to-ink ratio (concept by Tufte):** Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed
   - Healey notes that *..., it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it*.
-
-# Concepts from *"[Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)"* by Claus O. Wilke
 
 ## [The principle of proportional ink](https://clauswilke.com/dataviz/proportional-ink.html)
 
@@ -26,7 +24,7 @@ This concept has been termed by Bergstrom and West as the principle of proportio
 - On logarithmic axes, bars are a ratio. Make sure to represent correctly.
   - Consider using points instead of bars.
 
-## Direct Area Visualisations
+## [Direct Area Visualisations](https://clauswilke.com/dataviz/proportional-ink.html#direct-area-visualizations)
 
 > *"..., we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area."*
 
@@ -163,4 +161,5 @@ Order of "best" channels, where "best" means that randomly asked people can best
 
 ## References from inside lecture notes
 
-- **Top tier book!!** [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) by Claus O. Wilke
+- **Top tier book!!** *"[Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)"* by Claus O. Wilke
+- *"[Data Visualization: A practical introduction](https://socviz.co/lookatdata.html#why-look-at-data)"* by Kieran Healey.
