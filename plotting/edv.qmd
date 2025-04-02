@@ -2,7 +2,7 @@
 title: "Effective Data Visualisation"
 ---
 
-# Concepts from [sections 1.1 and 1.2](https://socviz.co/lookatdata.html#why-look-at-data) of *“Data Visualization: A practical introduction”* by Kieran Healey.
+## Concepts from [sections 1.1 and 1.2](https://socviz.co/lookatdata.html#why-look-at-data) of *“Data Visualization: A practical introduction”* by Kieran Healey.
 
 - **Aesthetic:** Ugly or inconsistent design choices
 - **Substantive:** It's not about making stuff look pretty but making sure to present data in the most informative way.
@@ -12,7 +12,7 @@ title: "Effective Data Visualisation"
 - **Data-to-ink ratio (concept by Tufte):** Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed
   - Healey notes that *..., it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it*.
 
-# Concepts from [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) by Claus O. Wilke
+# Concepts from *"[Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)"* by Claus O. Wilke
 
 ## [The principle of proportional ink](https://clauswilke.com/dataviz/proportional-ink.html)
 
