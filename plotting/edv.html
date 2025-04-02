@@ -297,12 +297,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overplotting" id="toc-overplotting" class="nav-link" data-scroll-target="#overplotting">Overplotting</a></li>
   <li><a href="#sec-colorpitfalls" id="toc-sec-colorpitfalls" class="nav-link" data-scroll-target="#sec-colorpitfalls">Color pitfalls</a>
   <ul class="collapse">
+  <li><a href="#color-vision-deficiency" id="toc-color-vision-deficiency" class="nav-link" data-scroll-target="#color-vision-deficiency">Color vision deficiency</a></li>
+  <li><a href="#color-contrasts" id="toc-color-contrasts" class="nav-link" data-scroll-target="#color-contrasts">Color contrasts</a></li>
+  <li><a href="#color-scales" id="toc-color-scales" class="nav-link" data-scroll-target="#color-scales">Color “scales”</a></li>
   <li><a href="#its-not-only-about-color" id="toc-its-not-only-about-color" class="nav-link" data-scroll-target="#its-not-only-about-color">It’s not only about color</a></li>
   </ul></li>
   <li><a href="#designing-figures-without-legends" id="toc-designing-figures-without-legends" class="nav-link" data-scroll-target="#designing-figures-without-legends">Designing figures without legends</a></li>
   <li><a href="#multi-panel-figures" id="toc-multi-panel-figures" class="nav-link" data-scroll-target="#multi-panel-figures">Multi-panel figures</a></li>
   <li><a href="#titles-captions-and-tables" id="toc-titles-captions-and-tables" class="nav-link" data-scroll-target="#titles-captions-and-tables">Titles, captions and tables</a></li>
   <li><a href="#gestault-rules" id="toc-gestault-rules" class="nav-link" data-scroll-target="#gestault-rules">Gestault rules</a></li>
+  <li><a href="#channels" id="toc-channels" class="nav-link" data-scroll-target="#channels">Channels</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
   <ul class="collapse">
@@ -398,7 +402,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Irrelevant:</strong> Do not color without a clear purpose that helps answer a question.</li>
 </ul></li>
 </ul>
+<section id="color-vision-deficiency" class="level3">
+<h3 class="anchored" data-anchor-id="color-vision-deficiency">Color vision deficiency</h3>
 <p><strong>Tip:</strong> To make sure your figures work for people with <em>cvd (color-vision-deficiency)</em>, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator - See <a href="https://colorspace.r-forge.r-project.org/reference/simulate_cvd.html"><code>colorspace::deutan</code></a></p>
+</section>
+<section id="color-contrasts" class="level3">
+<h3 class="anchored" data-anchor-id="color-contrasts">Color contrasts</h3>
+<p>We judge color relative to other colors, so colors might appear darker or lighter than they are depending on surrounding colors. See fx. <a href="https://socviz.co/lookatdata.html#perception-and-data-visualization">section 1.3.1</a> from Kieran Healy.</p>
+</section>
+<section id="color-scales" class="level3">
+<h3 class="anchored" data-anchor-id="color-scales">Color “scales”</h3>
+<p>See <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/colour">slide 11</a>.</p>
+<p>Works for categorical variables:</p>
+<ul>
+<li><em>hue:</em> Different colors</li>
+</ul>
+<p>Works for numerical variables:</p>
+<blockquote class="blockquote">
+<p>Make sure to keep hue constant while changing these.</p>
+</blockquote>
+<ul>
+<li><em>chroma:</em> How “saturated” the color is. White, grey, black have no chroma.</li>
+<li><em>luminance:</em> Darkness/brightness of color. On scale we go from white to black.</li>
+</ul>
+</section>
 <section id="its-not-only-about-color" class="level3">
 <h3 class="anchored" data-anchor-id="its-not-only-about-color">It’s not only about color</h3>
 <p><a href="https://clauswilke.com/dataviz/redundant-coding.html">Redundant coding</a> in essence means we do more than one aesthetic mapping to a single variable. Wilke fx. recommends:</p>
@@ -468,8 +495,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="gestault-rules" class="level2">
 <h2 class="anchored" data-anchor-id="gestault-rules"><a href="https://socviz.co/lookatdata.html#gestalt-rules">Gestault rules</a></h2>
 <blockquote class="blockquote">
-<p><em>“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“</em></p>
+<p><em>“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“</em>.</p>
 </blockquote>
+<p>See <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/gestalt-rules">slide 10</a> for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.</p>
+</section>
+<section id="channels" class="level2">
+<h2 class="anchored" data-anchor-id="channels">Channels</h2>
+<p><em>Channels</em> are a concept from <a href="https://socviz.co/lookatdata.html#channels-for-representing-data">section 1.5</a> from Kieran Healey. See a list of visual channels in the figures to the right in the reference.</p>
+<p>Order of “best” channels, where “best” means that randomly asked people can best decode the value of data from a visualisation.</p>
+<ul>
+<li>Position</li>
+<li>Length</li>
+<li>Angle</li>
+<li>Area</li>
+<li>Color</li>
+<li>Shape</li>
+<li>Texture (fx. hashing areas)
+<ul>
+<li>Usually just a worse choice than color</li>
+</ul></li>
+</ul>
 </section>
 </section>
 <section id="references" class="level1">
@@ -485,7 +530,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/effective-slides.html#/">Slides</a></li>
 </ul></li>
-<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/perception.html">Lecture 5 (Visual Perception)</a></li>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/perception.html">Lecture 5 (Visual Perception)</a>
+<ul>
+<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/">Slides</a></li>
+</ul></li>
 </ul>
 </section>
 <section id="references-from-inside-lecture-notes" class="level2">

@@ -153,7 +153,7 @@
     "href": "plotting/edv.html#sec-colorpitfalls",
     "title": "Effective Data Visualisation",
     "section": "Color pitfalls",
-    "text": "Color pitfalls\n\nEncoding too much or irrelevant information\n\nToo much:\n\nQuote from reference in title: “As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”\nPossible solutions: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)\n\nIrrelevant: Do not color without a clear purpose that helps answer a question.\n\n\nTip: To make sure your figures work for people with cvd (color-vision-deficiency), don’t just rely on specific color scales. Instead, test your figures in a cvd simulator - See colorspace::deutan\n\nIt’s not only about color\nRedundant coding in essence means we do more than one aesthetic mapping to a single variable. Wilke fx. recommends:\n\n“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”\n\n\nScatter plots: Fx. change the shape of points instead of only color.\nLine plots:\n\nChanging line type often does not work very well.\n“If there is a clear visual ordering in your data, make sure to match it in the legend.”.\n\nMost plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.",
+    "text": "Color pitfalls\n\nEncoding too much or irrelevant information\n\nToo much:\n\nQuote from reference in title: “As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”\nPossible solutions: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)\n\nIrrelevant: Do not color without a clear purpose that helps answer a question.\n\n\n\nColor vision deficiency\nTip: To make sure your figures work for people with cvd (color-vision-deficiency), don’t just rely on specific color scales. Instead, test your figures in a cvd simulator - See colorspace::deutan\n\n\nColor contrasts\nWe judge color relative to other colors, so colors might appear darker or lighter than they are depending on surrounding colors. See fx. section 1.3.1 from Kieran Healy.\n\n\nColor “scales”\nSee slide 11.\nWorks for categorical variables:\n\nhue: Different colors\n\nWorks for numerical variables:\n\nMake sure to keep hue constant while changing these.\n\n\nchroma: How “saturated” the color is. White, grey, black have no chroma.\nluminance: Darkness/brightness of color. On scale we go from white to black.\n\n\n\nIt’s not only about color\nRedundant coding in essence means we do more than one aesthetic mapping to a single variable. Wilke fx. recommends:\n\n“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”\n\n\nScatter plots: Fx. change the shape of points instead of only color.\nLine plots:\n\nChanging line type often does not work very well.\n“If there is a clear visual ordering in your data, make sure to match it in the legend.”.\n\nMost plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
@@ -197,7 +197,18 @@
     "href": "plotting/edv.html#gestault-rules",
     "title": "Effective Data Visualisation",
     "section": "Gestault rules",
-    "text": "Gestault rules\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“",
+    "text": "Gestault rules\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#channels",
+    "href": "plotting/edv.html#channels",
+    "title": "Effective Data Visualisation",
+    "section": "Channels",
+    "text": "Channels\nChannels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference.\nOrder of “best” channels, where “best” means that randomly asked people can best decode the value of data from a visualisation.\n\nPosition\nLength\nAngle\nArea\nColor\nShape\nTexture (fx. hashing areas)\n\nUsually just a worse choice than color",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
@@ -208,7 +219,7 @@
     "href": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
     "title": "Effective Data Visualisation",
     "section": "Lecture notes and slides from STATS 787: Data Visualisation at UoA",
-    "text": "Lecture notes and slides from STATS 787: Data Visualisation at UoA\n\nLecture 1 (Introduction to Data Visualisation)\n\nSlides\n\nLecture 4 (Effective Data Visualisations)\n\nSlides\n\nLecture 5 (Visual Perception)",
+    "text": "Lecture notes and slides from STATS 787: Data Visualisation at UoA\n\nLecture 1 (Introduction to Data Visualisation)\n\nSlides\n\nLecture 4 (Effective Data Visualisations)\n\nSlides\n\nLecture 5 (Visual Perception)\n\nSlides",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation"
