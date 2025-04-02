@@ -58,8 +58,29 @@ Functions to change the scale of point sizes (when using `aes(size = xx)` in a `
     - **Possible solutions**: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)
   - **Irrelevant:** Do not color without a clear purpose that helps answer a question.
 
+### Color vision deficiency
+
 **Tip:** To make sure your figures work for people with *cvd (color-vision-deficiency)*, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator
 - See [`colorspace::deutan`](https://colorspace.r-forge.r-project.org/reference/simulate_cvd.html)
+
+### Color contrasts
+
+We judge color relative to other colors, so colors might appear darker or lighter than they are depending on surrounding colors. See fx. [section 1.3.1](https://socviz.co/lookatdata.html#perception-and-data-visualization) from Kieran Healy.
+
+### Color "scales"
+
+See [slide 11](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/colour).
+
+Works for categorical variables:
+
+- *hue:* Different colors
+
+Works for numerical variables:
+
+> Make sure to keep hue constant while changing these.
+
+- *chroma:* How "saturated" the color is. White, grey, black have no chroma.
+- *luminance:* Darkness/brightness of color. On scale we go from white to black.
 
 ### It's not only about color
 
@@ -109,7 +130,24 @@ to render the exponent.
 
 ## [Gestault rules](https://socviz.co/lookatdata.html#gestalt-rules)
 
-> *"The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects... Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible..."*
+> *"The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects... Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible..."*.
+
+See [slide 10](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/gestalt-rules) for a "ranking" of what rules are dominant over each other and should be used for creating relations between data values.
+
+## Channels
+
+*Channels* are a concept from [section 1.5](https://socviz.co/lookatdata.html#channels-for-representing-data) from Kieran Healey. See a list of visual channels in the figures to the right in the reference.
+
+Order of "best" channels, where "best" means that randomly asked people can best decode the value of data from a visualisation.
+
+- Position
+- Length
+- Angle
+- Area
+- Color
+- Shape
+- Texture (fx. hashing areas)
+  - Usually just a worse choice than color
 
 # References
 
@@ -120,6 +158,7 @@ to render the exponent.
 - [Lecture 4 (Effective Data Visualisations)](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/effective.html)
   - [Slides](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/effective-slides.html#/)
 - [Lecture 5 (Visual Perception)](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/perception.html)
+  - [Slides](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/)
 
 
 ## References from inside lecture notes
