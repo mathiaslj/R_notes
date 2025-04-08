@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,7 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-3b319470b4edcef0648341312c309106.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -376,13 +376,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p><em>“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”</em></p>
 </blockquote>
-<p>Functions to change the scale of point sizes (when using <code>aes(size = xx)</code> in a <code>geom_point</code> fx.): - <code>ggplot2::scale_radius</code> can be used to scale based on radius rather than area since. - <code>ggplot2::scale_size_area</code> can be used to make sure ratio of sizes is equal to ratio of data values.</p>
+<p>Functions to change the scale of point sizes (when using <code>aes(size = xx)</code> in a <code>geom_point</code> fx.):</p>
+<ul>
+<li><code>ggplot2::scale_radius</code> can be used to scale based on radius rather than area since.</li>
+<li><code>ggplot2::scale_size_area</code> can be used to make sure ratio of sizes is equal to ratio of data values.</li>
+</ul>
 <p><strong>Note!</strong> Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.</p>
 </section>
 <section id="overplotting" class="level2">
 <h2 class="anchored" data-anchor-id="overplotting"><a href="https://clauswilke.com/dataviz/overlapping-points.html">Overplotting</a></h2>
 <p><strong>Issue:</strong> points that overlap.</p>
-<p><strong>Possible fixes:</strong> - Transparent points - Jitter - High density of points: <em>Use 2D histogram</em> - See <code>ggplot2::geom_bin2d</code> and <code>ggplot2::geom_hex</code> (hexagons are more “correct”) - See also <code>smoothScatter</code> in the base <code>graphics</code> package, whic makes a 2D kernel density estimate but also shows points “on the edge”. - Contour lines - See <code>ggplot2::geom_density2d</code> or <code>ggplot2::geom_density2d_filled</code> - Be wary of <code>ggplot2::geom_density2d</code> not showing the entire range of data</p>
+<p><strong>Possible fixes:</strong></p>
+<ul>
+<li>Transparent points</li>
+<li>Jitter</li>
+<li>High density of points: <em>Use 2D histogram</em>
+<ul>
+<li>See <code>ggplot2::geom_bin2d</code> and <code>ggplot2::geom_hex</code> (hexagons are more “correct”)</li>
+<li>See also <code>smoothScatter</code> in the base <code>graphics</code> package, whic makes a 2D kernel density estimate but also shows points “on the edge”.</li>
+</ul></li>
+<li>Contour lines
+<ul>
+<li>See <code>ggplot2::geom_density2d</code> or <code>ggplot2::geom_density2d_filled</code>
+<ul>
+<li>Be wary of <code>ggplot2::geom_density2d</code> not showing the entire range of data</li>
+</ul></li>
+</ul></li>
+</ul>
 </section>
 <section id="sec-colorpitfalls" class="level2">
 <h2 class="anchored" data-anchor-id="sec-colorpitfalls"><a href="https://clauswilke.com/dataviz/color-pitfalls.html">Color pitfalls</a></h2>
@@ -399,7 +419,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="color-vision-deficiency" class="level3">
 <h3 class="anchored" data-anchor-id="color-vision-deficiency">Color vision deficiency</h3>
-<p><strong>Tip:</strong> To make sure your figures work for people with <em>cvd (color-vision-deficiency)</em>, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator - See <a href="https://colorspace.r-forge.r-project.org/reference/simulate_cvd.html"><code>colorspace::deutan</code></a></p>
+<p><strong>Tip:</strong> To make sure your figures work for people with <em>cvd (color-vision-deficiency)</em>, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator</p>
+<ul>
+<li>See <a href="https://colorspace.r-forge.r-project.org/reference/simulate_cvd.html"><code>colorspace::deutan</code></a></li>
+</ul>
 </section>
 <section id="color-contrasts" class="level3">
 <h3 class="anchored" data-anchor-id="color-contrasts">Color contrasts</h3>
@@ -445,13 +468,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p><em>“Whenever possible, design your figures so they don’t need a legend.”</em></p>
 </blockquote>
-<p>See packages: - <code>ggforce</code> which has <code>geom</code>s that take <code>label</code> as an aesthetic mapping - <code>directlabels</code></p>
+<p>See packages:</p>
+<ul>
+<li><code>ggforce</code> which has <code>geom</code>s that take <code>label</code> as an aesthetic mapping</li>
+<li><code>directlabels</code></li>
+</ul>
 </section>
 <section id="multi-panel-figures" class="level2">
 <h2 class="anchored" data-anchor-id="multi-panel-figures"><a href="https://clauswilke.com/dataviz/multi-panel-figures.html">Multi-panel figures</a></h2>
 <ul>
 <li><strong>Small multiples:</strong> <em>“Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization.”</em>
 <ul>
+<li>Fx. created by <code>ggplot2::facet_wrap</code> and <code>ggplot2::facet_grid</code></li>
 <li>Be <strong>very careful</strong> with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.</li>
 </ul></li>
 <li><strong>Coumpound figures:</strong> <em>“Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets.”</em>
