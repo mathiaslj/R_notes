@@ -131,7 +131,7 @@ labs(x = expression(paste("Engine displacment (", "in"^3, ")")))
 
 to render the exponent.
 
-## [Gestault rules](https://socviz.co/lookatdata.html#gestalt-rules)
+## [Gestalt rules](https://socviz.co/lookatdata.html#gestalt-rules)
 
 > *"The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects... Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible..."*.
 
@@ -139,18 +139,7 @@ See [slide 10](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/per
 
 ## Channels
 
-*Channels* are a concept from [section 1.5](https://socviz.co/lookatdata.html#channels-for-representing-data) from Kieran Healey. See a list of visual channels in the figures to the right in the reference.
-
-Order of "best" channels, where "best" means that randomly asked people can best decode the value of data from a visualisation.
-
-- Position
-- Length
-- Angle
-- Area
-- Color
-- Shape
-- Texture (fx. hashing areas)
-  - Usually just a worse choice than color
+*Channels* are a concept from [section 1.5](https://socviz.co/lookatdata.html#channels-for-representing-data) from Kieran Healey. See a list of visual channels in the figures to the right in the reference. **NOTE!** that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.
 
 # References
 
