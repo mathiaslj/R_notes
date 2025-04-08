@@ -204,11 +204,11 @@
     ]
   },
   {
-    "objectID": "plotting/edv.html#gestault-rules",
-    "href": "plotting/edv.html#gestault-rules",
+    "objectID": "plotting/edv.html#gestalt-rules",
+    "href": "plotting/edv.html#gestalt-rules",
     "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Gestault rules",
-    "text": "Gestault rules\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.",
+    "section": "Gestalt rules",
+    "text": "Gestalt rules\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation and Visual Perception"
@@ -219,7 +219,7 @@
     "href": "plotting/edv.html#channels",
     "title": "Effective Data Visualisation and Visual Perception",
     "section": "Channels",
-    "text": "Channels\nChannels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference.\nOrder of “best” channels, where “best” means that randomly asked people can best decode the value of data from a visualisation.\n\nPosition\nLength\nAngle\nArea\nColor\nShape\nTexture (fx. hashing areas)\n\nUsually just a worse choice than color",
+    "text": "Channels\nChannels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference. NOTE! that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation and Visual Perception"
