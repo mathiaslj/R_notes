@@ -29,6 +29,7 @@ This concept has been termed by Bergstrom and West as the principle of proportio
 > *"..., we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area."*
 
 Functions to change the scale of point sizes (when using `aes(size = xx)` in a `geom_point` fx.):
+
 - `ggplot2::scale_radius` can be used to scale based on radius rather than area since.
 - `ggplot2::scale_size_area` can be used to make sure ratio of sizes is equal to ratio of data values.
 
@@ -39,6 +40,7 @@ Functions to change the scale of point sizes (when using `aes(size = xx)` in a `
 **Issue:** points that overlap.
 
 **Possible fixes:**
+
 - Transparent points
 - Jitter
 - High density of points: *Use 2D histogram*
@@ -59,6 +61,7 @@ Functions to change the scale of point sizes (when using `aes(size = xx)` in a `
 ### Color vision deficiency
 
 **Tip:** To make sure your figures work for people with *cvd (color-vision-deficiency)*, don’t just rely on specific color scales. Instead, test your figures in a cvd simulator
+
 - See [`colorspace::deutan`](https://colorspace.r-forge.r-project.org/reference/simulate_cvd.html)
 
 ### Color contrasts
@@ -97,12 +100,14 @@ Works for numerical variables:
 > *"Whenever possible, design your figures so they don’t need a legend."*
 
 See packages:
+
 - `ggforce` which has `geom`s that take `label` as an aesthetic mapping
 - `directlabels`
 
 ## [Multi-panel figures](https://clauswilke.com/dataviz/multi-panel-figures.html)
 
 - **Small multiples:** *"Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization."*
+  - Fx. created by `ggplot2::facet_wrap` and `ggplot2::facet_grid`
   - Be **very careful** with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.
 - **Coumpound figures:** *"Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets."*
   - Unlike small multiples, where panels are labelled by variables, labels often need to **be added manually** to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.
