@@ -1,8 +1,12 @@
 ---
-title: "Combining `grid` and `ggplot2`"
+title: "`gggrid`: Combining `grid` and `ggplot2`"
 ---
 
-See the overall summary with reference to code in specific questions in my [lab2 answer in STATS 787 at UoA](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary)
+See the overall summary with reference to code in specific questions in my [lab2 answer in STATS 787 at UoA](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary) as well as many other answers on that website.
+
+## Doing stuff outside a viewport/plot
+
+Use `coord_cartesian(clip = "off")`. See fx. how we use this to [label lines outside the plotting area](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab4_answer.html#challenge-7) in the Challenge of lab 4 in the course data visualisation at UoA.
 
 # Reference
 
