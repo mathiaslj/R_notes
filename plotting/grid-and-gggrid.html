@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Combining grid and ggplot2 – Various notes about R</title>
+<title>gggrid: Combining grid and ggplot2 – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../plotting/grid-and-gggrid.html">
- <span class="dropdown-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
+ <span class="dropdown-text"><code>gggrid</code>: Combining <code>grid</code> and <code>ggplot2</code></span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../plotting/ggplot2.html">
@@ -188,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Combining <code>grid</code> and <code>ggplot2</code></h1>
+          <h1 class="quarto-secondary-nav-title"><code>gggrid</code>: Combining <code>grid</code> and <code>ggplot2</code></h1>
         </a>     
     </div>
   </nav>
@@ -234,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Combining <code>grid</code> and <code>ggplot2</code></span></a>
+ <span class="menu-text"><code>gggrid</code>: Combining <code>grid</code> and <code>ggplot2</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -255,7 +255,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reference" id="toc-reference" class="nav-link active" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#doing-stuff-outside-a-viewportplot" id="toc-doing-stuff-outside-a-viewportplot" class="nav-link active" data-scroll-target="#doing-stuff-outside-a-viewportplot">Doing stuff outside a viewport/plot</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/grid-and-gggrid.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -264,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Combining <code>grid</code> and <code>ggplot2</code></h1>
+<h1 class="title d-none d-lg-block"><code>gggrid</code>: Combining <code>grid</code> and <code>ggplot2</code></h1>
 </div>
 
 
@@ -281,7 +282,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>See the overall summary with reference to code in specific questions in my <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary">lab2 answer in STATS 787 at UoA</a></p>
+<p>See the overall summary with reference to code in specific questions in my <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary">lab2 answer in STATS 787 at UoA</a> as well as many other answers on that website.</p>
+<section id="doing-stuff-outside-a-viewportplot" class="level2">
+<h2 class="anchored" data-anchor-id="doing-stuff-outside-a-viewportplot">Doing stuff outside a viewport/plot</h2>
+<p>Use <code>coord_cartesian(clip = "off")</code>. See fx. how we use this to <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab4_answer.html#challenge-7">label lines outside the plotting area</a> in the Challenge of lab 4 in the course data visualisation at UoA.</p>
+</section>
 <section id="reference" class="level1">
 <h1>Reference</h1>
 <ul>

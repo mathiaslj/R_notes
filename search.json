@@ -250,12 +250,23 @@
   {
     "objectID": "plotting/grid-and-gggrid.html",
     "href": "plotting/grid-and-gggrid.html",
-    "title": "Combining grid and ggplot2",
+    "title": "gggrid: Combining grid and ggplot2",
     "section": "",
-    "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA\n\nReference\n\nThe grid Graphics System by Paul Murrell for an overview and readings.\nSlides from lecture\n\nNotice transparency look of picture on slide 22\nUse of mask in slides 24-25 and 26-27\n\n\n\n\n\n\n Back to top",
+    "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA as well as many other answers on that website.",
     "crumbs": [
       "Creating plots",
-      "Combining `grid` and `ggplot2`"
+      "`gggrid`: Combining `grid` and `ggplot2`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#doing-stuff-outside-a-viewportplot",
+    "href": "plotting/grid-and-gggrid.html#doing-stuff-outside-a-viewportplot",
+    "title": "gggrid: Combining grid and ggplot2",
+    "section": "Doing stuff outside a viewport/plot",
+    "text": "Doing stuff outside a viewport/plot\nUse coord_cartesian(clip = \"off\"). See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
+    "crumbs": [
+      "Creating plots",
+      "`gggrid`: Combining `grid` and `ggplot2`"
     ]
   },
   {
