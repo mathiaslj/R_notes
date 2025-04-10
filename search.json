@@ -175,7 +175,7 @@
     "href": "plotting/edv.html#designing-figures-without-legends",
     "title": "Effective Data Visualisation and Visual Perception",
     "section": "Designing figures without legends",
-    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”\n\nSee packages:\n\nggforce which has geoms that take label as an aesthetic mapping\ndirectlabels",
+    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”\n\nSee packages:\n\nggtext for ways to fx. color text labels, titles, etc. See an example in the slides of lecture 6.\nggforce which has geoms that take label as an aesthetic mapping\ndirectlabels",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation and Visual Perception"
@@ -274,7 +274,7 @@
     "href": "plotting/ggplot2.html",
     "title": "ggplot2",
     "section": "",
-    "text": "Something something\n\n\n\n Back to top",
+    "text": "See package ggtext for ways to fx. color text labels, titles, etc.\n\n\n\n Back to top",
     "crumbs": [
       "Creating plots",
       "`ggplot2`"
