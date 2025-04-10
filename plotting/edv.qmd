@@ -101,6 +101,7 @@ Works for numerical variables:
 
 See packages:
 
+- [ggtext](https://wilkelab.org/ggtext/) for ways to fx. color text labels, titles, etc. See an example in [the slides](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Labs/design.html) of lecture 6.
 - `ggforce` which has `geom`s that take `label` as an aesthetic mapping
 - `directlabels`
 

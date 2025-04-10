@@ -2,4 +2,4 @@
 title: "`ggplot2`"
 ---
 
-Something something
+See package [ggtext](https://wilkelab.org/ggtext/) for ways to fx. color text labels, titles, etc. 
