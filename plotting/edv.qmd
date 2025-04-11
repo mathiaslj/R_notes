@@ -101,7 +101,7 @@ Works for numerical variables:
 
 See packages:
 
-- [ggtext](https://wilkelab.org/ggtext/) for ways to fx. color text labels, titles, etc. See an example in [the slides](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Labs/design.html) of lecture 6.
+- [ggtext](https://wilkelab.org/ggtext/) for ways to fx. color text labels, titles, etc. See an example of [coloring the title](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Labs/design.html) to replace a legend with code available in the answer to lab 5 [here](https://mathiaslj.github.io/stats787uoa-data-visualisation/)
 - `ggforce` which has `geom`s that take `label` as an aesthetic mapping
 - `directlabels`
 

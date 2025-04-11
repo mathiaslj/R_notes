@@ -1,7 +1,34 @@
 ---
-title: "Colors in R"
+title: "Colors and fonts in R"
 format: html
 ---
+
+# Colours
+
+See [Color Pitfalls](edv.qmd#sec-colorpitfalls) on this webpage.
+
+See below for how to color text.
+
+# Text
+
+See package [ggtext](https://wilkelab.org/ggtext/) for ways to fx. color text labels, titles, etc. based on categories in data.
+
+## Fonts
+
+See [Fonts in R](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Fonts/fonts-notes.html) for a small introduction
+
+### Getting new fonts
+
+Download font online: 
+
+1) Go to font download site, fx. [Google Gruppo](https://fonts.google.com/specimen/Gruppo?category=Serif,Display,Handwriting,Monospace)
+2) Click download
+3) When downloaded, extract it
+3a) On windows, click the `Gruppo-regular` file and press "Install"
+4) In R, use the cairo graphics device
+4a) In Rstudio: Tools -> Global options -> General -> Graphics (top) -> Backend -> Choose cairo
+4b) In Rmarkdown: Include `knitr::opts_chunk$set(dev.args = list(png = list(type ="cairo")))` in setup chunk.
+5) Refer to the new font by it's folder name in your system. Fx. `ggplot2::element_text(family = "Gruppo")`
 
 # References
 
@@ -14,5 +41,4 @@ format: html
 
 **Practical advice on how to use colors most "efficiently" in your plots**
 
-- Section [Color Pitfalls](edv.qmd#sec-colorpitfalls)
 - Chapters [4](https://clauswilke.com/dataviz/color-basics.html) and [19](https://clauswilke.com/dataviz/color-pitfalls.html) of “Fundamentals of Data Visualization” by Claus O. Wilke.
