@@ -46,12 +46,23 @@
   {
     "objectID": "plotting/colors-in-R.html",
     "href": "plotting/colors-in-R.html",
-    "title": "Colors in R",
+    "title": "Colors and fonts in R",
     "section": "",
-    "text": "References\n\n“Selecting colours in R”\n\nVarious R functions to generate colors\n\nThe Colorspace R package\n\n“A Toolbox for Manipulating and Assessing Colors and Palettes”\n\n“Coloring in R’s Blind Spot” by Achim Zeileis and Paul Murrell\n\nA walkthrough of new R color and palette functions introduced with R version 4.0.0\n\n\nPractical advice on how to use colors most “efficiently” in your plots\n\nSection Color Pitfalls\nChapters 4 and 19 of “Fundamentals of Data Visualization” by Claus O. Wilke.\n\n\n\n\n\n Back to top",
+    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
     "crumbs": [
       "Creating plots",
-      "Colors in R"
+      "Colors and fonts in R"
+    ]
+  },
+  {
+    "objectID": "plotting/colors-in-R.html#fonts",
+    "href": "plotting/colors-in-R.html#fonts",
+    "title": "Colors and fonts in R",
+    "section": "Fonts",
+    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
+    "crumbs": [
+      "Creating plots",
+      "Colors and fonts in R"
     ]
   },
   {
@@ -175,7 +186,7 @@
     "href": "plotting/edv.html#designing-figures-without-legends",
     "title": "Effective Data Visualisation and Visual Perception",
     "section": "Designing figures without legends",
-    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”\n\nSee packages:\n\nggtext for ways to fx. color text labels, titles, etc. See an example in the slides of lecture 6.\nggforce which has geoms that take label as an aesthetic mapping\ndirectlabels",
+    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”\n\nSee packages:\n\nggtext for ways to fx. color text labels, titles, etc. See an example of coloring the title to replace a legend with code available in the answer to lab 5 here\nggforce which has geoms that take label as an aesthetic mapping\ndirectlabels",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation and Visual Perception"
@@ -274,7 +285,7 @@
     "href": "plotting/ggplot2.html",
     "title": "ggplot2",
     "section": "",
-    "text": "See package ggtext for ways to fx. color text labels, titles, etc.\n\n\n\n Back to top",
+    "text": "Something something\n\n\n\n Back to top",
     "crumbs": [
       "Creating plots",
       "`ggplot2`"
