@@ -39,6 +39,7 @@ website:
         - section: "Principles of Effective Data Visualisation"
           contents:
             - plotting/edv.qmd
+            - plotting/CRAP-designs.qmd
         - section: "Creating plots"
           contents:
             - plotting/colors-in-R.qmd

@@ -1,5 +1,5 @@
 ---
-title: "Colors and fonts in R"
+title: "Colors and text in R"
 format: html
 ---
 
@@ -12,6 +12,8 @@ See below for how to color text.
 # Text
 
 See package [ggtext](https://wilkelab.org/ggtext/) for ways to fx. color text labels, titles, etc. based on categories in data.
+
+See also [gridtext](https://wilkelab.org/gridtext/) for text rendering support for grid graphics in R.
 
 ## Fonts
 
