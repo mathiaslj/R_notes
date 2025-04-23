@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Colors and text in R – Various notes about R</title>
+<title>Plot design - CRAP principles and fonts – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Colors and text in R</h1>
+          <h1 class="quarto-secondary-nav-title">Plot design - CRAP principles and fonts</h1>
         </a>     
     </div>
   </nav>
@@ -205,13 +205,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Principles of Effective Data Visualisation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../plotting/edv.html" class="sidebar-item-text sidebar-link">
@@ -220,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plotting/CRAP-designs.html" class="sidebar-item-text sidebar-link">
+  <a href="../plotting/CRAP-designs.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Plot design - CRAP principles and fonts</span></a>
   </div>
 </li>
@@ -228,16 +228,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Creating plots</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plotting/colors-in-R.html" class="sidebar-item-text sidebar-link active">
+  <a href="../plotting/colors-in-R.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Colors and text in R</span></a>
   </div>
 </li>
@@ -265,24 +265,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#colours" id="toc-colours" class="nav-link active" data-scroll-target="#colours">Colours</a></li>
-  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a>
-  <ul class="collapse">
-  <li><a href="#fonts" id="toc-fonts" class="nav-link" data-scroll-target="#fonts">Fonts</a>
-  <ul class="collapse">
-  <li><a href="#getting-new-fonts" id="toc-getting-new-fonts" class="nav-link" data-scroll-target="#getting-new-fonts">Getting new fonts</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#crap-design-principles" id="toc-crap-design-principles" class="nav-link active" data-scroll-target="#crap-design-principles">CRAP design principles</a></li>
+  <li><a href="#fonts" id="toc-fonts" class="nav-link" data-scroll-target="#fonts">Fonts</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/colors-in-R.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/CRAP-designs.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Colors and text in R</h1>
+<h1 class="title d-none d-lg-block">Plot design - CRAP principles and fonts</h1>
 </div>
 
 
@@ -299,51 +292,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="colours" class="level1">
-<h1>Colours</h1>
-<p>See <a href="../plotting/edv.html#sec-colorpitfalls">Color Pitfalls</a> on this webpage.</p>
-<p>See below for how to color text.</p>
-</section>
-<section id="text" class="level1">
-<h1>Text</h1>
-<p>See package <a href="https://wilkelab.org/ggtext/">ggtext</a> for ways to fx. color text labels, titles, etc. based on categories in data.</p>
-<p>See also <a href="https://wilkelab.org/gridtext/">gridtext</a> for text rendering support for grid graphics in R.</p>
-<section id="fonts" class="level2">
-<h2 class="anchored" data-anchor-id="fonts">Fonts</h2>
-<p>See <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Fonts/fonts-notes.html">Fonts in R</a> for a small introduction</p>
-<section id="getting-new-fonts" class="level3">
-<h3 class="anchored" data-anchor-id="getting-new-fonts">Getting new fonts</h3>
-<p>Download font online:</p>
-<ol type="1">
-<li>Go to font download site, fx. <a href="https://fonts.google.com/specimen/Gruppo?category=Serif,Display,Handwriting,Monospace">Google Gruppo</a></li>
-<li>Click download</li>
-<li>When downloaded, extract it 3a) On windows, click the <code>Gruppo-regular</code> file and press “Install”</li>
-<li>In R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include <code>knitr::opts_chunk$set(dev.args = list(png = list(type ="cairo")))</code> in setup chunk.</li>
-<li>Refer to the new font by it’s folder name in your system. Fx. <code>ggplot2::element_text(family = "Gruppo")</code></li>
-</ol>
-</section>
-</section>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
+<section id="crap-design-principles" class="level1">
+<h1>CRAP design principles</h1>
+<p>The <a href="https://www.pearson.com/en-us/subject-catalog/p/non-designers-design-book-the/P200000000691?view=educator">“The Non-Designer’s Design Book”</a> by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).</p>
+<p>See <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/design.html">lecture notes about CRAP principles</a> for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.</p>
 <ul>
-<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Colour/colour-notes.html">“Selecting colours in R”</a>
+<li><strong>Contrast:</strong> Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.
 <ul>
-<li>Various R functions to generate colors</li>
+<li>See <a href="https://datavizm20.classes.andrewheiss.com/slides/02-slides.html#21">these slides</a> by Andrew Heiss.</li>
 </ul></li>
-<li>The <a href="https://colorspace.r-forge.r-project.org/index.html">Colorspace</a> R package
+<li><strong>Repitition:</strong> Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.
 <ul>
-<li>“A Toolbox for Manipulating and Assessing Colors and Palettes”</li>
+<li>Fx. within an image by making all text have same color/size/… or across images in a report</li>
 </ul></li>
-<li><a href="https://arxiv.org/abs/2303.04918">“Coloring in R’s Blind Spot”</a> by Achim Zeileis and Paul Murrell
+<li><strong>Alignment:</strong> All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.
 <ul>
-<li>A walkthrough of new R color and palette functions introduced with R version 4.0.0</li>
+<li>Fx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.</li>
+<li>See <a href="https://datavizm20.classes.andrewheiss.com/slides/02-slides.html#48">example</a> in slides by Andrew Heiss of a compound figure.</li>
+</ul></li>
+<li><strong>Proximity:</strong> Elements of an image should be placed close to each other to form sub-elements of the image.
+<ul>
+<li>Fx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”</li>
 </ul></li>
 </ul>
-<p><strong>Practical advice on how to use colors most “efficiently” in your plots</strong></p>
-<ul>
-<li>Chapters <a href="https://clauswilke.com/dataviz/color-basics.html">4</a> and <a href="https://clauswilke.com/dataviz/color-pitfalls.html">19</a> of “Fundamentals of Data Visualization” by Claus O. Wilke.</li>
-</ul>
+<p>See also much more information in the readings in the link to lecture notes.</p>
+</section>
+<section id="fonts" class="level1">
+<h1>Fonts</h1>
 
 
 </section>
@@ -771,4 +746,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/colors-in-R.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/CRAP-designs.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

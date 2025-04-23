@@ -1,5 +1,16 @@
 [
   {
+    "objectID": "data-wrangling/baser.html",
+    "href": "data-wrangling/baser.html",
+    "title": "Base R",
+    "section": "",
+    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
+    "crumbs": [
+      "Base R",
+      "Base R"
+    ]
+  },
+  {
     "objectID": "pkg-dev/cran.html",
     "href": "pkg-dev/cran.html",
     "title": "Submitting to CRAN",
@@ -33,6 +44,50 @@
     ]
   },
   {
+    "objectID": "plotting/CRAP-designs.html",
+    "href": "plotting/CRAP-designs.html",
+    "title": "Plot design - CRAP principles and fonts",
+    "section": "",
+    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee also much more information in the readings in the link to lecture notes.\n\n\nFonts\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Plot design - CRAP principles and fonts"
+    ]
+  },
+  {
+    "objectID": "plotting/colors-in-R.html",
+    "href": "plotting/colors-in-R.html",
+    "title": "Colors and text in R",
+    "section": "",
+    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
+    "crumbs": [
+      "Creating plots",
+      "Colors and text in R"
+    ]
+  },
+  {
+    "objectID": "plotting/colors-in-R.html#fonts",
+    "href": "plotting/colors-in-R.html#fonts",
+    "title": "Colors and text in R",
+    "section": "Fonts",
+    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
+    "crumbs": [
+      "Creating plots",
+      "Colors and text in R"
+    ]
+  },
+  {
+    "objectID": "plotting/ggplot2.html",
+    "href": "plotting/ggplot2.html",
+    "title": "ggplot2",
+    "section": "",
+    "text": "Something something\n\n\n\n Back to top",
+    "crumbs": [
+      "Creating plots",
+      "`ggplot2`"
+    ]
+  },
+  {
     "objectID": "prog/obj_prog.html",
     "href": "prog/obj_prog.html",
     "title": "Object-oriented programming",
@@ -44,75 +99,36 @@
     ]
   },
   {
-    "objectID": "plotting/colors-in-R.html",
-    "href": "plotting/colors-in-R.html",
-    "title": "Colors and fonts in R",
+    "objectID": "prog/func_prog.html",
+    "href": "prog/func_prog.html",
+    "title": "Functional programming",
     "section": "",
-    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
+    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
+    "crumbs": [
+      "Functional programming",
+      "Functional programming"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html",
+    "href": "plotting/grid-and-gggrid.html",
+    "title": "gggrid: Combining grid and ggplot2",
+    "section": "",
+    "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA as well as many other answers on that website.",
     "crumbs": [
       "Creating plots",
-      "Colors and fonts in R"
+      "`gggrid`: Combining `grid` and `ggplot2`"
     ]
   },
   {
-    "objectID": "plotting/colors-in-R.html#fonts",
-    "href": "plotting/colors-in-R.html#fonts",
-    "title": "Colors and fonts in R",
-    "section": "Fonts",
-    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
+    "objectID": "plotting/grid-and-gggrid.html#doing-stuff-outside-a-viewportplot",
+    "href": "plotting/grid-and-gggrid.html#doing-stuff-outside-a-viewportplot",
+    "title": "gggrid: Combining grid and ggplot2",
+    "section": "Doing stuff outside a viewport/plot",
+    "text": "Doing stuff outside a viewport/plot\nUse coord_cartesian(clip = \"off\"). See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
     "crumbs": [
       "Creating plots",
-      "Colors and fonts in R"
-    ]
-  },
-  {
-    "objectID": "plotting/grid.html",
-    "href": "plotting/grid.html",
-    "title": "grid - Creating any graphical object (grob)",
-    "section": "",
-    "text": "The grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs).\n\nUsing viewports\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree).\nSee example of use of\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "",
-    "text": "This Quarto website is home to private notes about everything R.\nMisc links:"
-  },
-  {
-    "objectID": "index.html#learning-r",
-    "href": "index.html#learning-r",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "Learning R",
-    "text": "Learning R\n\nLearn the tidyverse\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse\n\n\nAdvanced\n\nAdvanced R\n\nSolutions\n\nThe art of R programming\nRstudio education - expert pathway"
-  },
-  {
-    "objectID": "index.html#organisations",
-    "href": "index.html#organisations",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "Organisations",
-    "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
-  },
-  {
-    "objectID": "data-wrangling/tidyverse.html",
-    "href": "data-wrangling/tidyverse.html",
-    "title": "The tidyverse",
-    "section": "",
-    "text": "Test\n\n\n\n Back to top",
-    "crumbs": [
-      "The tidyverse",
-      "The `tidyverse`"
-    ]
-  },
-  {
-    "objectID": "data-wrangling/baser.html",
-    "href": "data-wrangling/baser.html",
-    "title": "Base R",
-    "section": "",
-    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
-    "crumbs": [
-      "Base R",
-      "Base R"
+      "`gggrid`: Combining `grid` and `ggplot2`"
     ]
   },
   {
@@ -259,48 +275,32 @@
     ]
   },
   {
-    "objectID": "plotting/grid-and-gggrid.html",
-    "href": "plotting/grid-and-gggrid.html",
-    "title": "gggrid: Combining grid and ggplot2",
+    "objectID": "plotting/grid.html",
+    "href": "plotting/grid.html",
+    "title": "grid - Creating any graphical object (grob)",
     "section": "",
-    "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA as well as many other answers on that website.",
-    "crumbs": [
-      "Creating plots",
-      "`gggrid`: Combining `grid` and `ggplot2`"
-    ]
+    "text": "The grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs).\n\nUsing viewports\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree).\nSee example of use of\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "plotting/grid-and-gggrid.html#doing-stuff-outside-a-viewportplot",
-    "href": "plotting/grid-and-gggrid.html#doing-stuff-outside-a-viewportplot",
-    "title": "gggrid: Combining grid and ggplot2",
-    "section": "Doing stuff outside a viewport/plot",
-    "text": "Doing stuff outside a viewport/plot\nUse coord_cartesian(clip = \"off\"). See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
-    "crumbs": [
-      "Creating plots",
-      "`gggrid`: Combining `grid` and `ggplot2`"
-    ]
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "",
+    "text": "This Quarto website is home to private notes about everything R.\nMisc links:"
   },
   {
-    "objectID": "plotting/ggplot2.html",
-    "href": "plotting/ggplot2.html",
-    "title": "ggplot2",
-    "section": "",
-    "text": "Something something\n\n\n\n Back to top",
-    "crumbs": [
-      "Creating plots",
-      "`ggplot2`"
-    ]
+    "objectID": "index.html#learning-r",
+    "href": "index.html#learning-r",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "Learning R",
+    "text": "Learning R\n\nLearn the tidyverse\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse\n\n\nAdvanced\n\nAdvanced R\n\nSolutions\n\nThe art of R programming\nRstudio education - expert pathway"
   },
   {
-    "objectID": "prog/func_prog.html",
-    "href": "prog/func_prog.html",
-    "title": "Functional programming",
-    "section": "",
-    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
-    "crumbs": [
-      "Functional programming",
-      "Functional programming"
-    ]
+    "objectID": "index.html#organisations",
+    "href": "index.html#organisations",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "Organisations",
+    "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
   },
   {
     "objectID": "pkg-dev/gh-actions.html",
@@ -311,6 +311,17 @@
     "crumbs": [
       "Creating a package",
       "GitHub actions"
+    ]
+  },
+  {
+    "objectID": "data-wrangling/tidyverse.html",
+    "href": "data-wrangling/tidyverse.html",
+    "title": "The tidyverse",
+    "section": "",
+    "text": "Test\n\n\n\n Back to top",
+    "crumbs": [
+      "The tidyverse",
+      "The `tidyverse`"
     ]
   }
 ]
