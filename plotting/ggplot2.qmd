@@ -3,3 +3,14 @@ title: "`ggplot2`"
 ---
 
 Something something
+
+### Highlighting subsets of data
+
+See [this answer](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab4_answer.html#another-solution-using-a-bit-more-hidden-functionalities-in-ggplot2) to one of the lab assignments for an example of **making lines thicker for some categories** in a line plot.
+
+## Misc tips and tricks
+
+- `aspect.ratio` argument in `theme` to specify aspect ratio of each panel
+- `margin` argument in `element_...` functions
+  - Fx. `plot.title = element_text(size = 18, margin = margin(0,0,20,0))` to move the title higher up by adding a margin to the bottom
+- Use `coord_cartesian(clip = "off")` to write outside plotting area. See fx. how we use this to [label lines outside the plotting area](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab4_answer.html#challenge-7) in the Challenge of lab 4 in the course data visualisation at UoA.

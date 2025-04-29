@@ -45,6 +45,9 @@ website:
             - plotting/colors-in-R.qmd
             - plotting/grid-and-gggrid.qmd
             - plotting/ggplot2.qmd
+        - section: "Animation"
+          contents:
+            - plotting/animation.qmd
     - id: pkg-dev
       title: Package development
       style: "docked"

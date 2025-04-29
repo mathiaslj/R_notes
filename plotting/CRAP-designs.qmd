@@ -19,7 +19,7 @@ See [lecture notes about CRAP principles](https://www.stat.auckland.ac.nz/~paul/
 - **Proximity:** Elements of an image should be placed close to each other to form sub-elements of the image.
   - Fx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they "belong together"
   
-See also much more information in the readings in the link to lecture notes.
+See much more information in the readings in the link to lecture notes and some notes in the [answer to lab 5](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab5_answer.html).
 
 # Fonts
 

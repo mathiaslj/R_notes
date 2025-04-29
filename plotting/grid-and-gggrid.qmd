@@ -1,12 +1,37 @@
 ---
-title: "`gggrid`: Combining `grid` and `ggplot2`"
+title: "`grid` and `gggrid`"
 ---
 
-See the overall summary with reference to code in specific questions in my [lab2 answer in STATS 787 at UoA](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary) as well as many other answers on that website.
+The following is taken from the [overall summary](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary) of my lab2 answer in STATS 787 at UoA.
 
-## Doing stuff outside a viewport/plot
+> References to specific questions reference answers in the above link.
 
-Use `coord_cartesian(clip = "off")`. See fx. how we use this to [label lines outside the plotting area](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab4_answer.html#challenge-7) in the Challenge of lab 4 in the course data visualisation at UoA.
+## The `grid package`
+
+The `grid` package allows total customisation in creating *grobs* (graphical objects). They can either be drawn directly using `grid::grid.xx` functions or created as grobs with `grid::xxGrob` functions to be drawn later (with `grid::grid.draw`). This enables us to gather different grobs in a *grob tree* with `grid::gTree` and specifying grobs with a `grid::gList` as the `children` argument (alternatively use `grid::grobTree` when all components are grobs). See more in *question 1*.
+
+### Using viewports
+
+We can use `grid::viewport` with `grid::pushViewport` to draw whatever we want inside a certain area of our "full plotting area" and then go to a parent viewport with `grid::upViewport` (`grid::popViewport` navigates to parent viewport AND deletes the current viewport from the viewport tree). See *questions 2, 3, 5 and 8*.
+
+Additional takeaways about viewports:
+
+- **Note** this also works with `ggplot2` by assigning the `ggplot` object a value (fx. `p`) and then plotting it "inside the viewport" with `plot(p, newpage = FALSE)`. See *questions 5 and 8*.
+- We can use the `grid::convertUnit` function to change the axis we are referencing (useful fx. when creating a viewport with `angle = 90/270`). See *question 8*.
+- A strong way of using viewports is using `xscale` and/or `yscale` parameters in the `grid::viewport` function and the using the `grid::unit` function with `units = "native"` specified to make your grobs relate to the scale of the viewport.
+- Use of `grid::grid.layout` as in *question 3* can help with many situations.
+
+**Note** that `ggplot2` is built on `grid`. `ggplot2` uses viewports from `grid`. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.
+
+### `grid.layout`
+
+See the answer to [question 3](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-3) in the link above.
+
+## Combining `grid` and `ggplot2` - The `gggrid` package
+
+As mentioned above, viewports and ggplots integrate nicely using just `grid` and `ggplot2`. However, it's easy to combine elements of `grid` to `ggplot`s to create overlays on each facet/panel with `gggrid::grid_panel` or for each group using `gggrid::grid_group`.
+
+These functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes `data` and `coords` as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data). Note that the `coords` are transformed values of `x` and `y` (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. `data` contains the untransformed data and includes columns of other aesthetics (fx. `colour`).
 
 # Reference
 

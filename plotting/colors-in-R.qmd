@@ -13,6 +13,9 @@ See below for how to color text.
 
 See package [ggtext](https://wilkelab.org/ggtext/) for ways to fx. color text labels, titles, etc. based on categories in data.
 
+- Just specify the text using HTML code and specify the relevant argument in `ggplot2::theme()` using the function [`ggtext::element_markdown()`](https://wilkelab.org/ggtext/reference/element_markdown.html).
+  - See an example of [how to color your title](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab5_answer.html#question-3) in question 3 of lab5 at UoA.
+
 See also [gridtext](https://wilkelab.org/gridtext/) for text rendering support for grid graphics in R.
 
 ## Fonts

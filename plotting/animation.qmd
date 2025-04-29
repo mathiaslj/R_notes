@@ -1,0 +1,21 @@
+---
+title: "Animation"
+format: html
+---
+
+See [lecture notes](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/animation.html) about animation.
+
+## Low-level approach - [`magick`](https://docs.ropensci.org/magick/)
+
+Approach to draw every frame of the animation. More work but also more control.
+
+Basic steps to produce animation:
+
+- Assign value (fx. `img`) to call of `magick::image_graph` to open a `magick` graphics device
+- Run a loop that draws each frame of the animation
+- Call `dev.off()` to close the `magick` graphics device
+- Run `image_animate(img)`
+
+## High-level approach - [gganimate](https://gganimate.com/)
+
+See the [getting started](https://gganimate.com/articles/gganimate.html) article.
