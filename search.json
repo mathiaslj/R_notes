@@ -224,7 +224,7 @@
     "href": "plotting/animation.html#high-level-approach---gganimate",
     "title": "Animation",
     "section": "High-level approach - gganimate",
-    "text": "High-level approach - gganimate\nSee the getting started article.",
+    "text": "High-level approach - gganimate\nSee the getting started article as well as run examples in references section of each transition_... function.",
     "crumbs": [
       "Animation",
       "Animation"
