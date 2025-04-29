@@ -48,87 +48,10 @@
     "href": "plotting/CRAP-designs.html",
     "title": "Plot design - CRAP principles and fonts",
     "section": "",
-    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee also much more information in the readings in the link to lecture notes.\n\n\nFonts\n\n\n\n\n Back to top",
+    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee much more information in the readings in the link to lecture notes and some notes in the answer to lab 5.\n\n\nFonts\n\n\n\n\n Back to top",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Plot design - CRAP principles and fonts"
-    ]
-  },
-  {
-    "objectID": "plotting/colors-in-R.html",
-    "href": "plotting/colors-in-R.html",
-    "title": "Colors and text in R",
-    "section": "",
-    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
-    "crumbs": [
-      "Creating plots",
-      "Colors and text in R"
-    ]
-  },
-  {
-    "objectID": "plotting/colors-in-R.html#fonts",
-    "href": "plotting/colors-in-R.html#fonts",
-    "title": "Colors and text in R",
-    "section": "Fonts",
-    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
-    "crumbs": [
-      "Creating plots",
-      "Colors and text in R"
-    ]
-  },
-  {
-    "objectID": "plotting/ggplot2.html",
-    "href": "plotting/ggplot2.html",
-    "title": "ggplot2",
-    "section": "",
-    "text": "Something something\n\n\n\n Back to top",
-    "crumbs": [
-      "Creating plots",
-      "`ggplot2`"
-    ]
-  },
-  {
-    "objectID": "prog/obj_prog.html",
-    "href": "prog/obj_prog.html",
-    "title": "Object-oriented programming",
-    "section": "",
-    "text": "As intro, see Object-oriented programming in Advanced R.\n\n\n\n Back to top",
-    "crumbs": [
-      "Object-oriented programming",
-      "Object-oriented programming"
-    ]
-  },
-  {
-    "objectID": "prog/func_prog.html",
-    "href": "prog/func_prog.html",
-    "title": "Functional programming",
-    "section": "",
-    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
-    "crumbs": [
-      "Functional programming",
-      "Functional programming"
-    ]
-  },
-  {
-    "objectID": "plotting/grid-and-gggrid.html",
-    "href": "plotting/grid-and-gggrid.html",
-    "title": "gggrid: Combining grid and ggplot2",
-    "section": "",
-    "text": "See the overall summary with reference to code in specific questions in my lab2 answer in STATS 787 at UoA as well as many other answers on that website.",
-    "crumbs": [
-      "Creating plots",
-      "`gggrid`: Combining `grid` and `ggplot2`"
-    ]
-  },
-  {
-    "objectID": "plotting/grid-and-gggrid.html#doing-stuff-outside-a-viewportplot",
-    "href": "plotting/grid-and-gggrid.html#doing-stuff-outside-a-viewportplot",
-    "title": "gggrid: Combining grid and ggplot2",
-    "section": "Doing stuff outside a viewport/plot",
-    "text": "Doing stuff outside a viewport/plot\nUse coord_cartesian(clip = \"off\"). See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
-    "crumbs": [
-      "Creating plots",
-      "`gggrid`: Combining `grid` and `ggplot2`"
     ]
   },
   {
@@ -275,11 +198,136 @@
     ]
   },
   {
-    "objectID": "plotting/grid.html",
-    "href": "plotting/grid.html",
-    "title": "grid - Creating any graphical object (grob)",
+    "objectID": "plotting/animation.html",
+    "href": "plotting/animation.html",
+    "title": "Animation",
     "section": "",
-    "text": "The grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs).\n\nUsing viewports\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree).\nSee example of use of\n\n\n\n\n Back to top"
+    "text": "See lecture notes about animation.",
+    "crumbs": [
+      "Animation",
+      "Animation"
+    ]
+  },
+  {
+    "objectID": "plotting/animation.html#low-level-approach---magick",
+    "href": "plotting/animation.html#low-level-approach---magick",
+    "title": "Animation",
+    "section": "Low-level approach - magick",
+    "text": "Low-level approach - magick\nApproach to draw every frame of the animation. More work but also more control.\nBasic steps to produce animation:\n\nAssign value (fx. img) to call of magick::image_graph to open a magick graphics device\nRun a loop that draws each frame of the animation\nCall dev.off() to close the magick graphics device\nRun image_animate(img)",
+    "crumbs": [
+      "Animation",
+      "Animation"
+    ]
+  },
+  {
+    "objectID": "plotting/animation.html#high-level-approach---gganimate",
+    "href": "plotting/animation.html#high-level-approach---gganimate",
+    "title": "Animation",
+    "section": "High-level approach - gganimate",
+    "text": "High-level approach - gganimate\nSee the getting started article.",
+    "crumbs": [
+      "Animation",
+      "Animation"
+    ]
+  },
+  {
+    "objectID": "prog/obj_prog.html",
+    "href": "prog/obj_prog.html",
+    "title": "Object-oriented programming",
+    "section": "",
+    "text": "As intro, see Object-oriented programming in Advanced R.\n\n\n\n Back to top",
+    "crumbs": [
+      "Object-oriented programming",
+      "Object-oriented programming"
+    ]
+  },
+  {
+    "objectID": "prog/func_prog.html",
+    "href": "prog/func_prog.html",
+    "title": "Functional programming",
+    "section": "",
+    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
+    "crumbs": [
+      "Functional programming",
+      "Functional programming"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html",
+    "href": "plotting/grid-and-gggrid.html",
+    "title": "grid and gggrid",
+    "section": "",
+    "text": "The following is taken from the overall summary of my lab2 answer in STATS 787 at UoA.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#the-grid-package",
+    "href": "plotting/grid-and-gggrid.html#the-grid-package",
+    "title": "grid and gggrid",
+    "section": "The grid package",
+    "text": "The grid package\nThe grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs). See more in question 1.\n\nUsing viewports\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree). See questions 2, 3, 5 and 8.\nAdditional takeaways about viewports:\n\nNote this also works with ggplot2 by assigning the ggplot object a value (fx. p) and then plotting it “inside the viewport” with plot(p, newpage = FALSE). See questions 5 and 8.\nWe can use the grid::convertUnit function to change the axis we are referencing (useful fx. when creating a viewport with angle = 90/270). See question 8.\nA strong way of using viewports is using xscale and/or yscale parameters in the grid::viewport function and the using the grid::unit function with units = \"native\" specified to make your grobs relate to the scale of the viewport.\nUse of grid::grid.layout as in question 3 can help with many situations.\n\nNote that ggplot2 is built on grid. ggplot2 uses viewports from grid. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.\n\n\ngrid.layout\nSee the answer to question 3 in the link above.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#combining-grid-and-ggplot2---the-gggrid-package",
+    "href": "plotting/grid-and-gggrid.html#combining-grid-and-ggplot2---the-gggrid-package",
+    "title": "grid and gggrid",
+    "section": "Combining grid and ggplot2 - The gggrid package",
+    "text": "Combining grid and ggplot2 - The gggrid package\nAs mentioned above, viewports and ggplots integrate nicely using just grid and ggplot2. However, it’s easy to combine elements of grid to ggplots to create overlays on each facet/panel with gggrid::grid_panel or for each group using gggrid::grid_group.\nThese functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes data and coords as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data). Note that the coords are transformed values of x and y (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. data contains the untransformed data and includes columns of other aesthetics (fx. colour).",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/ggplot2.html",
+    "href": "plotting/ggplot2.html",
+    "title": "ggplot2",
+    "section": "",
+    "text": "Something something",
+    "crumbs": [
+      "Creating plots",
+      "`ggplot2`"
+    ]
+  },
+  {
+    "objectID": "plotting/ggplot2.html#misc-tips-and-tricks",
+    "href": "plotting/ggplot2.html#misc-tips-and-tricks",
+    "title": "ggplot2",
+    "section": "Misc tips and tricks",
+    "text": "Misc tips and tricks\n\naspect.ratio argument in theme to specify aspect ratio of each panel\nmargin argument in element_... functions\n\nFx. plot.title = element_text(size = 18, margin = margin(0,0,20,0)) to move the title higher up by adding a margin to the bottom\n\nUse coord_cartesian(clip = \"off\") to write outside plotting area. See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
+    "crumbs": [
+      "Creating plots",
+      "`ggplot2`"
+    ]
+  },
+  {
+    "objectID": "plotting/colors-in-R.html",
+    "href": "plotting/colors-in-R.html",
+    "title": "Colors and text in R",
+    "section": "",
+    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
+    "crumbs": [
+      "Creating plots",
+      "Colors and text in R"
+    ]
+  },
+  {
+    "objectID": "plotting/colors-in-R.html#fonts",
+    "href": "plotting/colors-in-R.html#fonts",
+    "title": "Colors and text in R",
+    "section": "Fonts",
+    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
+    "crumbs": [
+      "Creating plots",
+      "Colors and text in R"
+    ]
   },
   {
     "objectID": "index.html",

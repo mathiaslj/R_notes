@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Miscellaneous notes about R added as I stumble upon it – Various notes about R</title>
+<title>Animation – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7e266f8f7e98b6b255616bfad3d1c8d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7e266f8f7e98b6b255616bfad3d1c8d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,14 +71,14 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Various notes about R</span>
     </a>
   </div>
@@ -95,13 +95,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data-wrangling">    
         <li class="dropdown-header">Base R</li>
         <li>
-    <a class="dropdown-item" href="./data-wrangling/baser.html">
+    <a class="dropdown-item" href="../data-wrangling/baser.html">
  <span class="dropdown-text">Base R</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">The tidyverse</li>
         <li>
-    <a class="dropdown-item" href="./data-wrangling/tidyverse.html">
+    <a class="dropdown-item" href="../data-wrangling/tidyverse.html">
  <span class="dropdown-text">The <code>tidyverse</code></span></a>
   </li>  
     </ul>
@@ -113,31 +113,31 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-plotting">    
         <li class="dropdown-header">Principles of Effective Data Visualisation</li>
         <li>
-    <a class="dropdown-item" href="./plotting/edv.html">
+    <a class="dropdown-item" href="../plotting/edv.html">
  <span class="dropdown-text">Effective Data Visualisation and Visual Perception</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./plotting/CRAP-designs.html">
+    <a class="dropdown-item" href="../plotting/CRAP-designs.html">
  <span class="dropdown-text">Plot design - CRAP principles and fonts</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Creating plots</li>
         <li>
-    <a class="dropdown-item" href="./plotting/colors-in-R.html">
+    <a class="dropdown-item" href="../plotting/colors-in-R.html">
  <span class="dropdown-text">Colors and text in R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./plotting/grid-and-gggrid.html">
+    <a class="dropdown-item" href="../plotting/grid-and-gggrid.html">
  <span class="dropdown-text"><code>grid</code> and <code>gggrid</code></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./plotting/ggplot2.html">
+    <a class="dropdown-item" href="../plotting/ggplot2.html">
  <span class="dropdown-text"><code>ggplot2</code></span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Animation</li>
         <li>
-    <a class="dropdown-item" href="./plotting/animation.html">
+    <a class="dropdown-item" href="../plotting/animation.html">
  <span class="dropdown-text">Animation</span></a>
   </li>  
     </ul>
@@ -149,15 +149,15 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-package-development">    
         <li class="dropdown-header">Creating a package</li>
         <li>
-    <a class="dropdown-item" href="./pkg-dev/get-started.html">
+    <a class="dropdown-item" href="../pkg-dev/get-started.html">
  <span class="dropdown-text">Get started</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pkg-dev/gh-actions.html">
+    <a class="dropdown-item" href="../pkg-dev/gh-actions.html">
  <span class="dropdown-text">GitHub actions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pkg-dev/cran.html">
+    <a class="dropdown-item" href="../pkg-dev/cran.html">
  <span class="dropdown-text">Submitting to CRAN</span></a>
   </li>  
     </ul>
@@ -169,13 +169,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-programming-in-r">    
         <li class="dropdown-header">Functional programming</li>
         <li>
-    <a class="dropdown-item" href="./prog/func_prog.html">
+    <a class="dropdown-item" href="../prog/func_prog.html">
  <span class="dropdown-text">Functional programming</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Object-oriented programming</li>
         <li>
-    <a class="dropdown-item" href="./prog/obj_prog.html">
+    <a class="dropdown-item" href="../prog/obj_prog.html">
  <span class="dropdown-text">Object-oriented programming</span></a>
   </li>  
     </ul>
@@ -193,30 +193,113 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Animation</h1>
+        </a>     
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Principles of Effective Data Visualisation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/edv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Effective Data Visualisation and Visual Perception</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/CRAP-designs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plot design - CRAP principles and fonts</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Creating plots</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/colors-in-R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Colors and text in R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>grid</code> and <code>gggrid</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/ggplot2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>ggplot2</code></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Animation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/animation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Animation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-r" id="toc-learning-r" class="nav-link active" data-scroll-target="#learning-r">Learning R</a>
-  <ul class="collapse">
-  <li><a href="#advanced" id="toc-advanced" class="nav-link" data-scroll-target="#advanced">Advanced</a></li>
-  </ul></li>
-  <li><a href="#organisations" id="toc-organisations" class="nav-link" data-scroll-target="#organisations">Organisations</a></li>
+  <li><a href="#low-level-approach---magick" id="toc-low-level-approach---magick" class="nav-link active" data-scroll-target="#low-level-approach---magick">Low-level approach - <code>magick</code></a></li>
+  <li><a href="#high-level-approach---gganimate" id="toc-high-level-approach---gganimate" class="nav-link" data-scroll-target="#high-level-approach---gganimate">High-level approach - gganimate</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/animation.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Miscellaneous notes about R added as I stumble upon it</h1>
+<h1 class="title d-none d-lg-block">Animation</h1>
 </div>
 
 
@@ -233,33 +316,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This Quarto website is home to private notes about everything R.</p>
-<p>Misc links:</p>
-<section id="learning-r" class="level2">
-<h2 class="anchored" data-anchor-id="learning-r">Learning R</h2>
+<p>See <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/animation.html">lecture notes</a> about animation.</p>
+<section id="low-level-approach---magick" class="level2">
+<h2 class="anchored" data-anchor-id="low-level-approach---magick">Low-level approach - <a href="https://docs.ropensci.org/magick/"><code>magick</code></a></h2>
+<p>Approach to draw every frame of the animation. More work but also more control.</p>
+<p>Basic steps to produce animation:</p>
 <ul>
-<li><a href="https://www.tidyverse.org/learn/">Learn the tidyverse</a></li>
-<li><a href="https://www.tidymodels.org/books/moderndive/">Statistical Inference via Data Science: A ModernDive into R and the Tidyverse</a></li>
-</ul>
-<section id="advanced" class="level3">
-<h3 class="anchored" data-anchor-id="advanced">Advanced</h3>
-<ul>
-<li><a href="https://adv-r.hadley.nz/">Advanced R</a>
-<ul>
-<li><a href="https://advanced-r-solutions.rbind.io/">Solutions</a></li>
-</ul></li>
-<li><a href="https://diytranscriptomics.com/Reading/files/The%20Art%20of%20R%20Programming.pdf">The art of R programming</a></li>
-<li><a href="https://education.rstudio.com/learn/expert/">Rstudio education - expert pathway</a></li>
+<li>Assign value (fx. <code>img</code>) to call of <code>magick::image_graph</code> to open a <code>magick</code> graphics device</li>
+<li>Run a loop that draws each frame of the animation</li>
+<li>Call <code>dev.off()</code> to close the <code>magick</code> graphics device</li>
+<li>Run <code>image_animate(img)</code></li>
 </ul>
 </section>
-</section>
-<section id="organisations" class="level2">
-<h2 class="anchored" data-anchor-id="organisations">Organisations</h2>
-<ul>
-<li><a href="https://www.r-consortium.org/all-projects/isc-working-groups">R consortium (working groups)</a></li>
-<li><a href="https://ropensci.org/">ROpenSci</a></li>
-</ul>
-<p>To be continued…</p>
+<section id="high-level-approach---gganimate" class="level2">
+<h2 class="anchored" data-anchor-id="high-level-approach---gganimate">High-level approach - <a href="https://gganimate.com/">gganimate</a></h2>
+<p>See the <a href="https://gganimate.com/articles/gganimate.html">getting started</a> article.</p>
 
 
 </section>
@@ -669,4 +740,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/animation.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
