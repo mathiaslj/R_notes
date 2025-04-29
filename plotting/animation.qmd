@@ -18,4 +18,4 @@ Basic steps to produce animation:
 
 ## High-level approach - [gganimate](https://gganimate.com/)
 
-See the [getting started](https://gganimate.com/articles/gganimate.html) article.
+See the [getting started](https://gganimate.com/articles/gganimate.html) article as well as run examples in references section of each `transition_...` function.
