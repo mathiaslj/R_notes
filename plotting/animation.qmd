@@ -18,4 +18,6 @@ Basic steps to produce animation:
 
 ## High-level approach - [gganimate](https://gganimate.com/)
 
+> NOTE! Install package [gifski](https://cran.r-project.org/web/packages/gifski/index.html). If installed, `gganimate` will make sure to use that as the backend when creating the GIFs
+
 See the [getting started](https://gganimate.com/articles/gganimate.html) article as well as run examples in references section of each `transition_...` function.
