@@ -224,7 +224,7 @@
     "href": "plotting/animation.html#high-level-approach---gganimate",
     "title": "Animation",
     "section": "High-level approach - gganimate",
-    "text": "High-level approach - gganimate\nSee the getting started article as well as run examples in references section of each transition_... function.",
+    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.",
     "crumbs": [
       "Animation",
       "Animation"
