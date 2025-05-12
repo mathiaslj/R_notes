@@ -1,0 +1,16 @@
+---
+title: "Interactivity"
+format: html
+---
+
+## `plotly`
+
+### `ggplotly`
+
+See [this small document](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Plotly/plotly-notes.html), which describes how to use `plotly::ggplotly`.
+
+Notice especially the specification of the `text` aesthetic to create new strings in the hover interface.
+
+## [`plotscaper`](https://bartonicek.github.io/plotscaper/)
+
+Create simple linked plots.

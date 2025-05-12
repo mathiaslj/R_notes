@@ -1,0 +1,28 @@
+---
+title: "Maps"
+format: html
+---
+
+See [lecture notes](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/maps.html) from lecture 9 of STATS 787 - Data Visualisation at UoA.
+
+See especially link from lecture notes to the [Maps](https://ggplot2-book.org/maps.html) chapter in *"ggplot2: Elegant Graphics for Data Analysis (3e)"*.
+
+## Accessing map data
+
+1. Download map data fx. from https://koordinates.com/
+2. Extract zip file
+3. Read data into `R` with `sf::st_read("file_name.shp")`
+
+See MUCH more in the [sf](https://r-spatial.github.io/sf/) R package.
+
+## Readily available maps
+
+The [`maps`](https://cran.r-project.org/web/packages/maps/index.html) package contains data to display maps of the world.
+
+`ggplot2::map_data` can be used to get data with longitude and latitude of different locations from the `maps` package. A simple example of fetching data for New Zealand is seen below:
+
+```{r}
+nz <- map_data("nz")
+head(nz)
+```
+
