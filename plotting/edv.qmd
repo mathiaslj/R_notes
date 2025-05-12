@@ -2,15 +2,38 @@
 title: "Effective Data Visualisation and Visual Perception"
 ---
 
-## Concepts from [sections 1.1 and 1.2](https://socviz.co/lookatdata.html#why-look-at-data) of *“Data Visualization: A practical introduction”* by Kieran Healey.
+# Visual Perception
 
-- **Aesthetic:** Ugly or inconsistent design choices
-- **Substantive:** It's not about making stuff look pretty but making sure to present data in the most informative way.
-  - In many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.
-- **Perceptual:** In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at. 
-  - Fx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.
-- **Data-to-ink ratio (concept by Tufte):** Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed
-  - Healey notes that *..., it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it*.
+This section is about making sure plots are as easily interpretable as possible for the reader.
+
+## Visual channels
+
+*Channels* are a concept from [section 1.5](https://socviz.co/lookatdata.html#channels-for-representing-data) from Kieran Healey. See a list of visual channels in the figures to the right in the reference **ordered by effectiveness**. 
+
+*Effectiveness* meant such that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.
+
+### [Direct Area Visualisations](https://clauswilke.com/dataviz/proportional-ink.html#direct-area-visualizations)
+
+> *"..., we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area."*
+
+Functions to change the scale of point sizes (when using `aes(size = xx)` in a `geom_point` fx.):
+
+- `ggplot2::scale_radius` can be used to scale based on radius rather than area since.
+- `ggplot2::scale_size_area` can be used to make sure ratio of sizes is equal to ratio of data values.
+
+**Note!** Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.
+
+## [Gestalt rules](https://socviz.co/lookatdata.html#gestalt-rules)
+
+> *"The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects... Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible..."*.
+
+See [slide 10](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/gestalt-rules) for a "ranking" of what rules are dominant over each other and should be used for creating relations between data values.
+
+## Data-to-ink ratio
+
+**Data-to-ink ratio (concept by Tufte):** Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed
+
+- Healey notes that *..., it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it*.
 
 ## [The principle of proportional ink](https://clauswilke.com/dataviz/proportional-ink.html)
 
@@ -23,17 +46,16 @@ This concept has been termed by Bergstrom and West as the principle of proportio
 - If values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.
 - On logarithmic axes, bars are a ratio. Make sure to represent correctly.
   - Consider using points instead of bars.
+  
+  ## Concepts from [sections 1.1 and 1.2](https://socviz.co/lookatdata.html#why-look-at-data) of *“Data Visualization: A practical introduction”* by Kieran Healey.
 
-## [Direct Area Visualisations](https://clauswilke.com/dataviz/proportional-ink.html#direct-area-visualizations)
+- **Aesthetic:** Ugly or inconsistent design choices
+- **Substantive:** It's not about making stuff look pretty but making sure to present data in the most informative way.
+  - In many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.
+- **Perceptual:** In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at. 
+  - Fx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.
 
-> *"..., we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area."*
-
-Functions to change the scale of point sizes (when using `aes(size = xx)` in a `geom_point` fx.):
-
-- `ggplot2::scale_radius` can be used to scale based on radius rather than area since.
-- `ggplot2::scale_size_area` can be used to make sure ratio of sizes is equal to ratio of data values.
-
-**Note!** Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.
+# Practical tips to making plots nicer
 
 ## [Overplotting](https://clauswilke.com/dataviz/overlapping-points.html)
 
@@ -131,16 +153,6 @@ labs(x = expression(paste("Engine displacment (", "in"^3, ")")))
 ```
 
 to render the exponent.
-
-## [Gestalt rules](https://socviz.co/lookatdata.html#gestalt-rules)
-
-> *"The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects... Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible..."*.
-
-See [slide 10](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/gestalt-rules) for a "ranking" of what rules are dominant over each other and should be used for creating relations between data values.
-
-## Channels
-
-*Channels* are a concept from [section 1.5](https://socviz.co/lookatdata.html#channels-for-representing-data) from Kieran Healey. See a list of visual channels in the figures to the right in the reference. **NOTE!** that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.
 
 # References
 
