@@ -1,57 +1,67 @@
 [
   {
-    "objectID": "data-wrangling/baser.html",
-    "href": "data-wrangling/baser.html",
-    "title": "Base R",
+    "objectID": "data-wrangling/tidyverse.html",
+    "href": "data-wrangling/tidyverse.html",
+    "title": "The tidyverse",
     "section": "",
-    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
+    "text": "Test\n\n\n\n Back to top",
     "crumbs": [
-      "Base R",
-      "Base R"
+      "The tidyverse",
+      "The `tidyverse`"
     ]
   },
   {
-    "objectID": "pkg-dev/cran.html",
-    "href": "pkg-dev/cran.html",
-    "title": "Submitting to CRAN",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
     "section": "",
-    "text": "See nice guides in Chapter 22 of r-pkgs book and r consortiums CRAN submission cookbook.\n\n\n\n Back to top",
+    "text": "This Quarto website is home to private notes about everything R.\nMisc links:"
+  },
+  {
+    "objectID": "index.html#learning-r",
+    "href": "index.html#learning-r",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "Learning R",
+    "text": "Learning R\n\nLearn the tidyverse\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse\n\n\nAdvanced\n\nAdvanced R\n\nSolutions\n\nThe art of R programming\nRstudio education - expert pathway"
+  },
+  {
+    "objectID": "index.html#organisations",
+    "href": "index.html#organisations",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "Organisations",
+    "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
+  },
+  {
+    "objectID": "prog/obj_prog.html",
+    "href": "prog/obj_prog.html",
+    "title": "Object-oriented programming",
+    "section": "",
+    "text": "As intro, see Object-oriented programming in Advanced R.\n\n\n\n Back to top",
     "crumbs": [
-      "Creating a package",
-      "Submitting to CRAN"
+      "Object-oriented programming",
+      "Object-oriented programming"
     ]
   },
   {
-    "objectID": "pkg-dev/get-started.html",
-    "href": "pkg-dev/get-started.html",
-    "title": "Get started",
+    "objectID": "plotting/ggplot2.html",
+    "href": "plotting/ggplot2.html",
+    "title": "ggplot2",
     "section": "",
-    "text": "A package should use git and be hosted on a remote repository. Below we describe how to use GitHub.",
+    "text": "Something something",
     "crumbs": [
-      "Creating a package",
-      "Get started"
+      "Creating plots",
+      "`ggplot2`"
     ]
   },
   {
-    "objectID": "pkg-dev/get-started.html#setting-up-a-repository-with-github-pages-using-usethis",
-    "href": "pkg-dev/get-started.html#setting-up-a-repository-with-github-pages-using-usethis",
-    "title": "Get started",
-    "section": "Setting up a repository with GitHub pages using usethis",
-    "text": "Setting up a repository with GitHub pages using usethis\n\nuse_git()\nuse_github()\nuse_description()\nuse_github_action(...)\nuse_github_pages()\n\nSee more in page about GH actions.",
+    "objectID": "plotting/ggplot2.html#misc-tips-and-tricks",
+    "href": "plotting/ggplot2.html#misc-tips-and-tricks",
+    "title": "ggplot2",
+    "section": "Misc tips and tricks",
+    "text": "Misc tips and tricks\n\naspect.ratio argument in theme to specify aspect ratio of each panel\nmargin argument in element_... functions\n\nFx. plot.title = element_text(size = 18, margin = margin(0,0,20,0)) to move the title higher up by adding a margin to the bottom\n\nUse coord_cartesian(clip = \"off\") to write outside plotting area. See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
     "crumbs": [
-      "Creating a package",
-      "Get started"
-    ]
-  },
-  {
-    "objectID": "plotting/CRAP-designs.html",
-    "href": "plotting/CRAP-designs.html",
-    "title": "Plot design - CRAP principles and fonts",
-    "section": "",
-    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee much more information in the readings in the link to lecture notes and some notes in the answer to lab 5.\n\n\nFonts\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Plot design - CRAP principles and fonts"
+      "Creating plots",
+      "`ggplot2`"
     ]
   },
   {
@@ -59,18 +69,40 @@
     "href": "plotting/edv.html",
     "title": "Effective Data Visualisation and Visual Perception",
     "section": "",
-    "text": "Aesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
+    "text": "This section is about making sure plots are as easily interpretable as possible for the reader.\n\n\nChannels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference ordered by effectiveness.\nEffectiveness meant such that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.\n\n\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.):\n\nggplot2::scale_radius can be used to scale based on radius rather than area since.\nggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\n\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.\n\n\n\n\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.\n\n\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.\n\n\n\n\nThis concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.\n\n\nAesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation and Visual Perception"
     ]
   },
   {
-    "objectID": "plotting/edv.html#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.",
-    "href": "plotting/edv.html#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.",
+    "objectID": "plotting/edv.html#visual-channels",
+    "href": "plotting/edv.html#visual-channels",
     "title": "Effective Data Visualisation and Visual Perception",
     "section": "",
-    "text": "Aesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
+    "text": "Channels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference ordered by effectiveness.\nEffectiveness meant such that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.\n\n\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.):\n\nggplot2::scale_radius can be used to scale based on radius rather than area since.\nggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\n\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation and Visual Perception"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#gestalt-rules",
+    "href": "plotting/edv.html#gestalt-rules",
+    "title": "Effective Data Visualisation and Visual Perception",
+    "section": "",
+    "text": "“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation and Visual Perception"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#data-to-ink-ratio",
+    "href": "plotting/edv.html#data-to-ink-ratio",
+    "title": "Effective Data Visualisation and Visual Perception",
+    "section": "",
+    "text": "Data-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation and Visual Perception"
@@ -80,19 +112,8 @@
     "objectID": "plotting/edv.html#the-principle-of-proportional-ink",
     "href": "plotting/edv.html#the-principle-of-proportional-ink",
     "title": "Effective Data Visualisation and Visual Perception",
-    "section": "The principle of proportional ink",
-    "text": "The principle of proportional ink\nThis concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#direct-area-visualisations",
-    "href": "plotting/edv.html#direct-area-visualisations",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Direct Area Visualisations",
-    "text": "Direct Area Visualisations\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.):\n\nggplot2::scale_radius can be used to scale based on radius rather than area since.\nggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\n\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.",
+    "section": "",
+    "text": "This concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.\n\n\nAesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
       "Effective Data Visualisation and Visual Perception"
@@ -154,28 +175,6 @@
     ]
   },
   {
-    "objectID": "plotting/edv.html#gestalt-rules",
-    "href": "plotting/edv.html#gestalt-rules",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Gestalt rules",
-    "text": "Gestalt rules\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#channels",
-    "href": "plotting/edv.html#channels",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Channels",
-    "text": "Channels\nChannels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference. NOTE! that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
     "objectID": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
     "href": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
     "title": "Effective Data Visualisation and Visual Perception",
@@ -204,7 +203,7 @@
     "section": "",
     "text": "See lecture notes about animation.",
     "crumbs": [
-      "Animation",
+      "Animation and interactivity",
       "Animation"
     ]
   },
@@ -215,7 +214,7 @@
     "section": "Low-level approach - magick",
     "text": "Low-level approach - magick\nApproach to draw every frame of the animation. More work but also more control.\nBasic steps to produce animation:\n\nAssign value (fx. img) to call of magick::image_graph to open a magick graphics device\nRun a loop that draws each frame of the animation\nCall dev.off() to close the magick graphics device\nRun image_animate(img)",
     "crumbs": [
-      "Animation",
+      "Animation and interactivity",
       "Animation"
     ]
   },
@@ -224,32 +223,120 @@
     "href": "plotting/animation.html#high-level-approach---gganimate",
     "title": "Animation",
     "section": "High-level approach - gganimate",
-    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.",
+    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.\n\nCreate animation “superimposed” onto static image\nSee example how to do this in this model answer\n\n\nMisc notes about gganimate\n\nIf using exit/enter_xx function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.\nTo slow down the animation, assign it a value p, and then use animate(p, fps = 1) fx. to control the frames pr. second.",
     "crumbs": [
-      "Animation",
+      "Animation and interactivity",
       "Animation"
     ]
   },
   {
-    "objectID": "prog/obj_prog.html",
-    "href": "prog/obj_prog.html",
-    "title": "Object-oriented programming",
+    "objectID": "plotting/colors-in-R.html",
+    "href": "plotting/colors-in-R.html",
+    "title": "Colors and text in R",
     "section": "",
-    "text": "As intro, see Object-oriented programming in Advanced R.\n\n\n\n Back to top",
+    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
     "crumbs": [
-      "Object-oriented programming",
-      "Object-oriented programming"
+      "Creating plots",
+      "Colors and text in R"
     ]
   },
   {
-    "objectID": "prog/func_prog.html",
-    "href": "prog/func_prog.html",
-    "title": "Functional programming",
-    "section": "",
-    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
+    "objectID": "plotting/colors-in-R.html#fonts",
+    "href": "plotting/colors-in-R.html#fonts",
+    "title": "Colors and text in R",
+    "section": "Fonts",
+    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
     "crumbs": [
-      "Functional programming",
-      "Functional programming"
+      "Creating plots",
+      "Colors and text in R"
+    ]
+  },
+  {
+    "objectID": "pkg-dev/cran.html",
+    "href": "pkg-dev/cran.html",
+    "title": "Submitting to CRAN",
+    "section": "",
+    "text": "See nice guides in Chapter 22 of r-pkgs book and r consortiums CRAN submission cookbook.\n\n\n\n Back to top",
+    "crumbs": [
+      "Creating a package",
+      "Submitting to CRAN"
+    ]
+  },
+  {
+    "objectID": "pkg-dev/get-started.html",
+    "href": "pkg-dev/get-started.html",
+    "title": "Get started",
+    "section": "",
+    "text": "A package should use git and be hosted on a remote repository. Below we describe how to use GitHub.",
+    "crumbs": [
+      "Creating a package",
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "pkg-dev/get-started.html#setting-up-a-repository-with-github-pages-using-usethis",
+    "href": "pkg-dev/get-started.html#setting-up-a-repository-with-github-pages-using-usethis",
+    "title": "Get started",
+    "section": "Setting up a repository with GitHub pages using usethis",
+    "text": "Setting up a repository with GitHub pages using usethis\n\nuse_git()\nuse_github()\nuse_description()\nuse_github_action(...)\nuse_github_pages()\n\nSee more in page about GH actions.",
+    "crumbs": [
+      "Creating a package",
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "pkg-dev/gh-actions.html",
+    "href": "pkg-dev/gh-actions.html",
+    "title": "GitHub actions",
+    "section": "",
+    "text": "Back to top",
+    "crumbs": [
+      "Creating a package",
+      "GitHub actions"
+    ]
+  },
+  {
+    "objectID": "plotting/CRAP-designs.html",
+    "href": "plotting/CRAP-designs.html",
+    "title": "Plot design - CRAP principles and fonts",
+    "section": "",
+    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee much more information in the readings in the link to lecture notes and some notes in the answer to lab 5.\n\n\nFonts\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Plot design - CRAP principles and fonts"
+    ]
+  },
+  {
+    "objectID": "plotting/maps.html",
+    "href": "plotting/maps.html",
+    "title": "Maps",
+    "section": "",
+    "text": "See lecture notes from lecture 9 of STATS 787 - Data Visualisation at UoA as well as my answer to the corresponding lab\nSee especially link from lecture notes to the Maps chapter in “ggplot2: Elegant Graphics for Data Analysis (3e)”.",
+    "crumbs": [
+      "Maps",
+      "Maps"
+    ]
+  },
+  {
+    "objectID": "plotting/maps.html#accessing-map-data",
+    "href": "plotting/maps.html#accessing-map-data",
+    "title": "Maps",
+    "section": "Accessing map data",
+    "text": "Accessing map data\n\nDownload map data fx. from https://koordinates.com/\nExtract zip file\nRead data into R with sf::st_read(\"file_name.shp\")\n\nSee MUCH more in the sf R package.",
+    "crumbs": [
+      "Maps",
+      "Maps"
+    ]
+  },
+  {
+    "objectID": "plotting/maps.html#readily-available-maps",
+    "href": "plotting/maps.html#readily-available-maps",
+    "title": "Maps",
+    "section": "Readily available maps",
+    "text": "Readily available maps\nThe maps package contains data to display maps of the world.\nggplot2::map_data can be used to get data with longitude and latitude of different locations from the maps package. A simple example of fetching data for New Zealand is seen below:\n\nnz &lt;- ggplot2::map_data(\"nz\")\nhead(nz)\n\n      long       lat group order        region subregion\n1 172.7433 -34.44215     1     1 North.Island       &lt;NA&gt;\n2 172.7983 -34.45562     1     2 North.Island       &lt;NA&gt;\n3 172.8528 -34.44846     1     3 North.Island       &lt;NA&gt;\n4 172.8986 -34.41786     1     4 North.Island       &lt;NA&gt;\n5 172.9593 -34.42503     1     5 North.Island       &lt;NA&gt;\n6 173.0184 -34.39895     1     6 North.Island       &lt;NA&gt;",
+    "crumbs": [
+      "Maps",
+      "Maps"
     ]
   },
   {
@@ -286,90 +373,58 @@
     ]
   },
   {
-    "objectID": "plotting/ggplot2.html",
-    "href": "plotting/ggplot2.html",
-    "title": "ggplot2",
+    "objectID": "plotting/interactivity.html",
+    "href": "plotting/interactivity.html",
+    "title": "Interactivity",
     "section": "",
-    "text": "Something something",
+    "text": "See this small document, which describes how to use plotly::ggplotly.\nNotice especially the specification of the text aesthetic to create new strings in the hover interface.",
     "crumbs": [
-      "Creating plots",
-      "`ggplot2`"
+      "Animation and interactivity",
+      "Interactivity"
     ]
   },
   {
-    "objectID": "plotting/ggplot2.html#misc-tips-and-tricks",
-    "href": "plotting/ggplot2.html#misc-tips-and-tricks",
-    "title": "ggplot2",
-    "section": "Misc tips and tricks",
-    "text": "Misc tips and tricks\n\naspect.ratio argument in theme to specify aspect ratio of each panel\nmargin argument in element_... functions\n\nFx. plot.title = element_text(size = 18, margin = margin(0,0,20,0)) to move the title higher up by adding a margin to the bottom\n\nUse coord_cartesian(clip = \"off\") to write outside plotting area. See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
+    "objectID": "plotting/interactivity.html#plotly",
+    "href": "plotting/interactivity.html#plotly",
+    "title": "Interactivity",
+    "section": "",
+    "text": "See this small document, which describes how to use plotly::ggplotly.\nNotice especially the specification of the text aesthetic to create new strings in the hover interface.",
     "crumbs": [
-      "Creating plots",
-      "`ggplot2`"
+      "Animation and interactivity",
+      "Interactivity"
     ]
   },
   {
-    "objectID": "plotting/colors-in-R.html",
-    "href": "plotting/colors-in-R.html",
-    "title": "Colors and text in R",
-    "section": "",
-    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
+    "objectID": "plotting/interactivity.html#plotscaper",
+    "href": "plotting/interactivity.html#plotscaper",
+    "title": "Interactivity",
+    "section": "plotscaper",
+    "text": "plotscaper\nCreate simple linked plots.",
     "crumbs": [
-      "Creating plots",
-      "Colors and text in R"
+      "Animation and interactivity",
+      "Interactivity"
     ]
   },
   {
-    "objectID": "plotting/colors-in-R.html#fonts",
-    "href": "plotting/colors-in-R.html#fonts",
-    "title": "Colors and text in R",
-    "section": "Fonts",
-    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
+    "objectID": "prog/func_prog.html",
+    "href": "prog/func_prog.html",
+    "title": "Functional programming",
+    "section": "",
+    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
     "crumbs": [
-      "Creating plots",
-      "Colors and text in R"
+      "Functional programming",
+      "Functional programming"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "objectID": "data-wrangling/baser.html",
+    "href": "data-wrangling/baser.html",
+    "title": "Base R",
     "section": "",
-    "text": "This Quarto website is home to private notes about everything R.\nMisc links:"
-  },
-  {
-    "objectID": "index.html#learning-r",
-    "href": "index.html#learning-r",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "Learning R",
-    "text": "Learning R\n\nLearn the tidyverse\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse\n\n\nAdvanced\n\nAdvanced R\n\nSolutions\n\nThe art of R programming\nRstudio education - expert pathway"
-  },
-  {
-    "objectID": "index.html#organisations",
-    "href": "index.html#organisations",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "Organisations",
-    "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
-  },
-  {
-    "objectID": "pkg-dev/gh-actions.html",
-    "href": "pkg-dev/gh-actions.html",
-    "title": "GitHub actions",
-    "section": "",
-    "text": "Back to top",
+    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
     "crumbs": [
-      "Creating a package",
-      "GitHub actions"
-    ]
-  },
-  {
-    "objectID": "data-wrangling/tidyverse.html",
-    "href": "data-wrangling/tidyverse.html",
-    "title": "The tidyverse",
-    "section": "",
-    "text": "Test\n\n\n\n Back to top",
-    "crumbs": [
-      "The tidyverse",
-      "The `tidyverse`"
+      "Base R",
+      "Base R"
     ]
   }
 ]

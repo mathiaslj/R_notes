@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>grid and gggrid – Various notes about R</title>
+<title>Interactivity – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -209,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title"><code>grid</code> and <code>gggrid</code></h1>
+          <h1 class="quarto-secondary-nav-title">Interactivity</h1>
         </a>     
     </div>
   </nav>
@@ -245,13 +245,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Creating plots</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../plotting/colors-in-R.html" class="sidebar-item-text sidebar-link">
@@ -260,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link active">
+  <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><code>grid</code> and <code>gggrid</code></span></a>
   </div>
 </li>
@@ -291,13 +291,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Animation and interactivity</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../plotting/animation.html" class="sidebar-item-text sidebar-link">
@@ -306,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plotting/interactivity.html" class="sidebar-item-text sidebar-link">
+  <a href="../plotting/interactivity.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Interactivity</span></a>
   </div>
 </li>
@@ -322,22 +322,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-grid-package" id="toc-the-grid-package" class="nav-link active" data-scroll-target="#the-grid-package">The <code>grid package</code></a>
+  <li><a href="#plotly" id="toc-plotly" class="nav-link active" data-scroll-target="#plotly"><code>plotly</code></a>
   <ul class="collapse">
-  <li><a href="#using-viewports" id="toc-using-viewports" class="nav-link" data-scroll-target="#using-viewports">Using viewports</a></li>
-  <li><a href="#grid.layout" id="toc-grid.layout" class="nav-link" data-scroll-target="#grid.layout"><code>grid.layout</code></a></li>
+  <li><a href="#ggplotly" id="toc-ggplotly" class="nav-link" data-scroll-target="#ggplotly"><code>ggplotly</code></a></li>
   </ul></li>
-  <li><a href="#combining-grid-and-ggplot2---the-gggrid-package" id="toc-combining-grid-and-ggplot2---the-gggrid-package" class="nav-link" data-scroll-target="#combining-grid-and-ggplot2---the-gggrid-package">Combining <code>grid</code> and <code>ggplot2</code> - The <code>gggrid</code> package</a></li>
-  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#plotscaper" id="toc-plotscaper" class="nav-link" data-scroll-target="#plotscaper"><code>plotscaper</code></a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/grid-and-gggrid.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/interactivity.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><code>grid</code> and <code>gggrid</code></h1>
+<h1 class="title d-none d-lg-block">Interactivity</h1>
 </div>
 
 
@@ -354,45 +352,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The following is taken from the <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#overall-summary">overall summary</a> of my lab2 answer in STATS 787 at UoA.</p>
-<blockquote class="blockquote">
-<p>References to specific questions reference answers in the above link.</p>
-</blockquote>
-<section id="the-grid-package" class="level2">
-<h2 class="anchored" data-anchor-id="the-grid-package">The <code>grid package</code></h2>
-<p>The <code>grid</code> package allows total customisation in creating <em>grobs</em> (graphical objects). They can either be drawn directly using <code>grid::grid.xx</code> functions or created as grobs with <code>grid::xxGrob</code> functions to be drawn later (with <code>grid::grid.draw</code>). This enables us to gather different grobs in a <em>grob tree</em> with <code>grid::gTree</code> and specifying grobs with a <code>grid::gList</code> as the <code>children</code> argument (alternatively use <code>grid::grobTree</code> when all components are grobs). See more in <em>question 1</em>.</p>
-<section id="using-viewports" class="level3">
-<h3 class="anchored" data-anchor-id="using-viewports">Using viewports</h3>
-<p>We can use <code>grid::viewport</code> with <code>grid::pushViewport</code> to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with <code>grid::upViewport</code> (<code>grid::popViewport</code> navigates to parent viewport AND deletes the current viewport from the viewport tree). See <em>questions 2, 3, 5 and 8</em>.</p>
-<p>Additional takeaways about viewports:</p>
-<ul>
-<li><strong>Note</strong> this also works with <code>ggplot2</code> by assigning the <code>ggplot</code> object a value (fx. <code>p</code>) and then plotting it “inside the viewport” with <code>plot(p, newpage = FALSE)</code>. See <em>questions 5 and 8</em>.</li>
-<li>We can use the <code>grid::convertUnit</code> function to change the axis we are referencing (useful fx. when creating a viewport with <code>angle = 90/270</code>). See <em>question 8</em>.</li>
-<li>A strong way of using viewports is using <code>xscale</code> and/or <code>yscale</code> parameters in the <code>grid::viewport</code> function and the using the <code>grid::unit</code> function with <code>units = "native"</code> specified to make your grobs relate to the scale of the viewport.</li>
-<li>Use of <code>grid::grid.layout</code> as in <em>question 3</em> can help with many situations.</li>
-</ul>
-<p><strong>Note</strong> that <code>ggplot2</code> is built on <code>grid</code>. <code>ggplot2</code> uses viewports from <code>grid</code>. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.</p>
-</section>
-<section id="grid.layout" class="level3">
-<h3 class="anchored" data-anchor-id="grid.layout"><code>grid.layout</code></h3>
-<p>See the answer to <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-3">question 3</a> in the link above.</p>
+<section id="plotly" class="level2">
+<h2 class="anchored" data-anchor-id="plotly"><code>plotly</code></h2>
+<section id="ggplotly" class="level3">
+<h3 class="anchored" data-anchor-id="ggplotly"><code>ggplotly</code></h3>
+<p>See <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Plotly/plotly-notes.html">this small document</a>, which describes how to use <code>plotly::ggplotly</code>.</p>
+<p>Notice especially the specification of the <code>text</code> aesthetic to create new strings in the hover interface.</p>
 </section>
 </section>
-<section id="combining-grid-and-ggplot2---the-gggrid-package" class="level2">
-<h2 class="anchored" data-anchor-id="combining-grid-and-ggplot2---the-gggrid-package">Combining <code>grid</code> and <code>ggplot2</code> - The <code>gggrid</code> package</h2>
-<p>As mentioned above, viewports and ggplots integrate nicely using just <code>grid</code> and <code>ggplot2</code>. However, it’s easy to combine elements of <code>grid</code> to <code>ggplot</code>s to create overlays on each facet/panel with <code>gggrid::grid_panel</code> or for each group using <code>gggrid::grid_group</code>.</p>
-<p>These functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes <code>data</code> and <code>coords</code> as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data). Note that the <code>coords</code> are transformed values of <code>x</code> and <code>y</code> (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. <code>data</code> contains the untransformed data and includes columns of other aesthetics (fx. <code>colour</code>).</p>
-</section>
-<section id="reference" class="level1">
-<h1>Reference</h1>
-<ul>
-<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/2025/Topics/grid.html">The <code>grid</code> Graphics System</a> by Paul Murrell for an overview and readings.</li>
-<li><a href="https://www.stat.auckland.ac.nz/~paul/stats787/2025/Slides/grid-slides.html#/">Slides from lecture</a>
-<ul>
-<li>Notice transparency look of picture on slide 22</li>
-<li>Use of <code>mask</code> in slides 24-25 and 26-27</li>
-</ul></li>
-</ul>
+<section id="plotscaper" class="level2">
+<h2 class="anchored" data-anchor-id="plotscaper"><a href="https://bartonicek.github.io/plotscaper/"><code>plotscaper</code></a></h2>
+<p>Create simple linked plots.</p>
 
 
 </section>
@@ -802,4 +772,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/grid-and-gggrid.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/interactivity.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

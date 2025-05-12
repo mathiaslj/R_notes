@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7e266f8f7e98b6b255616bfad3d1c8d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0fde800073088734189ec133b6260862.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -135,10 +135,20 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text"><code>ggplot2</code></span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">Animation</li>
+        <li class="dropdown-header">Maps</li>
+        <li>
+    <a class="dropdown-item" href="../plotting/maps.html">
+ <span class="dropdown-text">Maps</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Animation and interactivity</li>
         <li>
     <a class="dropdown-item" href="../plotting/animation.html">
  <span class="dropdown-text">Animation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../plotting/interactivity.html">
+ <span class="dropdown-text">Interactivity</span></a>
   </li>  
     </ul>
   </li>
@@ -264,17 +274,40 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Animation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Maps</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Animation and interactivity</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../plotting/animation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Animation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/interactivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interactivity</span></a>
   </div>
 </li>
       </ul>
@@ -290,7 +323,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#low-level-approach---magick" id="toc-low-level-approach---magick" class="nav-link active" data-scroll-target="#low-level-approach---magick">Low-level approach - <code>magick</code></a></li>
-  <li><a href="#high-level-approach---gganimate" id="toc-high-level-approach---gganimate" class="nav-link" data-scroll-target="#high-level-approach---gganimate">High-level approach - gganimate</a></li>
+  <li><a href="#high-level-approach---gganimate" id="toc-high-level-approach---gganimate" class="nav-link" data-scroll-target="#high-level-approach---gganimate">High-level approach - gganimate</a>
+  <ul class="collapse">
+  <li><a href="#create-animation-superimposed-onto-static-image" id="toc-create-animation-superimposed-onto-static-image" class="nav-link" data-scroll-target="#create-animation-superimposed-onto-static-image">Create animation “superimposed” onto static image</a></li>
+  <li><a href="#misc-notes-about-gganimate" id="toc-misc-notes-about-gganimate" class="nav-link" data-scroll-target="#misc-notes-about-gganimate">Misc notes about <code>gganimate</code></a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/animation.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -334,8 +371,19 @@ ul.task-list li input[type="checkbox"] {
 <p>NOTE! Install package <a href="https://cran.r-project.org/web/packages/gifski/index.html">gifski</a>. If installed, <code>gganimate</code> will make sure to use that as the backend when creating the GIFs</p>
 </blockquote>
 <p>See the <a href="https://gganimate.com/articles/gganimate.html">getting started</a> article as well as run examples in references section of each <code>transition_...</code> function.</p>
+<section id="create-animation-superimposed-onto-static-image" class="level3">
+<h3 class="anchored" data-anchor-id="create-animation-superimposed-onto-static-image">Create animation “superimposed” onto static image</h3>
+<p>See example how to do this in <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab6_answer.html#creating-the-animation-with-gganimate">this model answer</a></p>
+</section>
+<section id="misc-notes-about-gganimate" class="level3">
+<h3 class="anchored" data-anchor-id="misc-notes-about-gganimate">Misc notes about <code>gganimate</code></h3>
+<ul>
+<li>If using <code>exit/enter_xx</code> function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.</li>
+<li>To slow down the animation, assign it a value <code>p</code>, and then use <code>animate(p, fps = 1)</code> fx. to control the frames pr. second.</li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

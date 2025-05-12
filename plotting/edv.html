@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7e266f8f7e98b6b255616bfad3d1c8d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0fde800073088734189ec133b6260862.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -170,10 +170,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text"><code>ggplot2</code></span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
-        <li class="dropdown-header">Animation</li>
+        <li class="dropdown-header">Maps</li>
+        <li>
+    <a class="dropdown-item" href="../plotting/maps.html">
+ <span class="dropdown-text">Maps</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Animation and interactivity</li>
         <li>
     <a class="dropdown-item" href="../plotting/animation.html">
  <span class="dropdown-text">Animation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../plotting/interactivity.html">
+ <span class="dropdown-text">Interactivity</span></a>
   </li>  
     </ul>
   </li>
@@ -300,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Animation</span></a>
+ <span class="menu-text">Maps</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -308,8 +318,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../plotting/maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Animation and interactivity</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../plotting/animation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Animation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/interactivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interactivity</span></a>
   </div>
 </li>
       </ul>
@@ -324,9 +357,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." id="toc-concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." class="nav-link active" data-scroll-target="#concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.">Concepts from sections 1.1 and 1.2 of <em>“Data Visualization: A practical introduction”</em> by Kieran Healey.</a></li>
-  <li><a href="#the-principle-of-proportional-ink" id="toc-the-principle-of-proportional-ink" class="nav-link" data-scroll-target="#the-principle-of-proportional-ink">The principle of proportional ink</a></li>
+  <li><a href="#visual-perception" id="toc-visual-perception" class="nav-link active" data-scroll-target="#visual-perception">Visual Perception</a>
+  <ul class="collapse">
+  <li><a href="#visual-channels" id="toc-visual-channels" class="nav-link" data-scroll-target="#visual-channels">Visual channels</a>
+  <ul class="collapse">
   <li><a href="#direct-area-visualisations" id="toc-direct-area-visualisations" class="nav-link" data-scroll-target="#direct-area-visualisations">Direct Area Visualisations</a></li>
+  </ul></li>
+  <li><a href="#gestalt-rules" id="toc-gestalt-rules" class="nav-link" data-scroll-target="#gestalt-rules">Gestalt rules</a></li>
+  <li><a href="#data-to-ink-ratio" id="toc-data-to-ink-ratio" class="nav-link" data-scroll-target="#data-to-ink-ratio">Data-to-ink ratio</a></li>
+  <li><a href="#the-principle-of-proportional-ink" id="toc-the-principle-of-proportional-ink" class="nav-link" data-scroll-target="#the-principle-of-proportional-ink">The principle of proportional ink</a></li>
+  </ul></li>
+  <li><a href="#practical-tips-to-making-plots-nicer" id="toc-practical-tips-to-making-plots-nicer" class="nav-link" data-scroll-target="#practical-tips-to-making-plots-nicer">Practical tips to making plots nicer</a>
+  <ul class="collapse">
   <li><a href="#overplotting" id="toc-overplotting" class="nav-link" data-scroll-target="#overplotting">Overplotting</a></li>
   <li><a href="#sec-colorpitfalls" id="toc-sec-colorpitfalls" class="nav-link" data-scroll-target="#sec-colorpitfalls">Color pitfalls</a>
   <ul class="collapse">
@@ -338,8 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#designing-figures-without-legends" id="toc-designing-figures-without-legends" class="nav-link" data-scroll-target="#designing-figures-without-legends">Designing figures without legends</a></li>
   <li><a href="#multi-panel-figures" id="toc-multi-panel-figures" class="nav-link" data-scroll-target="#multi-panel-figures">Multi-panel figures</a></li>
   <li><a href="#titles-captions-and-tables" id="toc-titles-captions-and-tables" class="nav-link" data-scroll-target="#titles-captions-and-tables">Titles, captions and tables</a></li>
-  <li><a href="#gestalt-rules" id="toc-gestalt-rules" class="nav-link" data-scroll-target="#gestalt-rules">Gestalt rules</a></li>
-  <li><a href="#channels" id="toc-channels" class="nav-link" data-scroll-target="#channels">Channels</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
   <ul class="collapse">
   <li><a href="#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa" id="toc-lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa" class="nav-link" data-scroll-target="#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa">Lecture notes and slides from STATS 787: Data Visualisation at UoA</a></li>
@@ -370,22 +411,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." class="level2">
-<h2 class="anchored" data-anchor-id="concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey.">Concepts from <a href="https://socviz.co/lookatdata.html#why-look-at-data">sections 1.1 and 1.2</a> of <em>“Data Visualization: A practical introduction”</em> by Kieran Healey.</h2>
+<section id="visual-perception" class="level1">
+<h1>Visual Perception</h1>
+<p>This section is about making sure plots are as easily interpretable as possible for the reader.</p>
+<section id="visual-channels" class="level2">
+<h2 class="anchored" data-anchor-id="visual-channels">Visual channels</h2>
+<p><em>Channels</em> are a concept from <a href="https://socviz.co/lookatdata.html#channels-for-representing-data">section 1.5</a> from Kieran Healey. See a list of visual channels in the figures to the right in the reference <strong>ordered by effectiveness</strong>.</p>
+<p><em>Effectiveness</em> meant such that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.</p>
+<section id="direct-area-visualisations" class="level3">
+<h3 class="anchored" data-anchor-id="direct-area-visualisations"><a href="https://clauswilke.com/dataviz/proportional-ink.html#direct-area-visualizations">Direct Area Visualisations</a></h3>
+<blockquote class="blockquote">
+<p><em>“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”</em></p>
+</blockquote>
+<p>Functions to change the scale of point sizes (when using <code>aes(size = xx)</code> in a <code>geom_point</code> fx.):</p>
 <ul>
-<li><strong>Aesthetic:</strong> Ugly or inconsistent design choices</li>
-<li><strong>Substantive:</strong> It’s not about making stuff look pretty but making sure to present data in the most informative way.
-<ul>
-<li>In many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.</li>
-</ul></li>
-<li><strong>Perceptual:</strong> In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.
-<ul>
-<li>Fx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.</li>
-</ul></li>
-<li><strong>Data-to-ink ratio (concept by Tufte):</strong> Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed
+<li><code>ggplot2::scale_radius</code> can be used to scale based on radius rather than area since.</li>
+<li><code>ggplot2::scale_size_area</code> can be used to make sure ratio of sizes is equal to ratio of data values.</li>
+</ul>
+<p><strong>Note!</strong> Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.</p>
+</section>
+</section>
+<section id="gestalt-rules" class="level2">
+<h2 class="anchored" data-anchor-id="gestalt-rules"><a href="https://socviz.co/lookatdata.html#gestalt-rules">Gestalt rules</a></h2>
+<blockquote class="blockquote">
+<p><em>“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“</em>.</p>
+</blockquote>
+<p>See <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/gestalt-rules">slide 10</a> for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.</p>
+</section>
+<section id="data-to-ink-ratio" class="level2">
+<h2 class="anchored" data-anchor-id="data-to-ink-ratio">Data-to-ink ratio</h2>
+<p><strong>Data-to-ink ratio (concept by Tufte):</strong> Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed</p>
 <ul>
 <li>Healey notes that <em>…, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it</em>.</li>
-</ul></li>
 </ul>
 </section>
 <section id="the-principle-of-proportional-ink" class="level2">
@@ -403,21 +460,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>On logarithmic axes, bars are a ratio. Make sure to represent correctly.
 <ul>
 <li>Consider using points instead of bars.</li>
+</ul>
+<h2 id="concepts-from-sections-1.1-and-1.2-of-data-visualization-a-practical-introduction-by-kieran-healey." class="anchored">Concepts from <a href="https://socviz.co/lookatdata.html#why-look-at-data">sections 1.1 and 1.2</a> of <em>“Data Visualization: A practical introduction”</em> by Kieran Healey.</h2></li>
+<li><strong>Aesthetic:</strong> Ugly or inconsistent design choices</li>
+<li><strong>Substantive:</strong> It’s not about making stuff look pretty but making sure to present data in the most informative way.
+<ul>
+<li>In many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.</li>
+</ul></li>
+<li><strong>Perceptual:</strong> In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.
+<ul>
+<li>Fx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.</li>
 </ul></li>
 </ul>
 </section>
-<section id="direct-area-visualisations" class="level2">
-<h2 class="anchored" data-anchor-id="direct-area-visualisations"><a href="https://clauswilke.com/dataviz/proportional-ink.html#direct-area-visualizations">Direct Area Visualisations</a></h2>
-<blockquote class="blockquote">
-<p><em>“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”</em></p>
-</blockquote>
-<p>Functions to change the scale of point sizes (when using <code>aes(size = xx)</code> in a <code>geom_point</code> fx.):</p>
-<ul>
-<li><code>ggplot2::scale_radius</code> can be used to scale based on radius rather than area since.</li>
-<li><code>ggplot2::scale_size_area</code> can be used to make sure ratio of sizes is equal to ratio of data values.</li>
-</ul>
-<p><strong>Note!</strong> Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.</p>
 </section>
+<section id="practical-tips-to-making-plots-nicer" class="level1">
+<h1>Practical tips to making plots nicer</h1>
 <section id="overplotting" class="level2">
 <h2 class="anchored" data-anchor-id="overplotting"><a href="https://clauswilke.com/dataviz/overlapping-points.html">Overplotting</a></h2>
 <p><strong>Issue:</strong> points that overlap.</p>
@@ -551,16 +609,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>to render the exponent.</p>
 </section>
-<section id="gestalt-rules" class="level2">
-<h2 class="anchored" data-anchor-id="gestalt-rules"><a href="https://socviz.co/lookatdata.html#gestalt-rules">Gestalt rules</a></h2>
-<blockquote class="blockquote">
-<p><em>“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“</em>.</p>
-</blockquote>
-<p>See <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Slides/perception-slides.html#/gestalt-rules">slide 10</a> for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.</p>
-</section>
-<section id="channels" class="level2">
-<h2 class="anchored" data-anchor-id="channels">Channels</h2>
-<p><em>Channels</em> are a concept from <a href="https://socviz.co/lookatdata.html#channels-for-representing-data">section 1.5</a> from Kieran Healey. See a list of visual channels in the figures to the right in the reference. <strong>NOTE!</strong> that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.</p>
 </section>
 <section id="references" class="level1">
 <h1>References</h1>
