@@ -29,3 +29,4 @@ See example how to do this in [this model answer](https://mathiaslj.github.io/st
 ### Misc notes about `gganimate`
 
 - If using `exit/enter_xx` function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.
+- To slow down the animation, assign it a value `p`, and then use `animate(p, fps = 1)` fx. to control the frames pr. second.
