@@ -24,7 +24,7 @@ The [`maps`](https://cran.r-project.org/web/packages/maps/index.html) package co
 `ggplot2::map_data` can be used to get data with longitude and latitude of different locations from the `maps` package. A simple example of fetching data for New Zealand is seen below:
 
 ```{r}
-nz <- map_data("nz")
+nz <- ggplot2::map_data("nz")
 head(nz)
 ```
 
