@@ -9,7 +9,9 @@ format: html
 
 See [this small document](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Plotly/plotly-notes.html), which describes how to use `plotly::ggplotly`.
 
-Notice especially the specification of the `text` aesthetic to create new strings in the hover interface.
+> Notice especially the specification of the `text` aesthetic to create new strings in the hover tooltips.
+
+See also the [lab answer](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Notes/Plotly/plotly-notes.html) for that weeks lecture.
 
 ## [`plotscaper`](https://bartonicek.github.io/plotscaper/)
 

@@ -3,7 +3,7 @@ title: "Animation"
 format: html
 ---
 
-See [lecture notes](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/animation.html) about animation.
+See [lecture notes](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/animation.html) about animation and more importantly the [answer to the lab](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab6_answer.html).
 
 ## Low-level approach - [`magick`](https://docs.ropensci.org/magick/)
 
