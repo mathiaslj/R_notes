@@ -1,16 +1,5 @@
 [
   {
-    "objectID": "data-wrangling/tidyverse.html",
-    "href": "data-wrangling/tidyverse.html",
-    "title": "The tidyverse",
-    "section": "",
-    "text": "Test\n\n\n\n Back to top",
-    "crumbs": [
-      "The tidyverse",
-      "The `tidyverse`"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Miscellaneous notes about R added as I stumble upon it",
@@ -32,6 +21,17 @@
     "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
   },
   {
+    "objectID": "data-wrangling/baser.html",
+    "href": "data-wrangling/baser.html",
+    "title": "Base R",
+    "section": "",
+    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
+    "crumbs": [
+      "Base R",
+      "Base R"
+    ]
+  },
+  {
     "objectID": "prog/obj_prog.html",
     "href": "prog/obj_prog.html",
     "title": "Object-oriented programming",
@@ -43,25 +43,58 @@
     ]
   },
   {
-    "objectID": "plotting/ggplot2.html",
-    "href": "plotting/ggplot2.html",
-    "title": "ggplot2",
+    "objectID": "plotting/colors-in-R.html",
+    "href": "plotting/colors-in-R.html",
+    "title": "Colors and text in R",
     "section": "",
-    "text": "Something something",
+    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
     "crumbs": [
       "Creating plots",
-      "`ggplot2`"
+      "Colors and text in R"
     ]
   },
   {
-    "objectID": "plotting/ggplot2.html#misc-tips-and-tricks",
-    "href": "plotting/ggplot2.html#misc-tips-and-tricks",
-    "title": "ggplot2",
-    "section": "Misc tips and tricks",
-    "text": "Misc tips and tricks\n\naspect.ratio argument in theme to specify aspect ratio of each panel\nmargin argument in element_... functions\n\nFx. plot.title = element_text(size = 18, margin = margin(0,0,20,0)) to move the title higher up by adding a margin to the bottom\n\nUse coord_cartesian(clip = \"off\") to write outside plotting area. See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
+    "objectID": "plotting/colors-in-R.html#fonts",
+    "href": "plotting/colors-in-R.html#fonts",
+    "title": "Colors and text in R",
+    "section": "Fonts",
+    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
     "crumbs": [
       "Creating plots",
-      "`ggplot2`"
+      "Colors and text in R"
+    ]
+  },
+  {
+    "objectID": "plotting/animation.html",
+    "href": "plotting/animation.html",
+    "title": "Animation",
+    "section": "",
+    "text": "See lecture notes about animation and more importantly the answer to the lab.",
+    "crumbs": [
+      "Animation and interactivity",
+      "Animation"
+    ]
+  },
+  {
+    "objectID": "plotting/animation.html#low-level-approach---magick",
+    "href": "plotting/animation.html#low-level-approach---magick",
+    "title": "Animation",
+    "section": "Low-level approach - magick",
+    "text": "Low-level approach - magick\nApproach to draw every frame of the animation. More work but also more control.\nBasic steps to produce animation:\n\nAssign value (fx. img) to call of magick::image_graph to open a magick graphics device\nRun a loop that draws each frame of the animation\nCall dev.off() to close the magick graphics device\nRun image_animate(img)",
+    "crumbs": [
+      "Animation and interactivity",
+      "Animation"
+    ]
+  },
+  {
+    "objectID": "plotting/animation.html#high-level-approach---gganimate",
+    "href": "plotting/animation.html#high-level-approach---gganimate",
+    "title": "Animation",
+    "section": "High-level approach - gganimate",
+    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.\n\nCreate animation “superimposed” onto static image\nSee example how to do this in this model answer\n\n\nMisc notes about gganimate\n\nIf using exit/enter_xx function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.\nTo slow down the animation, assign it a value p, and then use animate(p, fps = 1) fx. to control the frames pr. second.",
+    "crumbs": [
+      "Animation and interactivity",
+      "Animation"
     ]
   },
   {
@@ -197,69 +230,36 @@
     ]
   },
   {
-    "objectID": "plotting/animation.html",
-    "href": "plotting/animation.html",
-    "title": "Animation",
+    "objectID": "plotting/interactivity.html",
+    "href": "plotting/interactivity.html",
+    "title": "Interactivity",
     "section": "",
-    "text": "See lecture notes about animation.",
+    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
     "crumbs": [
       "Animation and interactivity",
-      "Animation"
+      "Interactivity"
     ]
   },
   {
-    "objectID": "plotting/animation.html#low-level-approach---magick",
-    "href": "plotting/animation.html#low-level-approach---magick",
-    "title": "Animation",
-    "section": "Low-level approach - magick",
-    "text": "Low-level approach - magick\nApproach to draw every frame of the animation. More work but also more control.\nBasic steps to produce animation:\n\nAssign value (fx. img) to call of magick::image_graph to open a magick graphics device\nRun a loop that draws each frame of the animation\nCall dev.off() to close the magick graphics device\nRun image_animate(img)",
+    "objectID": "plotting/interactivity.html#plotly",
+    "href": "plotting/interactivity.html#plotly",
+    "title": "Interactivity",
+    "section": "",
+    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
     "crumbs": [
       "Animation and interactivity",
-      "Animation"
+      "Interactivity"
     ]
   },
   {
-    "objectID": "plotting/animation.html#high-level-approach---gganimate",
-    "href": "plotting/animation.html#high-level-approach---gganimate",
-    "title": "Animation",
-    "section": "High-level approach - gganimate",
-    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.\n\nCreate animation “superimposed” onto static image\nSee example how to do this in this model answer\n\n\nMisc notes about gganimate\n\nIf using exit/enter_xx function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.\nTo slow down the animation, assign it a value p, and then use animate(p, fps = 1) fx. to control the frames pr. second.",
+    "objectID": "plotting/interactivity.html#plotscaper",
+    "href": "plotting/interactivity.html#plotscaper",
+    "title": "Interactivity",
+    "section": "plotscaper",
+    "text": "plotscaper\nCreate simple linked plots.",
     "crumbs": [
       "Animation and interactivity",
-      "Animation"
-    ]
-  },
-  {
-    "objectID": "plotting/colors-in-R.html",
-    "href": "plotting/colors-in-R.html",
-    "title": "Colors and text in R",
-    "section": "",
-    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
-    "crumbs": [
-      "Creating plots",
-      "Colors and text in R"
-    ]
-  },
-  {
-    "objectID": "plotting/colors-in-R.html#fonts",
-    "href": "plotting/colors-in-R.html#fonts",
-    "title": "Colors and text in R",
-    "section": "Fonts",
-    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
-    "crumbs": [
-      "Creating plots",
-      "Colors and text in R"
-    ]
-  },
-  {
-    "objectID": "pkg-dev/cran.html",
-    "href": "pkg-dev/cran.html",
-    "title": "Submitting to CRAN",
-    "section": "",
-    "text": "See nice guides in Chapter 22 of r-pkgs book and r consortiums CRAN submission cookbook.\n\n\n\n Back to top",
-    "crumbs": [
-      "Creating a package",
-      "Submitting to CRAN"
+      "Interactivity"
     ]
   },
   {
@@ -285,6 +285,17 @@
     ]
   },
   {
+    "objectID": "pkg-dev/cran.html",
+    "href": "pkg-dev/cran.html",
+    "title": "Submitting to CRAN",
+    "section": "",
+    "text": "See nice guides in Chapter 22 of r-pkgs book and r consortiums CRAN submission cookbook.\n\n\n\n Back to top",
+    "crumbs": [
+      "Creating a package",
+      "Submitting to CRAN"
+    ]
+  },
+  {
     "objectID": "pkg-dev/gh-actions.html",
     "href": "pkg-dev/gh-actions.html",
     "title": "GitHub actions",
@@ -293,17 +304,6 @@
     "crumbs": [
       "Creating a package",
       "GitHub actions"
-    ]
-  },
-  {
-    "objectID": "plotting/CRAP-designs.html",
-    "href": "plotting/CRAP-designs.html",
-    "title": "Plot design - CRAP principles and fonts",
-    "section": "",
-    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee much more information in the readings in the link to lecture notes and some notes in the answer to lab 5.\n\n\nFonts\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Plot design - CRAP principles and fonts"
     ]
   },
   {
@@ -340,6 +340,28 @@
     ]
   },
   {
+    "objectID": "plotting/ggplot2.html",
+    "href": "plotting/ggplot2.html",
+    "title": "ggplot2",
+    "section": "",
+    "text": "Something something",
+    "crumbs": [
+      "Creating plots",
+      "`ggplot2`"
+    ]
+  },
+  {
+    "objectID": "plotting/ggplot2.html#misc-tips-and-tricks",
+    "href": "plotting/ggplot2.html#misc-tips-and-tricks",
+    "title": "ggplot2",
+    "section": "Misc tips and tricks",
+    "text": "Misc tips and tricks\n\naspect.ratio argument in theme to specify aspect ratio of each panel\nmargin argument in element_... functions\n\nFx. plot.title = element_text(size = 18, margin = margin(0,0,20,0)) to move the title higher up by adding a margin to the bottom\n\nUse coord_cartesian(clip = \"off\") to write outside plotting area. See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
+    "crumbs": [
+      "Creating plots",
+      "`ggplot2`"
+    ]
+  },
+  {
     "objectID": "plotting/grid-and-gggrid.html",
     "href": "plotting/grid-and-gggrid.html",
     "title": "grid and gggrid",
@@ -373,36 +395,14 @@
     ]
   },
   {
-    "objectID": "plotting/interactivity.html",
-    "href": "plotting/interactivity.html",
-    "title": "Interactivity",
+    "objectID": "plotting/CRAP-designs.html",
+    "href": "plotting/CRAP-designs.html",
+    "title": "Plot design - CRAP principles and fonts",
     "section": "",
-    "text": "See this small document, which describes how to use plotly::ggplotly.\nNotice especially the specification of the text aesthetic to create new strings in the hover interface.",
+    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee much more information in the readings in the link to lecture notes and some notes in the answer to lab 5.\n\n\nFonts\n\n\n\n\n Back to top",
     "crumbs": [
-      "Animation and interactivity",
-      "Interactivity"
-    ]
-  },
-  {
-    "objectID": "plotting/interactivity.html#plotly",
-    "href": "plotting/interactivity.html#plotly",
-    "title": "Interactivity",
-    "section": "",
-    "text": "See this small document, which describes how to use plotly::ggplotly.\nNotice especially the specification of the text aesthetic to create new strings in the hover interface.",
-    "crumbs": [
-      "Animation and interactivity",
-      "Interactivity"
-    ]
-  },
-  {
-    "objectID": "plotting/interactivity.html#plotscaper",
-    "href": "plotting/interactivity.html#plotscaper",
-    "title": "Interactivity",
-    "section": "plotscaper",
-    "text": "plotscaper\nCreate simple linked plots.",
-    "crumbs": [
-      "Animation and interactivity",
-      "Interactivity"
+      "Principles of Effective Data Visualisation",
+      "Plot design - CRAP principles and fonts"
     ]
   },
   {
@@ -417,14 +417,14 @@
     ]
   },
   {
-    "objectID": "data-wrangling/baser.html",
-    "href": "data-wrangling/baser.html",
-    "title": "Base R",
+    "objectID": "data-wrangling/tidyverse.html",
+    "href": "data-wrangling/tidyverse.html",
+    "title": "The tidyverse",
     "section": "",
-    "text": "See Advanced R and The art of R programming\n\n\n\n Back to top",
+    "text": "Test\n\n\n\n Back to top",
     "crumbs": [
-      "Base R",
-      "Base R"
+      "The tidyverse",
+      "The `tidyverse`"
     ]
   }
 ]
