@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "",
-    "text": "This Quarto website is home to private notes about everything R.\nMisc links:"
-  },
-  {
-    "objectID": "index.html#learning-r",
-    "href": "index.html#learning-r",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "Learning R",
-    "text": "Learning R\n\nLearn the tidyverse\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse\n\n\nAdvanced\n\nAdvanced R\n\nSolutions\n\nThe art of R programming\nRstudio education - expert pathway"
-  },
-  {
-    "objectID": "index.html#organisations",
-    "href": "index.html#organisations",
-    "title": "Miscellaneous notes about R added as I stumble upon it",
-    "section": "Organisations",
-    "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
-  },
-  {
     "objectID": "data-wrangling/baser.html",
     "href": "data-wrangling/baser.html",
     "title": "Base R",
@@ -32,69 +11,113 @@
     ]
   },
   {
-    "objectID": "prog/obj_prog.html",
-    "href": "prog/obj_prog.html",
-    "title": "Object-oriented programming",
+    "objectID": "pkg-dev/cran.html",
+    "href": "pkg-dev/cran.html",
+    "title": "Submitting to CRAN",
     "section": "",
-    "text": "As intro, see Object-oriented programming in Advanced R.\n\n\n\n Back to top",
+    "text": "See nice guides in Chapter 22 of r-pkgs book and r consortiums CRAN submission cookbook.\n\n\n\n Back to top",
     "crumbs": [
-      "Object-oriented programming",
-      "Object-oriented programming"
+      "Creating a package",
+      "Submitting to CRAN"
     ]
   },
   {
-    "objectID": "plotting/colors-in-R.html",
-    "href": "plotting/colors-in-R.html",
-    "title": "Colors and text in R",
+    "objectID": "pkg-dev/get-started.html",
+    "href": "pkg-dev/get-started.html",
+    "title": "Get started",
     "section": "",
-    "text": "See Color Pitfalls on this webpage.\nSee below for how to color text.",
+    "text": "A package should use git and be hosted on a remote repository. Below we describe how to use GitHub.",
     "crumbs": [
-      "Creating plots",
-      "Colors and text in R"
+      "Creating a package",
+      "Get started"
     ]
   },
   {
-    "objectID": "plotting/colors-in-R.html#fonts",
-    "href": "plotting/colors-in-R.html#fonts",
-    "title": "Colors and text in R",
-    "section": "Fonts",
-    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
+    "objectID": "pkg-dev/get-started.html#setting-up-a-repository-with-github-pages-using-usethis",
+    "href": "pkg-dev/get-started.html#setting-up-a-repository-with-github-pages-using-usethis",
+    "title": "Get started",
+    "section": "Setting up a repository with GitHub pages using usethis",
+    "text": "Setting up a repository with GitHub pages using usethis\n\nuse_git()\nuse_github()\nuse_description()\nuse_github_action(...)\nuse_github_pages()\n\nSee more in page about GH actions.",
     "crumbs": [
-      "Creating plots",
-      "Colors and text in R"
+      "Creating a package",
+      "Get started"
     ]
   },
   {
-    "objectID": "plotting/animation.html",
-    "href": "plotting/animation.html",
-    "title": "Animation",
+    "objectID": "plotting/maps.html",
+    "href": "plotting/maps.html",
+    "title": "Maps",
     "section": "",
-    "text": "See lecture notes about animation and more importantly the answer to the lab.",
+    "text": "See lecture notes from lecture 9 of STATS 787 - Data Visualisation at UoA as well as my answer to the corresponding lab\nSee especially link from lecture notes to the Maps chapter in “ggplot2: Elegant Graphics for Data Analysis (3e)”.",
+    "crumbs": [
+      "Maps",
+      "Maps"
+    ]
+  },
+  {
+    "objectID": "plotting/maps.html#tips-for-making-nice-map-visualisations",
+    "href": "plotting/maps.html#tips-for-making-nice-map-visualisations",
+    "title": "Maps",
+    "section": "Tips for making nice map visualisations",
+    "text": "Tips for making nice map visualisations\n\nNote especially the challenge where we find a clever way to use position as our visual channel when showing continuous data, which works much better than using color or area as in the earlier questions.\nNon-linear pallette scaling to better highlight differences in data.",
+    "crumbs": [
+      "Maps",
+      "Maps"
+    ]
+  },
+  {
+    "objectID": "plotting/maps.html#accessing-map-data",
+    "href": "plotting/maps.html#accessing-map-data",
+    "title": "Maps",
+    "section": "Accessing map data",
+    "text": "Accessing map data\n\nDownload map data fx. from https://koordinates.com/\nExtract zip file\nRead data into R with sf::st_read(\"file_name.shp\")\n\nSee MUCH more in the sf R package.",
+    "crumbs": [
+      "Maps",
+      "Maps"
+    ]
+  },
+  {
+    "objectID": "plotting/maps.html#readily-available-maps",
+    "href": "plotting/maps.html#readily-available-maps",
+    "title": "Maps",
+    "section": "Readily available maps",
+    "text": "Readily available maps\nThe maps package contains data to display maps of the world.\nggplot2::map_data can be used to get data with longitude and latitude of different locations from the maps package. A simple example of fetching data for New Zealand is seen below:\n\nnz &lt;- ggplot2::map_data(\"nz\")\nhead(nz)\n\n      long       lat group order        region subregion\n1 172.7433 -34.44215     1     1 North.Island       &lt;NA&gt;\n2 172.7983 -34.45562     1     2 North.Island       &lt;NA&gt;\n3 172.8528 -34.44846     1     3 North.Island       &lt;NA&gt;\n4 172.8986 -34.41786     1     4 North.Island       &lt;NA&gt;\n5 172.9593 -34.42503     1     5 North.Island       &lt;NA&gt;\n6 173.0184 -34.39895     1     6 North.Island       &lt;NA&gt;",
+    "crumbs": [
+      "Maps",
+      "Maps"
+    ]
+  },
+  {
+    "objectID": "plotting/interactivity.html",
+    "href": "plotting/interactivity.html",
+    "title": "Interactivity",
+    "section": "",
+    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
     "crumbs": [
       "Animation and interactivity",
-      "Animation"
+      "Interactivity"
     ]
   },
   {
-    "objectID": "plotting/animation.html#low-level-approach---magick",
-    "href": "plotting/animation.html#low-level-approach---magick",
-    "title": "Animation",
-    "section": "Low-level approach - magick",
-    "text": "Low-level approach - magick\nApproach to draw every frame of the animation. More work but also more control.\nBasic steps to produce animation:\n\nAssign value (fx. img) to call of magick::image_graph to open a magick graphics device\nRun a loop that draws each frame of the animation\nCall dev.off() to close the magick graphics device\nRun image_animate(img)",
+    "objectID": "plotting/interactivity.html#plotly",
+    "href": "plotting/interactivity.html#plotly",
+    "title": "Interactivity",
+    "section": "",
+    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
     "crumbs": [
       "Animation and interactivity",
-      "Animation"
+      "Interactivity"
     ]
   },
   {
-    "objectID": "plotting/animation.html#high-level-approach---gganimate",
-    "href": "plotting/animation.html#high-level-approach---gganimate",
-    "title": "Animation",
-    "section": "High-level approach - gganimate",
-    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.\n\nCreate animation “superimposed” onto static image\nSee example how to do this in this model answer\n\n\nMisc notes about gganimate\n\nIf using exit/enter_xx function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.\nTo slow down the animation, assign it a value p, and then use animate(p, fps = 1) fx. to control the frames pr. second.",
+    "objectID": "plotting/interactivity.html#plotscaper",
+    "href": "plotting/interactivity.html#plotscaper",
+    "title": "Interactivity",
+    "section": "plotscaper",
+    "text": "plotscaper\nCreate simple linked plots.",
     "crumbs": [
       "Animation and interactivity",
-      "Animation"
+      "Interactivity"
     ]
   },
   {
@@ -230,113 +253,91 @@
     ]
   },
   {
-    "objectID": "plotting/interactivity.html",
-    "href": "plotting/interactivity.html",
-    "title": "Interactivity",
+    "objectID": "plotting/animation.html",
+    "href": "plotting/animation.html",
+    "title": "Animation",
     "section": "",
-    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
+    "text": "See lecture notes about animation and more importantly the answer to the lab.",
     "crumbs": [
       "Animation and interactivity",
-      "Interactivity"
+      "Animation"
     ]
   },
   {
-    "objectID": "plotting/interactivity.html#plotly",
-    "href": "plotting/interactivity.html#plotly",
-    "title": "Interactivity",
-    "section": "",
-    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
+    "objectID": "plotting/animation.html#low-level-approach---magick",
+    "href": "plotting/animation.html#low-level-approach---magick",
+    "title": "Animation",
+    "section": "Low-level approach - magick",
+    "text": "Low-level approach - magick\nApproach to draw every frame of the animation. More work but also more control.\nBasic steps to produce animation:\n\nAssign value (fx. img) to call of magick::image_graph to open a magick graphics device\nRun a loop that draws each frame of the animation\nCall dev.off() to close the magick graphics device\nRun image_animate(img)",
     "crumbs": [
       "Animation and interactivity",
-      "Interactivity"
+      "Animation"
     ]
   },
   {
-    "objectID": "plotting/interactivity.html#plotscaper",
-    "href": "plotting/interactivity.html#plotscaper",
-    "title": "Interactivity",
-    "section": "plotscaper",
-    "text": "plotscaper\nCreate simple linked plots.",
+    "objectID": "plotting/animation.html#high-level-approach---gganimate",
+    "href": "plotting/animation.html#high-level-approach---gganimate",
+    "title": "Animation",
+    "section": "High-level approach - gganimate",
+    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.\n\nCreate animation “superimposed” onto static image\nSee example how to do this in this model answer\n\n\nMisc notes about gganimate\n\nIf using exit/enter_xx function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.\nTo slow down the animation, assign it a value p, and then use animate(p, fps = 1) fx. to control the frames pr. second.",
     "crumbs": [
       "Animation and interactivity",
-      "Interactivity"
+      "Animation"
     ]
   },
   {
-    "objectID": "pkg-dev/get-started.html",
-    "href": "pkg-dev/get-started.html",
-    "title": "Get started",
+    "objectID": "prog/obj_prog.html",
+    "href": "prog/obj_prog.html",
+    "title": "Object-oriented programming",
     "section": "",
-    "text": "A package should use git and be hosted on a remote repository. Below we describe how to use GitHub.",
+    "text": "As intro, see Object-oriented programming in Advanced R.\n\n\n\n Back to top",
     "crumbs": [
-      "Creating a package",
-      "Get started"
+      "Object-oriented programming",
+      "Object-oriented programming"
     ]
   },
   {
-    "objectID": "pkg-dev/get-started.html#setting-up-a-repository-with-github-pages-using-usethis",
-    "href": "pkg-dev/get-started.html#setting-up-a-repository-with-github-pages-using-usethis",
-    "title": "Get started",
-    "section": "Setting up a repository with GitHub pages using usethis",
-    "text": "Setting up a repository with GitHub pages using usethis\n\nuse_git()\nuse_github()\nuse_description()\nuse_github_action(...)\nuse_github_pages()\n\nSee more in page about GH actions.",
-    "crumbs": [
-      "Creating a package",
-      "Get started"
-    ]
-  },
-  {
-    "objectID": "pkg-dev/cran.html",
-    "href": "pkg-dev/cran.html",
-    "title": "Submitting to CRAN",
+    "objectID": "prog/func_prog.html",
+    "href": "prog/func_prog.html",
+    "title": "Functional programming",
     "section": "",
-    "text": "See nice guides in Chapter 22 of r-pkgs book and r consortiums CRAN submission cookbook.\n\n\n\n Back to top",
+    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
     "crumbs": [
-      "Creating a package",
-      "Submitting to CRAN"
+      "Functional programming",
+      "Functional programming"
     ]
   },
   {
-    "objectID": "pkg-dev/gh-actions.html",
-    "href": "pkg-dev/gh-actions.html",
-    "title": "GitHub actions",
+    "objectID": "plotting/grid-and-gggrid.html",
+    "href": "plotting/grid-and-gggrid.html",
+    "title": "grid and gggrid",
     "section": "",
-    "text": "Back to top",
+    "text": "The following is taken from the overall summary of my lab2 answer in STATS 787 at UoA.",
     "crumbs": [
-      "Creating a package",
-      "GitHub actions"
+      "Creating plots",
+      "`grid` and `gggrid`"
     ]
   },
   {
-    "objectID": "plotting/maps.html",
-    "href": "plotting/maps.html",
-    "title": "Maps",
-    "section": "",
-    "text": "See lecture notes from lecture 9 of STATS 787 - Data Visualisation at UoA as well as my answer to the corresponding lab\nSee especially link from lecture notes to the Maps chapter in “ggplot2: Elegant Graphics for Data Analysis (3e)”.",
+    "objectID": "plotting/grid-and-gggrid.html#the-grid-package",
+    "href": "plotting/grid-and-gggrid.html#the-grid-package",
+    "title": "grid and gggrid",
+    "section": "The grid package",
+    "text": "The grid package\nThe grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs). See more in question 1.\n\nUsing viewports\nNote that ggplot2 is built on grid. ggplot2 uses viewports from grid. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree). See questions 2, 3, 5 and 8.\n\nImposing grid elements on ggplot2 plots\nAssign the ggplot object a value (fx. p) and then plot it “inside the viewport” with plot(p, newpage = FALSE). See questions 5 and 8.\n\n\nCreating a layout of viewports with grid.layout.\nUse of grid::grid.layout as in question 3 can help with many situations.\n\n\nNative scales in viewports\nA strong way of using viewports is using xscale and/or yscale parameters in the grid::viewport function and the using the grid::unit function with units = \"native\" specified to make your grobs relate to the scale of the viewport.\n\nSee a very nice example of this in the challenge of lab 9.\n\n\n\nViewports as part of grobTree\nIf creating a grob inside a viewport to be drawn later, you can specify the vp argument in the grid::grobTree function. See a good example usage in the challenge of lab 9.\n\n\nControlling size of “angled” objects\nWe can use the grid::convertUnit function to change the axis we are referencing (useful fx. when creating a viewport with angle = 90/270). See the challenge.",
     "crumbs": [
-      "Maps",
-      "Maps"
+      "Creating plots",
+      "`grid` and `gggrid`"
     ]
   },
   {
-    "objectID": "plotting/maps.html#accessing-map-data",
-    "href": "plotting/maps.html#accessing-map-data",
-    "title": "Maps",
-    "section": "Accessing map data",
-    "text": "Accessing map data\n\nDownload map data fx. from https://koordinates.com/\nExtract zip file\nRead data into R with sf::st_read(\"file_name.shp\")\n\nSee MUCH more in the sf R package.",
+    "objectID": "plotting/grid-and-gggrid.html#combining-grid-and-ggplot2---the-gggrid-package",
+    "href": "plotting/grid-and-gggrid.html#combining-grid-and-ggplot2---the-gggrid-package",
+    "title": "grid and gggrid",
+    "section": "Combining grid and ggplot2 - The gggrid package",
+    "text": "Combining grid and ggplot2 - The gggrid package\nAs mentioned above, viewports and ggplots integrate nicely using just grid and ggplot2. However, it’s easy to combine elements of grid to ggplots to create overlays on each facet/panel with gggrid::grid_panel or for each group using gggrid::grid_group.\nThese functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes data and coords as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data).\n\nNote that the coords are transformed values of x and y (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. data contains the untransformed data and includes columns of other aesthetics (fx. colour).\n\nSee many examples throughout the labs, like fx.\n\nadding a male/female ratio bar to the right of each facet\nadding direct labelling to facets\ncreating imbedded line plots on a geographical map",
     "crumbs": [
-      "Maps",
-      "Maps"
-    ]
-  },
-  {
-    "objectID": "plotting/maps.html#readily-available-maps",
-    "href": "plotting/maps.html#readily-available-maps",
-    "title": "Maps",
-    "section": "Readily available maps",
-    "text": "Readily available maps\nThe maps package contains data to display maps of the world.\nggplot2::map_data can be used to get data with longitude and latitude of different locations from the maps package. A simple example of fetching data for New Zealand is seen below:\n\nnz &lt;- ggplot2::map_data(\"nz\")\nhead(nz)\n\n      long       lat group order        region subregion\n1 172.7433 -34.44215     1     1 North.Island       &lt;NA&gt;\n2 172.7983 -34.45562     1     2 North.Island       &lt;NA&gt;\n3 172.8528 -34.44846     1     3 North.Island       &lt;NA&gt;\n4 172.8986 -34.41786     1     4 North.Island       &lt;NA&gt;\n5 172.9593 -34.42503     1     5 North.Island       &lt;NA&gt;\n6 173.0184 -34.39895     1     6 North.Island       &lt;NA&gt;",
-    "crumbs": [
-      "Maps",
-      "Maps"
+      "Creating plots",
+      "`grid` and `gggrid`"
     ]
   },
   {
@@ -362,36 +363,25 @@
     ]
   },
   {
-    "objectID": "plotting/grid-and-gggrid.html",
-    "href": "plotting/grid-and-gggrid.html",
-    "title": "grid and gggrid",
+    "objectID": "plotting/colors-in-R.html",
+    "href": "plotting/colors-in-R.html",
+    "title": "Colors and text in R",
     "section": "",
-    "text": "The following is taken from the overall summary of my lab2 answer in STATS 787 at UoA.",
+    "text": "See Color Pitfalls on this webpage.\nThe colorspace package can be used to A LOT of things. Examples:\n\nDesaturating the color of some categories in a ggplot\nTesting for color vision deficiency\nNon-linear pallette scaling",
     "crumbs": [
       "Creating plots",
-      "`grid` and `gggrid`"
+      "Colors and text in R"
     ]
   },
   {
-    "objectID": "plotting/grid-and-gggrid.html#the-grid-package",
-    "href": "plotting/grid-and-gggrid.html#the-grid-package",
-    "title": "grid and gggrid",
-    "section": "The grid package",
-    "text": "The grid package\nThe grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs). See more in question 1.\n\nUsing viewports\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree). See questions 2, 3, 5 and 8.\nAdditional takeaways about viewports:\n\nNote this also works with ggplot2 by assigning the ggplot object a value (fx. p) and then plotting it “inside the viewport” with plot(p, newpage = FALSE). See questions 5 and 8.\nWe can use the grid::convertUnit function to change the axis we are referencing (useful fx. when creating a viewport with angle = 90/270). See question 8.\nA strong way of using viewports is using xscale and/or yscale parameters in the grid::viewport function and the using the grid::unit function with units = \"native\" specified to make your grobs relate to the scale of the viewport.\nUse of grid::grid.layout as in question 3 can help with many situations.\n\nNote that ggplot2 is built on grid. ggplot2 uses viewports from grid. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.\n\n\ngrid.layout\nSee the answer to question 3 in the link above.",
+    "objectID": "plotting/colors-in-R.html#fonts",
+    "href": "plotting/colors-in-R.html#fonts",
+    "title": "Colors and text in R",
+    "section": "Fonts",
+    "text": "Fonts\nSee Fonts in R for a small introduction\n\nGetting new fonts\nDownload font online:\n\nGo to font download site, fx. Google Gruppo\nClick download\nWhen downloaded, extract it 3a) On windows, click the Gruppo-regular file and press “Install”\nIn R, use the cairo graphics device 4a) In Rstudio: Tools -&gt; Global options -&gt; General -&gt; Graphics (top) -&gt; Backend -&gt; Choose cairo 4b) In Rmarkdown: Include knitr::opts_chunk$set(dev.args = list(png = list(type =\"cairo\"))) in setup chunk.\nRefer to the new font by it’s folder name in your system. Fx. ggplot2::element_text(family = \"Gruppo\")",
     "crumbs": [
       "Creating plots",
-      "`grid` and `gggrid`"
-    ]
-  },
-  {
-    "objectID": "plotting/grid-and-gggrid.html#combining-grid-and-ggplot2---the-gggrid-package",
-    "href": "plotting/grid-and-gggrid.html#combining-grid-and-ggplot2---the-gggrid-package",
-    "title": "grid and gggrid",
-    "section": "Combining grid and ggplot2 - The gggrid package",
-    "text": "Combining grid and ggplot2 - The gggrid package\nAs mentioned above, viewports and ggplots integrate nicely using just grid and ggplot2. However, it’s easy to combine elements of grid to ggplots to create overlays on each facet/panel with gggrid::grid_panel or for each group using gggrid::grid_group.\nThese functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes data and coords as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data). Note that the coords are transformed values of x and y (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. data contains the untransformed data and includes columns of other aesthetics (fx. colour).",
-    "crumbs": [
-      "Creating plots",
-      "`grid` and `gggrid`"
+      "Colors and text in R"
     ]
   },
   {
@@ -406,14 +396,35 @@
     ]
   },
   {
-    "objectID": "prog/func_prog.html",
-    "href": "prog/func_prog.html",
-    "title": "Functional programming",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
     "section": "",
-    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
+    "text": "This Quarto website is home to private notes about everything R.\nMisc links:"
+  },
+  {
+    "objectID": "index.html#learning-r",
+    "href": "index.html#learning-r",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "Learning R",
+    "text": "Learning R\n\nLearn the tidyverse\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse\n\n\nAdvanced\n\nAdvanced R\n\nSolutions\n\nThe art of R programming\nRstudio education - expert pathway"
+  },
+  {
+    "objectID": "index.html#organisations",
+    "href": "index.html#organisations",
+    "title": "Miscellaneous notes about R added as I stumble upon it",
+    "section": "Organisations",
+    "text": "Organisations\n\nR consortium (working groups)\nROpenSci\n\nTo be continued…"
+  },
+  {
+    "objectID": "pkg-dev/gh-actions.html",
+    "href": "pkg-dev/gh-actions.html",
+    "title": "GitHub actions",
+    "section": "",
+    "text": "Back to top",
     "crumbs": [
-      "Functional programming",
-      "Functional programming"
+      "Creating a package",
+      "GitHub actions"
     ]
   },
   {

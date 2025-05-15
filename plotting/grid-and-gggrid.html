@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3c2d062f4b5e1249a867b6bbcc791441.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7e266f8f7e98b6b255616bfad3d1c8d5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -325,7 +325,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-grid-package" id="toc-the-grid-package" class="nav-link active" data-scroll-target="#the-grid-package">The <code>grid package</code></a>
   <ul class="collapse">
   <li><a href="#using-viewports" id="toc-using-viewports" class="nav-link" data-scroll-target="#using-viewports">Using viewports</a></li>
-  <li><a href="#grid.layout" id="toc-grid.layout" class="nav-link" data-scroll-target="#grid.layout"><code>grid.layout</code></a></li>
   </ul></li>
   <li><a href="#combining-grid-and-ggplot2---the-gggrid-package" id="toc-combining-grid-and-ggplot2---the-gggrid-package" class="nav-link" data-scroll-target="#combining-grid-and-ggplot2---the-gggrid-package">Combining <code>grid</code> and <code>ggplot2</code> - The <code>gggrid</code> package</a></li>
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
@@ -363,25 +362,46 @@ ul.task-list li input[type="checkbox"] {
 <p>The <code>grid</code> package allows total customisation in creating <em>grobs</em> (graphical objects). They can either be drawn directly using <code>grid::grid.xx</code> functions or created as grobs with <code>grid::xxGrob</code> functions to be drawn later (with <code>grid::grid.draw</code>). This enables us to gather different grobs in a <em>grob tree</em> with <code>grid::gTree</code> and specifying grobs with a <code>grid::gList</code> as the <code>children</code> argument (alternatively use <code>grid::grobTree</code> when all components are grobs). See more in <em>question 1</em>.</p>
 <section id="using-viewports" class="level3">
 <h3 class="anchored" data-anchor-id="using-viewports">Using viewports</h3>
-<p>We can use <code>grid::viewport</code> with <code>grid::pushViewport</code> to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with <code>grid::upViewport</code> (<code>grid::popViewport</code> navigates to parent viewport AND deletes the current viewport from the viewport tree). See <em>questions 2, 3, 5 and 8</em>.</p>
-<p>Additional takeaways about viewports:</p>
-<ul>
-<li><strong>Note</strong> this also works with <code>ggplot2</code> by assigning the <code>ggplot</code> object a value (fx. <code>p</code>) and then plotting it “inside the viewport” with <code>plot(p, newpage = FALSE)</code>. See <em>questions 5 and 8</em>.</li>
-<li>We can use the <code>grid::convertUnit</code> function to change the axis we are referencing (useful fx. when creating a viewport with <code>angle = 90/270</code>). See <em>question 8</em>.</li>
-<li>A strong way of using viewports is using <code>xscale</code> and/or <code>yscale</code> parameters in the <code>grid::viewport</code> function and the using the <code>grid::unit</code> function with <code>units = "native"</code> specified to make your grobs relate to the scale of the viewport.</li>
-<li>Use of <code>grid::grid.layout</code> as in <em>question 3</em> can help with many situations.</li>
-</ul>
 <p><strong>Note</strong> that <code>ggplot2</code> is built on <code>grid</code>. <code>ggplot2</code> uses viewports from <code>grid</code>. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.</p>
+<p>We can use <code>grid::viewport</code> with <code>grid::pushViewport</code> to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with <code>grid::upViewport</code> (<code>grid::popViewport</code> navigates to parent viewport AND deletes the current viewport from the viewport tree). See <em>questions 2, 3, 5 and 8</em>.</p>
+<section id="imposing-grid-elements-on-ggplot2-plots" class="level4">
+<h4 class="anchored" data-anchor-id="imposing-grid-elements-on-ggplot2-plots">Imposing <code>grid</code> elements on <code>ggplot2</code> plots</h4>
+<p>Assign the <code>ggplot</code> object a value (fx. <code>p</code>) and then plot it “inside the viewport” with <code>plot(p, newpage = FALSE)</code>. See questions <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-5">5</a> and <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#challenge">8</a>.</p>
 </section>
-<section id="grid.layout" class="level3">
-<h3 class="anchored" data-anchor-id="grid.layout"><code>grid.layout</code></h3>
-<p>See the answer to <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-3">question 3</a> in the link above.</p>
+<section id="creating-a-layout-of-viewports-with-grid.layout." class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-layout-of-viewports-with-grid.layout.">Creating a layout of viewports with <code>grid.layout</code>.</h4>
+<p>Use of <code>grid::grid.layout</code> as in <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-3">question 3</a> can help with many situations.</p>
+</section>
+<section id="native-scales-in-viewports" class="level4">
+<h4 class="anchored" data-anchor-id="native-scales-in-viewports">Native scales in viewports</h4>
+<p>A strong way of using viewports is using <code>xscale</code> and/or <code>yscale</code> parameters in the <code>grid::viewport</code> function and the using the <code>grid::unit</code> function with <code>units = "native"</code> specified to make your grobs relate to the scale of the viewport.</p>
+<blockquote class="blockquote">
+<p>See a very nice example of this in the <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge">challenge</a> of lab 9.</p>
+</blockquote>
+</section>
+<section id="viewports-as-part-of-grobtree" class="level4">
+<h4 class="anchored" data-anchor-id="viewports-as-part-of-grobtree">Viewports as part of <code>grobTree</code></h4>
+<p>If creating a grob inside a viewport to be drawn later, you can specify the <code>vp</code> argument in the <code>grid::grobTree</code> function. See a good example usage in the <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge">challenge</a> of lab 9.</p>
+</section>
+<section id="controlling-size-of-angled-objects" class="level4">
+<h4 class="anchored" data-anchor-id="controlling-size-of-angled-objects">Controlling size of “angled” objects</h4>
+<p>We can use the <code>grid::convertUnit</code> function to change the axis we are referencing (useful fx. when creating a viewport with <code>angle = 90/270</code>). See <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#challenge">the challenge</a>.</p>
+</section>
 </section>
 </section>
 <section id="combining-grid-and-ggplot2---the-gggrid-package" class="level2">
 <h2 class="anchored" data-anchor-id="combining-grid-and-ggplot2---the-gggrid-package">Combining <code>grid</code> and <code>ggplot2</code> - The <code>gggrid</code> package</h2>
 <p>As mentioned above, viewports and ggplots integrate nicely using just <code>grid</code> and <code>ggplot2</code>. However, it’s easy to combine elements of <code>grid</code> to <code>ggplot</code>s to create overlays on each facet/panel with <code>gggrid::grid_panel</code> or for each group using <code>gggrid::grid_group</code>.</p>
-<p>These functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes <code>data</code> and <code>coords</code> as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data). Note that the <code>coords</code> are transformed values of <code>x</code> and <code>y</code> (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. <code>data</code> contains the untransformed data and includes columns of other aesthetics (fx. <code>colour</code>).</p>
+<p>These functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes <code>data</code> and <code>coords</code> as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data).</p>
+<blockquote class="blockquote">
+<p>Note that the <code>coords</code> are transformed values of <code>x</code> and <code>y</code> (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. <code>data</code> contains the untransformed data and includes columns of other aesthetics (fx. <code>colour</code>).</p>
+</blockquote>
+<p>See many examples throughout the labs, like fx.</p>
+<ul>
+<li><a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#challenge">adding a male/female ratio bar to the right of each facet</a></li>
+<li><a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab5_answer.html#question-3">adding direct labelling to facets</a></li>
+<li><a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge">creating imbedded line plots on a geographical map</a></li>
+</ul>
 </section>
 <section id="reference" class="level1">
 <h1>Reference</h1>
