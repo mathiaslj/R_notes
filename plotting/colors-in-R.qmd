@@ -7,7 +7,11 @@ format: html
 
 See [Color Pitfalls](edv.qmd#sec-colorpitfalls) on this webpage.
 
-See below for how to color text.
+The [colorspace](https://colorspace.r-forge.r-project.org/index.html) package can be used to A LOT of things. Examples:
+
+- [Desaturating the color of some categories in a ggplot](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab4_answer.html#question-4)
+- [Testing for color vision deficiency](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab4_answer.html#question-5)
+- [Non-linear pallette scaling](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#creating-non-linear-colour-scales)
 
 # Text
 

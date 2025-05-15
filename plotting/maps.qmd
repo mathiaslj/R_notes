@@ -5,9 +5,12 @@ format: html
 
 See [lecture notes](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/maps.html) from lecture 9 of STATS 787 - Data Visualisation at UoA as well as my [answer to the corresponding lab](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab8_answer.html)
 
-- Note **especially** the [challenge](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab8_answer.html#challenge) where we find a clever way to use *position* as our *visual channel* when showing continuous data, which works much better than using *color* or *area* as in the earlier questions.
-
 See especially link from lecture notes to the [Maps](https://ggplot2-book.org/maps.html) chapter in *"ggplot2: Elegant Graphics for Data Analysis (3e)"*.
+
+## Tips for making nice map visualisations
+
+- Note **especially** the [challenge](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab8_answer.html#challenge) where we find a clever way to use *position* as our *visual channel* when showing continuous data, which works much better than using *color* or *area* as in the earlier questions.
+- [Non-linear pallette scaling](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#creating-non-linear-colour-scales) to better highlight differences in data.
 
 ## Accessing map data
 

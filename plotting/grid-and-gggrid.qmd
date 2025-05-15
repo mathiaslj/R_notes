@@ -12,26 +12,45 @@ The `grid` package allows total customisation in creating *grobs* (graphical obj
 
 ### Using viewports
 
-We can use `grid::viewport` with `grid::pushViewport` to draw whatever we want inside a certain area of our "full plotting area" and then go to a parent viewport with `grid::upViewport` (`grid::popViewport` navigates to parent viewport AND deletes the current viewport from the viewport tree). See *questions 2, 3, 5 and 8*.
-
-Additional takeaways about viewports:
-
-- **Note** this also works with `ggplot2` by assigning the `ggplot` object a value (fx. `p`) and then plotting it "inside the viewport" with `plot(p, newpage = FALSE)`. See *questions 5 and 8*.
-- We can use the `grid::convertUnit` function to change the axis we are referencing (useful fx. when creating a viewport with `angle = 90/270`). See *question 8*.
-- A strong way of using viewports is using `xscale` and/or `yscale` parameters in the `grid::viewport` function and the using the `grid::unit` function with `units = "native"` specified to make your grobs relate to the scale of the viewport.
-- Use of `grid::grid.layout` as in *question 3* can help with many situations.
-
 **Note** that `ggplot2` is built on `grid`. `ggplot2` uses viewports from `grid`. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.
 
-### `grid.layout`
+We can use `grid::viewport` with `grid::pushViewport` to draw whatever we want inside a certain area of our "full plotting area" and then go to a parent viewport with `grid::upViewport` (`grid::popViewport` navigates to parent viewport AND deletes the current viewport from the viewport tree). See *questions 2, 3, 5 and 8*.
 
-See the answer to [question 3](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-3) in the link above.
+#### Imposing `grid` elements on `ggplot2` plots
+
+Assign the `ggplot` object a value (fx. `p`) and then plot it "inside the viewport" with `plot(p, newpage = FALSE)`. See questions [5](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-5) and [8](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#challenge).
+
+#### Creating a layout of viewports with `grid.layout`.
+
+Use of `grid::grid.layout` as in [question 3](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-3) can help with many situations.
+
+#### Native scales in viewports
+
+A strong way of using viewports is using `xscale` and/or `yscale` parameters in the `grid::viewport` function and the using the `grid::unit` function with `units = "native"` specified to make your grobs relate to the scale of the viewport.
+
+> See a very nice example of this in the [challenge](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge) of lab 9.
+
+#### Viewports as part of `grobTree`
+
+If creating a grob inside a viewport to be drawn later, you can specify the `vp` argument in the `grid::grobTree` function. See a good example usage in the [challenge](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge) of lab 9.
+
+#### Controlling size of "angled" objects
+
+We can use the `grid::convertUnit` function to change the axis we are referencing (useful fx. when creating a viewport with `angle = 90/270`). See [the challenge](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#challenge).
 
 ## Combining `grid` and `ggplot2` - The `gggrid` package
 
 As mentioned above, viewports and ggplots integrate nicely using just `grid` and `ggplot2`. However, it's easy to combine elements of `grid` to `ggplot`s to create overlays on each facet/panel with `gggrid::grid_panel` or for each group using `gggrid::grid_group`.
 
-These functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes `data` and `coords` as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data). Note that the `coords` are transformed values of `x` and `y` (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. `data` contains the untransformed data and includes columns of other aesthetics (fx. `colour`).
+These functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes `data` and `coords` as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data).
+
+> Note that the `coords` are transformed values of `x` and `y` (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. `data` contains the untransformed data and includes columns of other aesthetics (fx. `colour`).
+
+See many examples throughout the labs, like fx.
+
+- [adding a male/female ratio bar to the right of each facet](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#challenge)
+- [adding direct labelling to facets](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab5_answer.html#question-3)
+- [creating imbedded line plots on a geographical map](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge)
 
 # Reference
 
