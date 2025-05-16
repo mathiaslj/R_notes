@@ -1,5 +1,5 @@
 ---
-title: "Effective Data Visualisation and Visual Perception"
+title: "Effective Data Visualisation, Visual Perception and Design Principles"
 ---
 
 # Visual Perception
@@ -57,20 +57,23 @@ This concept has been termed by Bergstrom and West as the principle of proportio
 
 # Practical tips to making plots nicer
 
-## [Overplotting](https://clauswilke.com/dataviz/overlapping-points.html)
+## CRAP design principles
 
-**Issue:** points that overlap.
+The [“The Non-Designer’s Design Book”](https://www.pearson.com/en-us/subject-catalog/p/non-designers-design-book-the/P200000000691?view=educator) by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).
 
-**Possible fixes:**
+See [lecture notes about CRAP principles](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/design.html) for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.
 
-- Transparent points
-- Jitter
-- High density of points: *Use 2D histogram*
-  - See `ggplot2::geom_bin2d` and `ggplot2::geom_hex` (hexagons are more "correct")
-  - See also `smoothScatter` in the base `graphics` package, whic makes a 2D kernel density estimate but also shows points "on the edge".
-- Contour lines
-  - See `ggplot2::geom_density2d` or `ggplot2::geom_density2d_filled`
-    - Be wary of `ggplot2::geom_density2d` not showing the entire range of data
+- **Contrast:** Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.
+  - See [these slides](https://datavizm20.classes.andrewheiss.com/slides/02-slides.html#21) by Andrew Heiss.
+- **Repitition:** Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.
+  - Fx. within an image by making all text have same color/size/... or across images in a report
+- **Alignment:** All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.
+  - Fx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.
+  - See [example](https://datavizm20.classes.andrewheiss.com/slides/02-slides.html#48) in slides by Andrew Heiss of a compound figure.
+- **Proximity:** Elements of an image should be placed close to each other to form sub-elements of the image.
+  - Fx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they "belong together"
+  
+See much more information in the readings in the link to lecture notes and some notes in the [answer to lab 5](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab5_answer.html). See especially [this black themed plot](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab5_answer.html#easier-way-of-coloring-title-with-ggtext) in the answer to question 3 in the same lab.
 
 ## [Color pitfalls](https://clauswilke.com/dataviz/color-pitfalls.html) {#sec-colorpitfalls}
 
@@ -126,14 +129,6 @@ See packages:
 - [ggtext](https://wilkelab.org/ggtext/) for ways to fx. color text labels, titles, etc. See an example of [coloring the title](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Labs/design.html) to replace a legend with code available in the answer to lab 5 [here](https://mathiaslj.github.io/stats787uoa-data-visualisation/)
 - `ggforce` which has `geom`s that take `label` as an aesthetic mapping
 - `directlabels`
-
-## [Multi-panel figures](https://clauswilke.com/dataviz/multi-panel-figures.html)
-
-- **Small multiples:** *"Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization."*
-  - Fx. created by `ggplot2::facet_wrap` and `ggplot2::facet_grid`
-  - Be **very careful** with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.
-- **Coumpound figures:** *"Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets."*
-  - Unlike small multiples, where panels are labelled by variables, labels often need to **be added manually** to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.
   
 ## [Titles, captions and tables](https://clauswilke.com/dataviz/figure-titles-captions.html)
 
@@ -153,6 +148,29 @@ labs(x = expression(paste("Engine displacment (", "in"^3, ")")))
 ```
 
 to render the exponent.
+
+## [Multi-panel figures](https://clauswilke.com/dataviz/multi-panel-figures.html)
+
+- **Small multiples:** *"Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization."*
+  - Fx. created by `ggplot2::facet_wrap` and `ggplot2::facet_grid`
+  - Be **very careful** with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.
+- **Coumpound figures:** *"Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets."*
+  - Unlike small multiples, where panels are labelled by variables, labels often need to **be added manually** to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.
+
+## [Overplotting](https://clauswilke.com/dataviz/overlapping-points.html)
+
+**Issue:** points that overlap.
+
+**Possible fixes:**
+
+- Transparent points
+- Jitter
+- High density of points: *Use 2D histogram*
+  - See `ggplot2::geom_bin2d` and `ggplot2::geom_hex` (hexagons are more "correct")
+  - See also `smoothScatter` in the base `graphics` package, whic makes a 2D kernel density estimate but also shows points "on the edge".
+- Contour lines
+  - See `ggplot2::geom_density2d` or `ggplot2::geom_density2d_filled`
+    - Be wary of `ggplot2::geom_density2d` not showing the entire range of data
 
 # References
 

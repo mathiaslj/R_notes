@@ -6,39 +6,39 @@ The following is taken from the [overall summary](https://mathiaslj.github.io/st
 
 > References to specific questions reference answers in the above link.
 
-## The `grid package`
+# The `grid package`
 
 The `grid` package allows total customisation in creating *grobs* (graphical objects). They can either be drawn directly using `grid::grid.xx` functions or created as grobs with `grid::xxGrob` functions to be drawn later (with `grid::grid.draw`). This enables us to gather different grobs in a *grob tree* with `grid::gTree` and specifying grobs with a `grid::gList` as the `children` argument (alternatively use `grid::grobTree` when all components are grobs). See more in *question 1*.
 
-### Using viewports
+## Using viewports
 
 **Note** that `ggplot2` is built on `grid`. `ggplot2` uses viewports from `grid`. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.
 
 We can use `grid::viewport` with `grid::pushViewport` to draw whatever we want inside a certain area of our "full plotting area" and then go to a parent viewport with `grid::upViewport` (`grid::popViewport` navigates to parent viewport AND deletes the current viewport from the viewport tree). See *questions 2, 3, 5 and 8*.
 
-#### Imposing `grid` elements on `ggplot2` plots
+## Imposing `grid` elements on `ggplot2` plots
 
 Assign the `ggplot` object a value (fx. `p`) and then plot it "inside the viewport" with `plot(p, newpage = FALSE)`. See questions [5](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-5) and [8](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#challenge).
 
-#### Creating a layout of viewports with `grid.layout`.
+## Creating a layout of viewports with `grid.layout`.
 
 Use of `grid::grid.layout` as in [question 3](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#question-3) can help with many situations.
 
-#### Native scales in viewports
+## Native scales in viewports
 
 A strong way of using viewports is using `xscale` and/or `yscale` parameters in the `grid::viewport` function and the using the `grid::unit` function with `units = "native"` specified to make your grobs relate to the scale of the viewport.
 
 > See a very nice example of this in the [challenge](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge) of lab 9.
 
-#### Viewports as part of `grobTree`
+## Viewports as part of `grobTree`
 
 If creating a grob inside a viewport to be drawn later, you can specify the `vp` argument in the `grid::grobTree` function. See a good example usage in the [challenge](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge) of lab 9.
 
-#### Controlling size of "angled" objects
+## Controlling size of "angled" objects
 
 We can use the `grid::convertUnit` function to change the axis we are referencing (useful fx. when creating a viewport with `angle = 90/270`). See [the challenge](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab2_answer.html#challenge).
 
-## Combining `grid` and `ggplot2` - The `gggrid` package
+# Combining `grid` and `ggplot2` - The `gggrid` package
 
 As mentioned above, viewports and ggplots integrate nicely using just `grid` and `ggplot2`. However, it's easy to combine elements of `grid` to `ggplot`s to create overlays on each facet/panel with `gggrid::grid_panel` or for each group using `gggrid::grid_group`.
 

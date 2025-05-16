@@ -1,5 +1,5 @@
 ---
-title: "Interactivity"
+title: "Hovering tooltips with `plotly` and linked plots with `plotscaper`"
 format: html
 ---
 
@@ -15,4 +15,4 @@ See also the [lab answer](https://www.stat.auckland.ac.nz/~paul/stats787/Current
 
 ## [`plotscaper`](https://bartonicek.github.io/plotscaper/)
 
-Create simple linked plots.
+Create simple linked plots. See this [lab answer](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab7_answer.html#question-2) to lab 7.
