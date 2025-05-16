@@ -50,7 +50,7 @@
     "section": "",
     "text": "See lecture notes from lecture 9 of STATS 787 - Data Visualisation at UoA as well as my answer to the corresponding lab\nSee especially link from lecture notes to the Maps chapter in “ggplot2: Elegant Graphics for Data Analysis (3e)”.",
     "crumbs": [
-      "Maps",
+      "Creating plots",
       "Maps"
     ]
   },
@@ -61,7 +61,7 @@
     "section": "Tips for making nice map visualisations",
     "text": "Tips for making nice map visualisations\n\nNote especially the challenge where we find a clever way to use position as our visual channel when showing continuous data, which works much better than using color or area as in the earlier questions.\nNon-linear pallette scaling to better highlight differences in data.",
     "crumbs": [
-      "Maps",
+      "Creating plots",
       "Maps"
     ]
   },
@@ -72,7 +72,7 @@
     "section": "Accessing map data",
     "text": "Accessing map data\n\nDownload map data fx. from https://koordinates.com/\nExtract zip file\nRead data into R with sf::st_read(\"file_name.shp\")\n\nSee MUCH more in the sf R package.",
     "crumbs": [
-      "Maps",
+      "Creating plots",
       "Maps"
     ]
   },
@@ -83,283 +83,8 @@
     "section": "Readily available maps",
     "text": "Readily available maps\nThe maps package contains data to display maps of the world.\nggplot2::map_data can be used to get data with longitude and latitude of different locations from the maps package. A simple example of fetching data for New Zealand is seen below:\n\nnz &lt;- ggplot2::map_data(\"nz\")\nhead(nz)\n\n      long       lat group order        region subregion\n1 172.7433 -34.44215     1     1 North.Island       &lt;NA&gt;\n2 172.7983 -34.45562     1     2 North.Island       &lt;NA&gt;\n3 172.8528 -34.44846     1     3 North.Island       &lt;NA&gt;\n4 172.8986 -34.41786     1     4 North.Island       &lt;NA&gt;\n5 172.9593 -34.42503     1     5 North.Island       &lt;NA&gt;\n6 173.0184 -34.39895     1     6 North.Island       &lt;NA&gt;",
     "crumbs": [
-      "Maps",
+      "Creating plots",
       "Maps"
-    ]
-  },
-  {
-    "objectID": "plotting/interactivity.html",
-    "href": "plotting/interactivity.html",
-    "title": "Interactivity",
-    "section": "",
-    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
-    "crumbs": [
-      "Animation and interactivity",
-      "Interactivity"
-    ]
-  },
-  {
-    "objectID": "plotting/interactivity.html#plotly",
-    "href": "plotting/interactivity.html#plotly",
-    "title": "Interactivity",
-    "section": "",
-    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
-    "crumbs": [
-      "Animation and interactivity",
-      "Interactivity"
-    ]
-  },
-  {
-    "objectID": "plotting/interactivity.html#plotscaper",
-    "href": "plotting/interactivity.html#plotscaper",
-    "title": "Interactivity",
-    "section": "plotscaper",
-    "text": "plotscaper\nCreate simple linked plots.",
-    "crumbs": [
-      "Animation and interactivity",
-      "Interactivity"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html",
-    "href": "plotting/edv.html",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "",
-    "text": "This section is about making sure plots are as easily interpretable as possible for the reader.\n\n\nChannels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference ordered by effectiveness.\nEffectiveness meant such that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.\n\n\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.):\n\nggplot2::scale_radius can be used to scale based on radius rather than area since.\nggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\n\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.\n\n\n\n\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.\n\n\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.\n\n\n\n\nThis concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.\n\n\nAesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#visual-channels",
-    "href": "plotting/edv.html#visual-channels",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "",
-    "text": "Channels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference ordered by effectiveness.\nEffectiveness meant such that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.\n\n\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.):\n\nggplot2::scale_radius can be used to scale based on radius rather than area since.\nggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\n\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#gestalt-rules",
-    "href": "plotting/edv.html#gestalt-rules",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "",
-    "text": "“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#data-to-ink-ratio",
-    "href": "plotting/edv.html#data-to-ink-ratio",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "",
-    "text": "Data-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#the-principle-of-proportional-ink",
-    "href": "plotting/edv.html#the-principle-of-proportional-ink",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "",
-    "text": "This concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.\n\n\nAesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#overplotting",
-    "href": "plotting/edv.html#overplotting",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Overplotting",
-    "text": "Overplotting\nIssue: points that overlap.\nPossible fixes:\n\nTransparent points\nJitter\nHigh density of points: Use 2D histogram\n\nSee ggplot2::geom_bin2d and ggplot2::geom_hex (hexagons are more “correct”)\nSee also smoothScatter in the base graphics package, whic makes a 2D kernel density estimate but also shows points “on the edge”.\n\nContour lines\n\nSee ggplot2::geom_density2d or ggplot2::geom_density2d_filled\n\nBe wary of ggplot2::geom_density2d not showing the entire range of data",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#sec-colorpitfalls",
-    "href": "plotting/edv.html#sec-colorpitfalls",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Color pitfalls",
-    "text": "Color pitfalls\n\nEncoding too much or irrelevant information\n\nToo much:\n\nQuote from reference in title: “As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”\nPossible solutions: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)\n\nIrrelevant: Do not color without a clear purpose that helps answer a question.\n\n\n\nColor vision deficiency\nTip: To make sure your figures work for people with cvd (color-vision-deficiency), don’t just rely on specific color scales. Instead, test your figures in a cvd simulator\n\nSee colorspace::deutan\n\n\n\nColor contrasts\nWe judge color relative to other colors, so colors might appear darker or lighter than they are depending on surrounding colors. See fx. section 1.3.1 from Kieran Healy.\n\n\nColor “scales”\nSee slide 11.\nWorks for categorical variables:\n\nhue: Different colors\n\nWorks for numerical variables:\n\nMake sure to keep hue constant while changing these.\n\n\nchroma: How “saturated” the color is. White, grey, black have no chroma.\nluminance: Darkness/brightness of color. On scale we go from white to black.\n\n\n\nIt’s not only about color\nRedundant coding in essence means we do more than one aesthetic mapping to a single variable. Wilke fx. recommends:\n\n“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”\n\n\nScatter plots: Fx. change the shape of points instead of only color.\nLine plots:\n\nChanging line type often does not work very well.\n“If there is a clear visual ordering in your data, make sure to match it in the legend.”.\n\nMost plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#designing-figures-without-legends",
-    "href": "plotting/edv.html#designing-figures-without-legends",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Designing figures without legends",
-    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”\n\nSee packages:\n\nggtext for ways to fx. color text labels, titles, etc. See an example of coloring the title to replace a legend with code available in the answer to lab 5 here\nggforce which has geoms that take label as an aesthetic mapping\ndirectlabels",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#multi-panel-figures",
-    "href": "plotting/edv.html#multi-panel-figures",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Multi-panel figures",
-    "text": "Multi-panel figures\n\nSmall multiples: “Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization.”\n\nFx. created by ggplot2::facet_wrap and ggplot2::facet_grid\nBe very careful with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.\n\nCoumpound figures: “Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets.”\n\nUnlike small multiples, where panels are labelled by variables, labels often need to be added manually to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#titles-captions-and-tables",
-    "href": "plotting/edv.html#titles-captions-and-tables",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Titles, captions and tables",
-    "text": "Titles, captions and tables\n\nTitle: “Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”\n\nUse title, subtitle and caption in labs.\n\nAxis and legend titles:\n\nAxis and legend titles should be informative.\n\nDisplay units in parentheses when possible.\n\nLegend label not needed when self explanatory. Fx. when values displayed are “female” and “male”, so the variable is obviously sex/gender.\n\nTables:\n\nSee the 6-item breakdown of table guidelines in this section from the reference in the title of this section.\nPlace captions on top (underneath for figures).\n\n\nTip: Use expressions to make LaTeX rendered text. Fx. write\n\nlabs(x = expression(paste(\"Engine displacment (\", \"in\"^3, \")\")))\n\nto render the exponent.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
-    "href": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "Lecture notes and slides from STATS 787: Data Visualisation at UoA",
-    "text": "Lecture notes and slides from STATS 787: Data Visualisation at UoA\n\nLecture 1 (Introduction to Data Visualisation)\n\nSlides\n\nLecture 4 (Effective Data Visualisations)\n\nSlides\n\nLecture 5 (Visual Perception)\n\nSlides",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/edv.html#references-from-inside-lecture-notes",
-    "href": "plotting/edv.html#references-from-inside-lecture-notes",
-    "title": "Effective Data Visualisation and Visual Perception",
-    "section": "References from inside lecture notes",
-    "text": "References from inside lecture notes\n\nTop tier book!! “Fundamentals of Data Visualization” by Claus O. Wilke\n“Data Visualization: A practical introduction” by Kieran Healey.",
-    "crumbs": [
-      "Principles of Effective Data Visualisation",
-      "Effective Data Visualisation and Visual Perception"
-    ]
-  },
-  {
-    "objectID": "plotting/animation.html",
-    "href": "plotting/animation.html",
-    "title": "Animation",
-    "section": "",
-    "text": "See lecture notes about animation and more importantly the answer to the lab.",
-    "crumbs": [
-      "Animation and interactivity",
-      "Animation"
-    ]
-  },
-  {
-    "objectID": "plotting/animation.html#low-level-approach---magick",
-    "href": "plotting/animation.html#low-level-approach---magick",
-    "title": "Animation",
-    "section": "Low-level approach - magick",
-    "text": "Low-level approach - magick\nApproach to draw every frame of the animation. More work but also more control.\nBasic steps to produce animation:\n\nAssign value (fx. img) to call of magick::image_graph to open a magick graphics device\nRun a loop that draws each frame of the animation\nCall dev.off() to close the magick graphics device\nRun image_animate(img)",
-    "crumbs": [
-      "Animation and interactivity",
-      "Animation"
-    ]
-  },
-  {
-    "objectID": "plotting/animation.html#high-level-approach---gganimate",
-    "href": "plotting/animation.html#high-level-approach---gganimate",
-    "title": "Animation",
-    "section": "High-level approach - gganimate",
-    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.\n\nCreate animation “superimposed” onto static image\nSee example how to do this in this model answer\n\n\nMisc notes about gganimate\n\nIf using exit/enter_xx function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.\nTo slow down the animation, assign it a value p, and then use animate(p, fps = 1) fx. to control the frames pr. second.",
-    "crumbs": [
-      "Animation and interactivity",
-      "Animation"
-    ]
-  },
-  {
-    "objectID": "prog/obj_prog.html",
-    "href": "prog/obj_prog.html",
-    "title": "Object-oriented programming",
-    "section": "",
-    "text": "As intro, see Object-oriented programming in Advanced R.\n\n\n\n Back to top",
-    "crumbs": [
-      "Object-oriented programming",
-      "Object-oriented programming"
-    ]
-  },
-  {
-    "objectID": "prog/func_prog.html",
-    "href": "prog/func_prog.html",
-    "title": "Functional programming",
-    "section": "",
-    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
-    "crumbs": [
-      "Functional programming",
-      "Functional programming"
-    ]
-  },
-  {
-    "objectID": "plotting/grid-and-gggrid.html",
-    "href": "plotting/grid-and-gggrid.html",
-    "title": "grid and gggrid",
-    "section": "",
-    "text": "The following is taken from the overall summary of my lab2 answer in STATS 787 at UoA.",
-    "crumbs": [
-      "Creating plots",
-      "`grid` and `gggrid`"
-    ]
-  },
-  {
-    "objectID": "plotting/grid-and-gggrid.html#the-grid-package",
-    "href": "plotting/grid-and-gggrid.html#the-grid-package",
-    "title": "grid and gggrid",
-    "section": "The grid package",
-    "text": "The grid package\nThe grid package allows total customisation in creating grobs (graphical objects). They can either be drawn directly using grid::grid.xx functions or created as grobs with grid::xxGrob functions to be drawn later (with grid::grid.draw). This enables us to gather different grobs in a grob tree with grid::gTree and specifying grobs with a grid::gList as the children argument (alternatively use grid::grobTree when all components are grobs). See more in question 1.\n\nUsing viewports\nNote that ggplot2 is built on grid. ggplot2 uses viewports from grid. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree). See questions 2, 3, 5 and 8.\n\nImposing grid elements on ggplot2 plots\nAssign the ggplot object a value (fx. p) and then plot it “inside the viewport” with plot(p, newpage = FALSE). See questions 5 and 8.\n\n\nCreating a layout of viewports with grid.layout.\nUse of grid::grid.layout as in question 3 can help with many situations.\n\n\nNative scales in viewports\nA strong way of using viewports is using xscale and/or yscale parameters in the grid::viewport function and the using the grid::unit function with units = \"native\" specified to make your grobs relate to the scale of the viewport.\n\nSee a very nice example of this in the challenge of lab 9.\n\n\n\nViewports as part of grobTree\nIf creating a grob inside a viewport to be drawn later, you can specify the vp argument in the grid::grobTree function. See a good example usage in the challenge of lab 9.\n\n\nControlling size of “angled” objects\nWe can use the grid::convertUnit function to change the axis we are referencing (useful fx. when creating a viewport with angle = 90/270). See the challenge.",
-    "crumbs": [
-      "Creating plots",
-      "`grid` and `gggrid`"
-    ]
-  },
-  {
-    "objectID": "plotting/grid-and-gggrid.html#combining-grid-and-ggplot2---the-gggrid-package",
-    "href": "plotting/grid-and-gggrid.html#combining-grid-and-ggplot2---the-gggrid-package",
-    "title": "grid and gggrid",
-    "section": "Combining grid and ggplot2 - The gggrid package",
-    "text": "Combining grid and ggplot2 - The gggrid package\nAs mentioned above, viewports and ggplots integrate nicely using just grid and ggplot2. However, it’s easy to combine elements of grid to ggplots to create overlays on each facet/panel with gggrid::grid_panel or for each group using gggrid::grid_group.\nThese functions either take a static grob or a function that will create a grob (or a tree of grobs) within each panel/group. The function takes data and coords as an argument, and it will then use this function to draw using the function on only the data in that panel (stratified data).\n\nNote that the coords are transformed values of x and y (from the aesthetic mapping) to scale 0-1, so it can be plotted correctly in the scale of the viewport. data contains the untransformed data and includes columns of other aesthetics (fx. colour).\n\nSee many examples throughout the labs, like fx.\n\nadding a male/female ratio bar to the right of each facet\nadding direct labelling to facets\ncreating imbedded line plots on a geographical map",
-    "crumbs": [
-      "Creating plots",
-      "`grid` and `gggrid`"
-    ]
-  },
-  {
-    "objectID": "plotting/ggplot2.html",
-    "href": "plotting/ggplot2.html",
-    "title": "ggplot2",
-    "section": "",
-    "text": "Something something",
-    "crumbs": [
-      "Creating plots",
-      "`ggplot2`"
-    ]
-  },
-  {
-    "objectID": "plotting/ggplot2.html#misc-tips-and-tricks",
-    "href": "plotting/ggplot2.html#misc-tips-and-tricks",
-    "title": "ggplot2",
-    "section": "Misc tips and tricks",
-    "text": "Misc tips and tricks\n\naspect.ratio argument in theme to specify aspect ratio of each panel\nmargin argument in element_... functions\n\nFx. plot.title = element_text(size = 18, margin = margin(0,0,20,0)) to move the title higher up by adding a margin to the bottom\n\nUse coord_cartesian(clip = \"off\") to write outside plotting area. See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
-    "crumbs": [
-      "Creating plots",
-      "`ggplot2`"
     ]
   },
   {
@@ -385,14 +110,333 @@
     ]
   },
   {
-    "objectID": "plotting/CRAP-designs.html",
-    "href": "plotting/CRAP-designs.html",
-    "title": "Plot design - CRAP principles and fonts",
+    "objectID": "plotting/ggplot2.html",
+    "href": "plotting/ggplot2.html",
+    "title": "ggplot2",
     "section": "",
-    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee much more information in the readings in the link to lecture notes and some notes in the answer to lab 5.\n\n\nFonts\n\n\n\n\n Back to top",
+    "text": "Something something",
+    "crumbs": [
+      "Creating plots",
+      "`ggplot2`"
+    ]
+  },
+  {
+    "objectID": "plotting/ggplot2.html#misc-tips-and-tricks",
+    "href": "plotting/ggplot2.html#misc-tips-and-tricks",
+    "title": "ggplot2",
+    "section": "Misc tips and tricks",
+    "text": "Misc tips and tricks\n\naspect.ratio argument in theme to specify aspect ratio of each panel\nmargin argument in element_... functions\n\nFx. plot.title = element_text(size = 18, margin = margin(0,0,20,0)) to move the title higher up by adding a margin to the bottom\n\nUse coord_cartesian(clip = \"off\") to write outside plotting area. See fx. how we use this to label lines outside the plotting area in the Challenge of lab 4 in the course data visualisation at UoA.",
+    "crumbs": [
+      "Creating plots",
+      "`ggplot2`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html",
+    "href": "plotting/grid-and-gggrid.html",
+    "title": "grid and gggrid",
+    "section": "",
+    "text": "The following is taken from the overall summary of my lab2 answer in STATS 787 at UoA.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#using-viewports",
+    "href": "plotting/grid-and-gggrid.html#using-viewports",
+    "title": "grid and gggrid",
+    "section": "Using viewports",
+    "text": "Using viewports\nNote that ggplot2 is built on grid. ggplot2 uses viewports from grid. Fx. on a simple plot, it uses (nested) viewports for the background, axis text, axis ticks, etc. etc.\nWe can use grid::viewport with grid::pushViewport to draw whatever we want inside a certain area of our “full plotting area” and then go to a parent viewport with grid::upViewport (grid::popViewport navigates to parent viewport AND deletes the current viewport from the viewport tree). See questions 2, 3, 5 and 8.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#imposing-grid-elements-on-ggplot2-plots",
+    "href": "plotting/grid-and-gggrid.html#imposing-grid-elements-on-ggplot2-plots",
+    "title": "grid and gggrid",
+    "section": "Imposing grid elements on ggplot2 plots",
+    "text": "Imposing grid elements on ggplot2 plots\nAssign the ggplot object a value (fx. p) and then plot it “inside the viewport” with plot(p, newpage = FALSE). See questions 5 and 8.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#creating-a-layout-of-viewports-with-grid.layout.",
+    "href": "plotting/grid-and-gggrid.html#creating-a-layout-of-viewports-with-grid.layout.",
+    "title": "grid and gggrid",
+    "section": "Creating a layout of viewports with grid.layout.",
+    "text": "Creating a layout of viewports with grid.layout.\nUse of grid::grid.layout as in question 3 can help with many situations.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#native-scales-in-viewports",
+    "href": "plotting/grid-and-gggrid.html#native-scales-in-viewports",
+    "title": "grid and gggrid",
+    "section": "Native scales in viewports",
+    "text": "Native scales in viewports\nA strong way of using viewports is using xscale and/or yscale parameters in the grid::viewport function and the using the grid::unit function with units = \"native\" specified to make your grobs relate to the scale of the viewport.\n\nSee a very nice example of this in the challenge of lab 9.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#viewports-as-part-of-grobtree",
+    "href": "plotting/grid-and-gggrid.html#viewports-as-part-of-grobtree",
+    "title": "grid and gggrid",
+    "section": "Viewports as part of grobTree",
+    "text": "Viewports as part of grobTree\nIf creating a grob inside a viewport to be drawn later, you can specify the vp argument in the grid::grobTree function. See a good example usage in the challenge of lab 9.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "plotting/grid-and-gggrid.html#controlling-size-of-angled-objects",
+    "href": "plotting/grid-and-gggrid.html#controlling-size-of-angled-objects",
+    "title": "grid and gggrid",
+    "section": "Controlling size of “angled” objects",
+    "text": "Controlling size of “angled” objects\nWe can use the grid::convertUnit function to change the axis we are referencing (useful fx. when creating a viewport with angle = 90/270). See the challenge.",
+    "crumbs": [
+      "Creating plots",
+      "`grid` and `gggrid`"
+    ]
+  },
+  {
+    "objectID": "prog/func_prog.html",
+    "href": "prog/func_prog.html",
+    "title": "Functional programming",
+    "section": "",
+    "text": "As intro, see Functional programming in Advanced R.\n\n\n\n Back to top",
+    "crumbs": [
+      "Functional programming",
+      "Functional programming"
+    ]
+  },
+  {
+    "objectID": "prog/obj_prog.html",
+    "href": "prog/obj_prog.html",
+    "title": "Object-oriented programming",
+    "section": "",
+    "text": "As intro, see Object-oriented programming in Advanced R.\n\n\n\n Back to top",
+    "crumbs": [
+      "Object-oriented programming",
+      "Object-oriented programming"
+    ]
+  },
+  {
+    "objectID": "plotting/animation.html",
+    "href": "plotting/animation.html",
+    "title": "Animation using magick and ´gganimate´",
+    "section": "",
+    "text": "See lecture notes about animation and more importantly the answer to the lab.",
+    "crumbs": [
+      "Animation and interactivity",
+      "Animation using `magick` and ´gganimate´"
+    ]
+  },
+  {
+    "objectID": "plotting/animation.html#low-level-approach---magick",
+    "href": "plotting/animation.html#low-level-approach---magick",
+    "title": "Animation using magick and ´gganimate´",
+    "section": "Low-level approach - magick",
+    "text": "Low-level approach - magick\nApproach to draw every frame of the animation. More work but also more control.\nBasic steps to produce animation:\n\nAssign value (fx. img) to call of magick::image_graph to open a magick graphics device\nRun a loop that draws each frame of the animation\nCall dev.off() to close the magick graphics device\nRun image_animate(img)",
+    "crumbs": [
+      "Animation and interactivity",
+      "Animation using `magick` and ´gganimate´"
+    ]
+  },
+  {
+    "objectID": "plotting/animation.html#high-level-approach---gganimate",
+    "href": "plotting/animation.html#high-level-approach---gganimate",
+    "title": "Animation using magick and ´gganimate´",
+    "section": "High-level approach - gganimate",
+    "text": "High-level approach - gganimate\n\nNOTE! Install package gifski. If installed, gganimate will make sure to use that as the backend when creating the GIFs\n\nSee the getting started article as well as run examples in references section of each transition_... function.\n\nCreate animation “superimposed” onto static image\nSee example how to do this in this model answer\n\n\nMisc notes about gganimate\n\nIf using exit/enter_xx function you NEED to specify a grouping aesthetic EXPLICITLY, which will devide data into subsets that the transitions will display in each frame.\nTo slow down the animation, assign it a value p, and then use animate(p, fps = 1) fx. to control the frames pr. second.",
+    "crumbs": [
+      "Animation and interactivity",
+      "Animation using `magick` and ´gganimate´"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html",
+    "href": "plotting/edv.html",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "",
+    "text": "This section is about making sure plots are as easily interpretable as possible for the reader.\n\n\nChannels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference ordered by effectiveness.\nEffectiveness meant such that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.\n\n\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.):\n\nggplot2::scale_radius can be used to scale based on radius rather than area since.\nggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\n\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.\n\n\n\n\n\n“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.\n\n\n\nData-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.\n\n\n\n\nThis concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.\n\n\nAesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.",
     "crumbs": [
       "Principles of Effective Data Visualisation",
-      "Plot design - CRAP principles and fonts"
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#visual-channels",
+    "href": "plotting/edv.html#visual-channels",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "",
+    "text": "Channels are a concept from section 1.5 from Kieran Healey. See a list of visual channels in the figures to the right in the reference ordered by effectiveness.\nEffectiveness meant such that the listing in the reference is ordered from top-to-bottom of most effective to least effective, where effectiveness is based on surveys of asking people to decode data values from their visual channel.\n\n\n\n“…, we perceive the area in a pie chart differently from the same area in a bar plot. The fundamental reason is that human perception primarily judges distances and not areas. Thus, if a data value is encoded entirely as a distance, as is the case with the length of a bar, we perceive it more accurately than when the data value is encoded through a combination of two or more distances that jointly create an area.”\n\nFunctions to change the scale of point sizes (when using aes(size = xx) in a geom_point fx.):\n\nggplot2::scale_radius can be used to scale based on radius rather than area since.\nggplot2::scale_size_area can be used to make sure ratio of sizes is equal to ratio of data values.\n\nNote! Above function are generally not recommended, as they break with the principle of proportional ink. However, still might be cases where it makes sense to do.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#gestalt-rules",
+    "href": "plotting/edv.html#gestalt-rules",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "",
+    "text": "“The strong inferences we make about relationships between visual elements from relatively sparse visual information are called “gestalt rules”. They are not pure perceptual effects… Rather, they describe our tendency to infer relationships between the objects we are looking at in a way that goes beyond what is strictly visible…“.\n\nSee slide 10 for a “ranking” of what rules are dominant over each other and should be used for creating relations between data values.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#data-to-ink-ratio",
+    "href": "plotting/edv.html#data-to-ink-ratio",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "",
+    "text": "Data-to-ink ratio (concept by Tufte): Tufte proposes to always maximise the data-to-ink ratio. Only add ANYTHING if it is really, really needed\n\nHealey notes that …, it may be the case that graphics that really do maximize the data-to-ink ratio are harder to interpret than those that are a little more relaxed about it.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#the-principle-of-proportional-ink",
+    "href": "plotting/edv.html#the-principle-of-proportional-ink",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "",
+    "text": "This concept has been termed by Bergstrom and West as the principle of proportional ink (Bergstrom and West 2016):\n\nThe principle of proportional ink: The sizes of shaded areas in a visualization need to be proportional to the data values they represent.\n\n\nMost plots should always include 0 in the y-axis.\n\nBe careful with heights/widths of bars.\n\nIf values in a plot are much different from 0, making it hard to see differences, consider changing the response to a difference of some sort.\nOn logarithmic axes, bars are a ratio. Make sure to represent correctly.\n\nConsider using points instead of bars.\n\n\nAesthetic: Ugly or inconsistent design choices\nSubstantive: It’s not about making stuff look pretty but making sure to present data in the most informative way.\n\nIn many cases, this is not an issue directly with the plot but with the data. Always related to our question of interest.\n\nPerceptual: In these cases, even with good aesthetic qualities and good data, the graph will be confusing or misleading because of how people perceive and process what they are looking at.\n\nFx. a continuous color scale for many categories can make it hard to distinguish colors from each other and can make fx. make a color appear lighter than it actually is if surrounded by darker colors.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#crap-design-principles",
+    "href": "plotting/edv.html#crap-design-principles",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "CRAP design principles",
+    "text": "CRAP design principles\nThe “The Non-Designer’s Design Book” by Robin Williams proposes four major design features that make an image more appealing and more effective: Contrast, Repetition, Alignment, and Proximity (CRAP).\nSee lecture notes about CRAP principles for more information about the meaning of the 4 design features. Below are short quotes about each principle from the link.\n\nContrast: Elements of an image should be either very similar or very different. If elements of an image are supposed to be different, make them obviously different.\n\nSee these slides by Andrew Heiss.\n\nRepitition: Specific colours or styles should be used to tie elements of an image together. This helps to create a more consistent, more cohesive, less chaotic, image.\n\nFx. within an image by making all text have same color/size/… or across images in a report\n\nAlignment: All elements of an image should be aligned with some other anchor point in the image. This helps to create organisation and structure within an image, which can make it easier to navigate within the image.\n\nFx. aligning the legend vertically with the top of the plotting region, aligning the title with the left of the plotting region, etc.\nSee example in slides by Andrew Heiss of a compound figure.\n\nProximity: Elements of an image should be placed close to each other to form sub-elements of the image.\n\nFx. moving axis breaks closer to axis ticks or moving keys in a legend closer together to highlight that they “belong together”\n\n\nSee much more information in the readings in the link to lecture notes and some notes in the answer to lab 5. See especially this black themed plot in the answer to question 3 in the same lab.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#sec-colorpitfalls",
+    "href": "plotting/edv.html#sec-colorpitfalls",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "Color pitfalls",
+    "text": "Color pitfalls\n\nEncoding too much or irrelevant information\n\nToo much:\n\nQuote from reference in title: “As a rule of thumb, qualitative color scales work best when there are three to five different categories that need to be colored. Once we reach eight to ten different categories or more, the task of matching colors to categories becomes too burdensome to be useful, even if the colors remain sufficiently different to be distinguishable in principle.”\nPossible solutions: Label points (potentially color according to a categorisation variable with fewer levels while labelling according to the variable of interest)\n\nIrrelevant: Do not color without a clear purpose that helps answer a question.\n\n\n\nColor vision deficiency\nTip: To make sure your figures work for people with cvd (color-vision-deficiency), don’t just rely on specific color scales. Instead, test your figures in a cvd simulator\n\nSee colorspace::deutan\n\n\n\nColor contrasts\nWe judge color relative to other colors, so colors might appear darker or lighter than they are depending on surrounding colors. See fx. section 1.3.1 from Kieran Healy.\n\n\nColor “scales”\nSee slide 11.\nWorks for categorical variables:\n\nhue: Different colors\n\nWorks for numerical variables:\n\nMake sure to keep hue constant while changing these.\n\n\nchroma: How “saturated” the color is. White, grey, black have no chroma.\nluminance: Darkness/brightness of color. On scale we go from white to black.\n\n\n\nIt’s not only about color\nRedundant coding in essence means we do more than one aesthetic mapping to a single variable. Wilke fx. recommends:\n\n“use color to enhance the visual appearance of the figure without relying entirely on color to convey key information.”\n\n\nScatter plots: Fx. change the shape of points instead of only color.\nLine plots:\n\nChanging line type often does not work very well.\n“If there is a clear visual ordering in your data, make sure to match it in the legend.”.\n\nMost plots will create legend in alphabetical order. Make sure to create factor with levels ordered by magnitude.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#designing-figures-without-legends",
+    "href": "plotting/edv.html#designing-figures-without-legends",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "Designing figures without legends",
+    "text": "Designing figures without legends\n\n“Whenever possible, design your figures so they don’t need a legend.”\n\nSee packages:\n\nggtext for ways to fx. color text labels, titles, etc. See an example of coloring the title to replace a legend with code available in the answer to lab 5 here\nggforce which has geoms that take label as an aesthetic mapping\ndirectlabels",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#titles-captions-and-tables",
+    "href": "plotting/edv.html#titles-captions-and-tables",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "Titles, captions and tables",
+    "text": "Titles, captions and tables\n\nTitle: “Either the title is integrated into the actual figure display or it is provided as the first element of the caption underneath the figure.”\n\nUse title, subtitle and caption in labs.\n\nAxis and legend titles:\n\nAxis and legend titles should be informative.\n\nDisplay units in parentheses when possible.\n\nLegend label not needed when self explanatory. Fx. when values displayed are “female” and “male”, so the variable is obviously sex/gender.\n\nTables:\n\nSee the 6-item breakdown of table guidelines in this section from the reference in the title of this section.\nPlace captions on top (underneath for figures).\n\n\nTip: Use expressions to make LaTeX rendered text. Fx. write\n\nlabs(x = expression(paste(\"Engine displacment (\", \"in\"^3, \")\")))\n\nto render the exponent.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#multi-panel-figures",
+    "href": "plotting/edv.html#multi-panel-figures",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "Multi-panel figures",
+    "text": "Multi-panel figures\n\nSmall multiples: “Small multiples are plots consisting of multiple panels arranged in a regular grid. Each panel shows a different subset of the data but all panels use the same type of visualization.”\n\nFx. created by ggplot2::facet_wrap and ggplot2::facet_grid\nBe very careful with having different axis ranges across panels. Guideline to almost never do this. If you HAVE to, make a note about it to the reader.\n\nCoumpound figures: “Compound figures consist of separate figure panels assembled in an arbitrary arrangement (which may or may not be grid based) and showing entirely different visualizations, or possibly even different datasets.”\n\nUnlike small multiples, where panels are labelled by variables, labels often need to be added manually to compound figures. Make sure they uniquely define each figure and are formatted (font, size, placement, etc.) nicely.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#overplotting",
+    "href": "plotting/edv.html#overplotting",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "Overplotting",
+    "text": "Overplotting\nIssue: points that overlap.\nPossible fixes:\n\nTransparent points\nJitter\nHigh density of points: Use 2D histogram\n\nSee ggplot2::geom_bin2d and ggplot2::geom_hex (hexagons are more “correct”)\nSee also smoothScatter in the base graphics package, whic makes a 2D kernel density estimate but also shows points “on the edge”.\n\nContour lines\n\nSee ggplot2::geom_density2d or ggplot2::geom_density2d_filled\n\nBe wary of ggplot2::geom_density2d not showing the entire range of data",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
+    "href": "plotting/edv.html#lecture-notes-and-slides-from-stats-787-data-visualisation-at-uoa",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "Lecture notes and slides from STATS 787: Data Visualisation at UoA",
+    "text": "Lecture notes and slides from STATS 787: Data Visualisation at UoA\n\nLecture 1 (Introduction to Data Visualisation)\n\nSlides\n\nLecture 4 (Effective Data Visualisations)\n\nSlides\n\nLecture 5 (Visual Perception)\n\nSlides",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/edv.html#references-from-inside-lecture-notes",
+    "href": "plotting/edv.html#references-from-inside-lecture-notes",
+    "title": "Effective Data Visualisation, Visual Perception and Design Principles",
+    "section": "References from inside lecture notes",
+    "text": "References from inside lecture notes\n\nTop tier book!! “Fundamentals of Data Visualization” by Claus O. Wilke\n“Data Visualization: A practical introduction” by Kieran Healey.",
+    "crumbs": [
+      "Principles of Effective Data Visualisation",
+      "Effective Data Visualisation, Visual Perception and Design Principles"
+    ]
+  },
+  {
+    "objectID": "plotting/interactivity.html",
+    "href": "plotting/interactivity.html",
+    "title": "Hovering tooltips with plotly and linked plots with plotscaper",
+    "section": "",
+    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
+    "crumbs": [
+      "Animation and interactivity",
+      "Hovering tooltips with `plotly` and linked plots with `plotscaper`"
+    ]
+  },
+  {
+    "objectID": "plotting/interactivity.html#plotly",
+    "href": "plotting/interactivity.html#plotly",
+    "title": "Hovering tooltips with plotly and linked plots with plotscaper",
+    "section": "",
+    "text": "See this small document, which describes how to use plotly::ggplotly.\n\nNotice especially the specification of the text aesthetic to create new strings in the hover tooltips.\n\nSee also the lab answer for that weeks lecture.",
+    "crumbs": [
+      "Animation and interactivity",
+      "Hovering tooltips with `plotly` and linked plots with `plotscaper`"
+    ]
+  },
+  {
+    "objectID": "plotting/interactivity.html#plotscaper",
+    "href": "plotting/interactivity.html#plotscaper",
+    "title": "Hovering tooltips with plotly and linked plots with plotscaper",
+    "section": "plotscaper",
+    "text": "plotscaper\nCreate simple linked plots. See this lab answer to lab 7.",
+    "crumbs": [
+      "Animation and interactivity",
+      "Hovering tooltips with `plotly` and linked plots with `plotscaper`"
     ]
   },
   {
