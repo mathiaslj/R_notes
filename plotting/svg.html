@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Base R – Various notes about R</title>
+<title>Scalable Vector Graphics – Various notes about R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -209,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Base R</h1>
+          <h1 class="quarto-secondary-nav-title">Scalable Vector Graphics</h1>
         </a>     
     </div>
   </nav>
@@ -222,17 +222,17 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Base R</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Principles of Effective Data Visualisation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data-wrangling/baser.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Base R</span></a>
+  <a href="../plotting/edv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Effective Data Visualisation, Visual Perception and Design Principles</span></a>
   </div>
 </li>
       </ul>
@@ -240,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">The tidyverse</span></a>
+ <span class="menu-text">Creating plots</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -248,8 +248,66 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data-wrangling/tidyverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The <code>tidyverse</code></span></a>
+  <a href="../plotting/colors-in-R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Colors and text in R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/grid-and-gggrid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>grid</code> and <code>gggrid</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/ggplot2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>ggplot2</code></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Animation and interactivity</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/animation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Animation using <code>magick</code> and ´gganimate´</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/interactivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hovering tooltips with <code>plotly</code> and linked plots with <code>plotscaper</code></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">SVG Graphics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../plotting/svg.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Scalable Vector Graphics</span></a>
   </div>
 </li>
       </ul>
@@ -259,15 +317,31 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#svg-basics" id="toc-svg-basics" class="nav-link active" data-scroll-target="#svg-basics">SVG basics</a>
+  <ul class="collapse">
+  <li><a href="#viewboxes" id="toc-viewboxes" class="nav-link" data-scroll-target="#viewboxes">viewBoxes</a></li>
+  <li><a href="#create-groups" id="toc-create-groups" class="nav-link" data-scroll-target="#create-groups">Create groups</a></li>
+  <li><a href="#adding-style-to-text" id="toc-adding-style-to-text" class="nav-link" data-scroll-target="#adding-style-to-text">Adding style to text</a>
+  <ul class="collapse">
+  <li><a href="#adding-a-hyperlink" id="toc-adding-a-hyperlink" class="nav-link" data-scroll-target="#adding-a-hyperlink">Adding a hyperlink</a></li>
+  </ul></li>
+  <li><a href="#animation" id="toc-animation" class="nav-link" data-scroll-target="#animation">Animation</a></li>
+  </ul></li>
+  <li><a href="#combining-svg-with-embedded-javascript" id="toc-combining-svg-with-embedded-javascript" class="nav-link" data-scroll-target="#combining-svg-with-embedded-javascript">Combining SVG with embedded javascript</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/svg.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Base R</h1>
+<h1 class="title d-none d-lg-block">Scalable Vector Graphics</h1>
 </div>
 
 
@@ -284,9 +358,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>See <a href="https://adv-r.hadley.nz/">Advanced R</a> and <a href="https://diytranscriptomics.com/Reading/files/The%20Art%20of%20R%20Programming.pdf">The art of R programming</a></p>
+<p>See the <a href="https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/web.html">lecture notes</a>, which links to <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch">this introduction to SVG</a>.</p>
+<section id="svg-basics" class="level1">
+<h1>SVG basics</h1>
+<section id="viewboxes" class="level2">
+<h2 class="anchored" data-anchor-id="viewboxes">viewBoxes</h2>
+<p>Use a <code>viewBox</code> specification to create a user coordinate system.</p>
+<ul>
+<li>Make sure to use <code>preserveAspectRatio="none"</code> fx. if a picture has 500px times 100px, but you want a coordinate system in 1:1 ratio, i.e.&nbsp;100px times 100px.</li>
+</ul>
+</section>
+<section id="create-groups" class="level2">
+<h2 class="anchored" data-anchor-id="create-groups">Create groups</h2>
+<p>See this <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations">introduction to <code>&lt;g&gt;</code></a> which is a group element used to define attributes for a group of elements.</p>
+</section>
+<section id="adding-style-to-text" class="level2">
+<h2 class="anchored" data-anchor-id="adding-style-to-text">Adding style to text</h2>
+<p>Use a <code>&lt;tspan&gt;</code> element to specify fx. fill, font type, etc.</p>
+<p>Can also use CSS <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts"><code>&lt;style&gt;</code></a> for more complicated things.</p>
+<section id="adding-a-hyperlink" class="level3">
+<h3 class="anchored" data-anchor-id="adding-a-hyperlink">Adding a hyperlink</h3>
+<p>See an <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/href#example">example of using <code>&lt;a&gt;</code> to add a hyperlink to text</a>.</p>
+</section>
+</section>
+<section id="animation" class="level2">
+<h2 class="anchored" data-anchor-id="animation">Animation</h2>
+<p>Use <code>&lt;animate&gt;</code>. See how in <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#adding-animation">lab9</a> and notice the code for embedding a button to run the animation.</p>
+</section>
+</section>
+<section id="combining-svg-with-embedded-javascript" class="level1">
+<h1>Combining SVG with embedded javascript</h1>
+<p>See an example of <a href="https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge">how to create a selection menu and run an animation for selection</a> in the challenge of the lab.</p>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -693,4 +798,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/data-wrangling/baser.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mathiaslj/R_notes/blob/main/plotting/svg.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

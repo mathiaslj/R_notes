@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://mathiaslj.github.io/R_notes/index.html</loc>
+    <lastmod>2025-05-17T09:38:29.003Z</lastmod>
+  </url>
+  <url>
     <loc>https://mathiaslj.github.io/R_notes/data-wrangling/baser.html</loc>
-    <lastmod>2025-05-16T21:11:53.270Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/pkg-dev/cran.html</loc>
-    <lastmod>2025-05-16T21:11:53.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/pkg-dev/get-started.html</loc>
-    <lastmod>2025-05-16T21:11:53.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/plotting/maps.html</loc>
-    <lastmod>2025-05-16T21:11:53.274Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/plotting/colors-in-R.html</loc>
-    <lastmod>2025-05-16T21:11:53.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/plotting/ggplot2.html</loc>
-    <lastmod>2025-05-16T21:11:53.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/plotting/grid-and-gggrid.html</loc>
-    <lastmod>2025-05-16T21:11:53.274Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mathiaslj.github.io/R_notes/prog/func_prog.html</loc>
-    <lastmod>2025-05-16T21:11:53.274Z</lastmod>
+    <lastmod>2025-05-17T09:38:29.000Z</lastmod>
   </url>
   <url>
     <loc>https://mathiaslj.github.io/R_notes/prog/obj_prog.html</loc>
-    <lastmod>2025-05-16T21:11:53.274Z</lastmod>
+    <lastmod>2025-05-17T09:38:29.004Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/plotting/animation.html</loc>
-    <lastmod>2025-05-16T21:11:53.273Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/grid-and-gggrid.html</loc>
+    <lastmod>2025-05-17T09:38:29.004Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/plotting/edv.html</loc>
-    <lastmod>2025-05-16T21:11:53.273Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/ggplot2.html</loc>
+    <lastmod>2025-05-17T09:38:29.004Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/maps.html</loc>
+    <lastmod>2025-05-17T09:38:29.004Z</lastmod>
   </url>
   <url>
     <loc>https://mathiaslj.github.io/R_notes/plotting/interactivity.html</loc>
-    <lastmod>2025-05-16T21:11:53.274Z</lastmod>
+    <lastmod>2025-05-17T09:38:29.004Z</lastmod>
   </url>
   <url>
-    <loc>https://mathiaslj.github.io/R_notes/index.html</loc>
-    <lastmod>2025-05-16T21:11:53.273Z</lastmod>
+    <loc>https://mathiaslj.github.io/R_notes/pkg-dev/get-started.html</loc>
+    <lastmod>2025-05-17T09:38:29.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mathiaslj.github.io/R_notes/pkg-dev/cran.html</loc>
+    <lastmod>2025-05-17T09:38:29.003Z</lastmod>
   </url>
   <url>
     <loc>https://mathiaslj.github.io/R_notes/pkg-dev/gh-actions.html</loc>
-    <lastmod>2025-05-16T21:11:53.273Z</lastmod>
+    <lastmod>2025-05-17T09:38:29.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/svg.html</loc>
+    <lastmod>2025-05-17T09:38:29.004Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/edv.html</loc>
+    <lastmod>2025-05-17T09:38:29.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/animation.html</loc>
+    <lastmod>2025-05-17T09:38:29.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mathiaslj.github.io/R_notes/plotting/colors-in-R.html</loc>
+    <lastmod>2025-05-17T09:38:29.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mathiaslj.github.io/R_notes/prog/func_prog.html</loc>
+    <lastmod>2025-05-17T09:38:29.004Z</lastmod>
   </url>
   <url>
     <loc>https://mathiaslj.github.io/R_notes/data-wrangling/tidyverse.html</loc>
-    <lastmod>2025-05-16T21:11:53.270Z</lastmod>
+    <lastmod>2025-05-17T09:38:29.001Z</lastmod>
   </url>
 </urlset>
