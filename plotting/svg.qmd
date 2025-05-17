@@ -1,0 +1,36 @@
+---
+title: "Scalable Vector Graphics"
+format: html
+---
+
+See the [lecture notes](https://www.stat.auckland.ac.nz/~paul/stats787/Current/Topics/web.html), which links to [this introduction to SVG](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch).
+
+# SVG basics
+
+## viewBoxes
+
+Use a `viewBox` specification to create a user coordinate system.
+
+- Make sure to use `preserveAspectRatio="none"` fx. if a picture has 500px times 100px, but you want a coordinate system in 1:1 ratio, i.e. 100px times 100px.
+
+## Create groups
+
+See this [introduction to `<g>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations) which is a group element used to define attributes for a group of elements.
+
+## Adding style to text
+
+Use a `<tspan>` element to specify fx. fill, font type, etc.
+
+Can also use CSS [`<style>` ](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts) for more complicated things.
+
+### Adding a hyperlink
+
+See an [example of using `<a>` to add a hyperlink to text](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/href#example).
+
+## Animation
+
+Use `<animate>`. See how in [lab9](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#adding-animation) and notice the code for embedding a button to run the animation.
+
+# Combining SVG with embedded javascript
+
+See an example of [how to create a selection menu and run an animation for selection](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge) in the challenge of the lab.

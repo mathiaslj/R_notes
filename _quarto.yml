@@ -49,6 +49,9 @@ website:
           contents:
             - plotting/animation.qmd
             - plotting/interactivity.qmd
+        - section: "SVG Graphics"
+          contents:
+            - plotting/svg.qmd
     - id: pkg-dev
       title: Package development
       style: "docked"
