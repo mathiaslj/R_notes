@@ -318,6 +318,17 @@
     ]
   },
   {
+    "objectID": "plotting/svg.html#combining-svg-with-embedded-javascript",
+    "href": "plotting/svg.html#combining-svg-with-embedded-javascript",
+    "title": "Scalable Vector Graphics",
+    "section": "Combining SVG with embedded javascript",
+    "text": "Combining SVG with embedded javascript\nSee an example of how to create a selection menu and run an animation for selection in the challenge of the lab.",
+    "crumbs": [
+      "SVG Graphics",
+      "Scalable Vector Graphics"
+    ]
+  },
+  {
     "objectID": "plotting/edv.html",
     "href": "plotting/edv.html",
     "title": "Effective Data Visualisation, Visual Perception and Design Principles",
