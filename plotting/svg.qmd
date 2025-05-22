@@ -31,6 +31,20 @@ See an [example of using `<a>` to add a hyperlink to text](https://developer.moz
 
 Use `<animate>`. See how in [lab9](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#adding-animation) and notice the code for embedding a button to run the animation.
 
-# Combining SVG with embedded javascript
+# Including SVG in Rmarkdown
+
+Can include an svg file in markdown by using a `<div>` element, using `results = "asis"` in the chunk option, and using cat to print the svg code from the file.
+
+> Note that the comments should be removed but are added here to be able to render.
+
+```{r eval = FALSE}
+<div id="c">
+# ```{r echo = FALSE, results="asis"}
+cat(paste(gsub("^\\s*", "", readLines("q2_program.svg")), collapse = ""))
+# ```
+</div>
+```
+
+## Combining SVG with embedded javascript
 
 See an example of [how to create a selection menu and run an animation for selection](https://mathiaslj.github.io/stats787uoa-data-visualisation/labs/lab9_answer.html#challenge) in the challenge of the lab.
